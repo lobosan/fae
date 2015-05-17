@@ -138,6 +138,10 @@ h5 {
 	margin-bottom: 30px;
 }
 
+.form-control {
+	color: #676a6c !important;
+}
+
 .input-group .form-control:last-child {
 	height: 36px;
 }
@@ -152,7 +156,12 @@ h5 {
 
 .fae-grupo > tbody > tr > td {
 	font-size: 12px !important;
-	padding: 6px !important;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.td-criterio {
+	padding-left: 17px !important;
 }
 
 .fae-valoraciones {
