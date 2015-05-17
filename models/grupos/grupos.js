@@ -4,10 +4,17 @@ Grupos.attachSchema(new SimpleSchema({
     provincia: {
         type: String,
         label: 'Provincia',
-        allowedValues: ['Pichincha', 'Imbabura', 'Loja'],
         autoform: {
+            type: "select",
+            options: function () {
+                return [
+                    {label: "Pichincha", value: 'Pichincha'},
+                    {label: "Imbabura", value: 'Imbabura'},
+                    {label: "Loja", value: 'Loja'}
+                ];
+            },
             afFieldInput: {
-                firstOption: "Seleccione una Provincia"
+                firstOption: "Seleccione una provincia"
             }
         }
     },
@@ -17,7 +24,7 @@ Grupos.attachSchema(new SimpleSchema({
         allowedValues: ['Quito', 'Alausí', 'Archidona'],
         autoform: {
             afFieldInput: {
-                firstOption: "Seleccione un Cantón"
+                firstOption: "Seleccione un cantón"
             }
         }
     },
@@ -27,7 +34,7 @@ Grupos.attachSchema(new SimpleSchema({
         allowedValues: ['Abdón Calderón', 'Achupallas', 'Alamor, Cabecera Cantonal'],
         autoform: {
             afFieldInput: {
-                firstOption: "Seleccione una Parroquia"
+                firstOption: "Seleccione una parroquia"
             }
         }
     },
@@ -171,6 +178,11 @@ Grupos.attachSchema(new SimpleSchema({
         type: String,
         autoValue: function () {
             return this.userId
+        },
+        optional: true,
+        autoform: {
+            type: "hidden",
+            label: false
         }
     }
 }));

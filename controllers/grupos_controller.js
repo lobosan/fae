@@ -6,6 +6,7 @@ GruposController = RouteController.extend({
         return Grupos.findOne({_id: this.params._id});
     },
     insert: function () {
+        AutoForm.debug();
         this.render('InsertGrupo', {});
     },
     list: function() {

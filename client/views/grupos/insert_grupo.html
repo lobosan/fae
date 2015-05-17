@@ -1,4 +1,52 @@
 <template name="InsertGrupo">
 	<h1>Nueva Ficha de Diagnóstico de Grupo</h1>
-	{{> quickForm collection="Grupos" id="insertGrupoForm" type="insert" omitFields="createdBy" buttonContent="Guardar"}}
+	{{#autoForm collection="Grupos" id="insertGrupoForm" type="insert"}}
+		{{> afQuickField name='provincia'}}
+		{{> afQuickField name='canton' options="allowed"}}
+		{{> afQuickField name='parroquia' options="allowed"}}
+		{{> afQuickField name='sectores'}}
+		{{> afQuickField name='nombreGrupo'}}
+		{{> afQuickField name='representante'}}
+		{{> afQuickField name='correo'}}
+		{{> afQuickField name='telefonoFijo'}}
+		{{> afQuickField name='telefonoCelular'}}
+		{{> afQuickField name='personeriaJuridica'}}
+		{{> afQuickField name='adjudica'}}
+		{{> afQuickField name='tiempoVidaGrupo'}}
+		{{> afQuickField name='juridica'}}
+		{{> afQuickField name='deHecho'}}
+		{{> afQuickField name='numeroMiembros'}}
+		{{> afQuickField name='diaPreferidoReuniones'}}
+		{{> fichaDiagnosticoGrupoTabla}}
+		<button type="submit" class="btn btn-primary bottom-buffer">Guardar</button>
+	{{/autoForm}}
+</template>
+
+<template name="fichaDiagnosticoGrupoTabla">
+	{{#each fichaDiagnosticoGrupoTabla}}
+	<table class="table table-bordered fae-grupo">
+		<thead class="fae-valoraciones">
+		<tr>
+			<td colspan="3">
+				<label class="control-label">{{titulo}}</label>
+			</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td class="col-md-10">{{criterios.[0]}}</td>
+			<td class="col-md-1 fae-text-align-center">1</td>
+			<td class="fae-vertical-align-middle" rowspan="3">{{> afQuickField name=campo label=false}}</td>
+		</tr>
+		<tr>
+			<td class="col-md-10">{{criterios.[1]}}</td>
+			<td class="col-md-1 fae-text-align-center">5</td>
+		</tr>
+		<tr>
+			<td class="col-md-10">{{criterios.[2]}}</td>
+			<td class="col-md-1 fae-text-align-center">10</td>
+		</tr>
+		</tbody>
+	</table>
+	{{/each}}
 </template>
