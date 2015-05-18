@@ -1,4 +1,4 @@
-Template.GruposList.helpers({
+Template.gruposList.helpers({
     settings: function () {
         //Meteor.call('removeAllGrupos');
         return {
@@ -14,5 +14,12 @@ Template.GruposList.helpers({
                 { key: 'representante', label: 'Representante' }
             ]
         };
+    }
+});
+
+Template._indicadoresFichaTabla.helpers({
+    indicadoresFichaTabla: function () {
+        //Meteor.call('removeAllGrupoCriterios');
+        return GrupoCriterios.find({});
     }
 });

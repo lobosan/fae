@@ -17,7 +17,7 @@ h6 {
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 26px;
 }
 
 h2 {
@@ -47,34 +47,6 @@ h5 {
 	font-weight: 600;
 }
 
-.navbar-inverse {
-	background-color: #293846 !important;
-	border-color: #2F4050 !important;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-	color: #A7B1C2 !important;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:active {
-	color: #FFF !important;
-}
-
-.menu-items .active > a {
-	color: #FFF;
-	background-color: transparent !important;
-}
-
-.btn-primary {
-	background-color: #1ab394 !important;
-	border-color: #1ab394 !important;
-}
-
-.btn-primary:hover, .btn-primary.focus, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
-	background-color: #18a689 !important;
-	border-color: #18a689 !important;
-}
-
 #logo-img {
 	background: url("images/fae_logo.png") no-repeat;
 	background-size: 55px;
@@ -84,8 +56,40 @@ h5 {
 	margin: -9px 7px 0 0;
 }
 
+.btn-primary {
+	background-color: #019875 !important;
+	border-color: #019875 !important;
+}
+
+.btn-primary:hover, .btn-primary.focus, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
+	background-color: #18a689 !important;
+	border-color: #18a689 !important;
+}
+
+.navbar-inverse {
+	background-color: #474D57 !important;
+	border-color: #2F4050 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+	color: #b3b8bf;
+}
+
+.nav > li.active > a {
+	color: #FFF;
+	background-color: transparent !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:active {
+	color: #FFF !important;
+}
+
+.menu-items > li > a, #login-dropdown-list > a {
+	font-weight: 600;
+}
+
 .dropdown-toggle {
-	color: #A7B1C2 !important;
+	color: #b3b8bf !important;
 	background-color: transparent !important;
 	padding: 15px;
 	display: block;
@@ -126,18 +130,6 @@ h5 {
 	padding-right: 0 !important;
 }
 
-.top-buffer {
-	margin-top: 10px;
-}
-
-.right-buffer {
-	margin-right: 5px;
-}
-
-.bottom-buffer {
-	margin-bottom: 30px;
-}
-
 .form-control {
 	color: #676a6c !important;
 }
@@ -154,28 +146,14 @@ h5 {
 	color: #676a6c;
 }
 
-.fae-grupo > tbody > tr > td {
-	font-size: 12px !important;
-	padding-top: 6px;
-	padding-bottom: 6px;
+.top-buffer {
+	margin-top: 10px;
 }
 
-.td-criterio {
-	padding-left: 17px !important;
+.right-buffer {
+	margin-right: 5px;
 }
 
-.fae-valoraciones {
-	background-color: #f9f9f9;
-}
-
-.fae-text-align-center {
-	text-align: center;
-}
-
-.fae-vertical-align-middle {
-	vertical-align: middle !important;
-}
-
-.fae-vertical-align-middle > div > input {
-	margin-top: 16px !important;
+.bottom-buffer {
+	margin-bottom: 150px;
 }

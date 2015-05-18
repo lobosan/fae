@@ -1,11 +1,11 @@
-Template.FreeLayout.onRendered(function () {
+Template.header.onRendered(function () {
     this.$('.navbar-brand').click(function(e) {
         $('.menu-items li.active').removeClass('active');
     });
 });
 
-Template.FreeLayoutMainMenu.onRendered(function () {
-    this.$('.menu-items li').click(function(e) {
+Template.mainMenu.onRendered(function () {
+    this.$('.menu-items li').click(function() {
         $('.menu-items li.active').removeClass('active');
         var $this = $(this);
         if (!$this.hasClass('active')) {

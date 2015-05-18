@@ -1,6 +1,8 @@
-Template.fichaDiagnosticoGrupoTabla.helpers({
-    fichaDiagnosticoGrupoTabla: function () {
-        var diagnosticoGrupoDatos = [
+Meteor.startup(function () {
+    var countGrupoCriterios = GrupoCriterios.find({}).count();
+
+    if (countGrupoCriterios == 0) {
+        var criterios = [
             {campo: 'conocimientosGenerales', titulo: 'Conocimientos de los principios generales de la agroecología', criterios: [
                 'No Conoce',
                 'Conoce pero no conecta con los trabajos diarios',
@@ -58,6 +60,10 @@ Template.fichaDiagnosticoGrupoTabla.helpers({
             ]}
         ];
 
-        return diagnosticoGrupoDatos;
+        _.each(criterios, function (criterio) {
+            GrupoCriterios.insert(criterio);
+        });
     }
 });
+
+

@@ -1,0 +1,28 @@
+<template name="_indicadoresFichaTabla">
+	{{#each indicadoresFichaTabla}}
+		<table class="table table-bordered grupo-td">
+			<thead class="grupo-titulo-indicador">
+			<tr>
+				<td colspan="3">
+					<label class="control-label">{{titulo}}</label>
+				</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="col-md-10 grupo-td-indicador">{{criterios.[0]}}</td>
+				<td class="col-md-1 grupo-text-align-center">1</td>
+				<td class="grupo-vertical-align-middle" rowspan="3">{{> afQuickField name=campo label=false}}</td>
+			</tr>
+			<tr>
+				<td class="col-md-10 grupo-td-indicador">{{criterios.[1]}}</td>
+				<td class="col-md-1 grupo-text-align-center">5</td>
+			</tr>
+			<tr>
+				<td class="col-md-10 grupo-td-indicador">{{criterios.[2]}}</td>
+				<td class="col-md-1 grupo-text-align-center">10</td>
+			</tr>
+			</tbody>
+		</table>
+	{{/each}}
+</template>
