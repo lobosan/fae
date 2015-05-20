@@ -11,6 +11,11 @@ Router.route('/grupos_list', {
 Router.route('/insert_grupo', {
     name: 'insertGrupo',
     template: 'insertGrupo',
+    data: function () {
+        return templateData = {
+            indicadoresFichaTabla: GrupoCriterios.find({})
+        };
+    },
     waitOn: function () {
         return [
             Meteor.subscribe('grupoCriterios')

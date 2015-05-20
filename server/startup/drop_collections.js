@@ -1,7 +1,11 @@
 Meteor.startup(function () {
-    /*Meteor.users.allow({remove: function() { return true }});
+    /*Meteor.users.allow({
+        update: function (userId, doc, fieldNames, modifier) {
+            return true;
+        }
+    });*/
 
-    /!*** DELETE REGISTERS ***!/
+    /*/!*** DELETE REGISTERS ***!/
     var globalObject = Meteor.isClient ? window : global;
     for (var property in globalObject) {
         var object = globalObject[property];

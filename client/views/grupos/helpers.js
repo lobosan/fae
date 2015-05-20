@@ -1,6 +1,6 @@
 Template.gruposList.helpers({
     settings: function () {
-        //Meteor.call('removeAllGrupos');
+        Meteor.call('initializeGrupos', Meteor.userId(), Grupos.find().count());
         return {
             collection: Grupos,
             rowsPerPage: 10,
@@ -14,12 +14,5 @@ Template.gruposList.helpers({
                 { key: 'representante', label: 'Representante' }
             ]
         };
-    }
-});
-
-Template._indicadoresFichaTabla.helpers({
-    indicadoresFichaTabla: function () {
-        //Meteor.call('removeAllGrupoCriterios');
-        return GrupoCriterios.find({});
     }
 });

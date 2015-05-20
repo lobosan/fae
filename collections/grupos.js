@@ -5,16 +5,16 @@ Grupos.attachSchema(new SimpleSchema({
         type: String,
         label: 'Provincia',
         autoform: {
-            type: "select",
+            type: 'select',
             options: function () {
                 return [
-                    {label: "Pichincha", value: 'Pichincha'},
-                    {label: "Imbabura", value: 'Imbabura'},
-                    {label: "Loja", value: 'Loja'}
+                    {label: 'Pichincha', value: 'Pichincha'},
+                    {label: 'Imbabura', value: 'Imbabura'},
+                    {label: 'Loja', value: 'Loja'}
                 ];
             },
             afFieldInput: {
-                firstOption: "Seleccione una provincia"
+                firstOption: 'Seleccione una provincia'
             }
         }
     },
@@ -24,7 +24,7 @@ Grupos.attachSchema(new SimpleSchema({
         allowedValues: ['Quito', 'Alausí', 'Archidona'],
         autoform: {
             afFieldInput: {
-                firstOption: "Seleccione un cantón"
+                firstOption: 'Seleccione un cantón'
             }
         }
     },
@@ -34,7 +34,7 @@ Grupos.attachSchema(new SimpleSchema({
         allowedValues: ['Abdón Calderón', 'Achupallas', 'Alamor, Cabecera Cantonal'],
         autoform: {
             afFieldInput: {
-                firstOption: "Seleccione una parroquia"
+                firstOption: 'Seleccione una parroquia'
             }
         }
     },
@@ -68,31 +68,20 @@ Grupos.attachSchema(new SimpleSchema({
         type: String,
         label: 'Personería jurídica',
         autoform: {
-            type: "select-radio-inline",
-            defaultValue: 'No',
+            type: 'select-radio-inline',
+            defaultValue: 'En trámite',
             options: function () {
                 return [
-                    {label: "Si", value: "Si"},
-                    {label: "No", value: "No"}
+                    {label: 'Si', value: 'Si'},
+                    {label: 'No', value: 'No'},
+                    {label: 'En trámite', value: 'En trámite'}
                 ];
             }
         }
     },
-    adjudica: {
-        type: Boolean,
-        label: 'Adjudica'
-    },
     tiempoVidaGrupo: {
         type: String,
         label: 'Tiempo de vida del grupo'
-    },
-    juridica: {
-        type: Boolean,
-        label: 'Jurídica'
-    },
-    deHecho: {
-        type: Boolean,
-        label: 'De hecho'
     },
     numeroMiembros: {
         type: Number,
@@ -101,10 +90,21 @@ Grupos.attachSchema(new SimpleSchema({
     },
     diaPreferidoReuniones: {
         type: String,
-        label: 'Día y hora preferido para reuniones/talleres',
+        label: 'Día preferido para reuniones/talleres',
         autoform: {
-            afFieldInput: {
-                type: "bootstrap-datetimepicker"
+            type: 'select-radio-inline',
+            defaultValue: 'Ninguno',
+            options: function () {
+                return [
+                    {label: 'Lunes', value: 'Lunes'},
+                    {label: 'Martes', value: 'Martes'},
+                    {label: 'Miércoles', value: 'Miércoles'},
+                    {label: 'Jueves', value: 'Jueves'},
+                    {label: 'Viernes', value: 'Viernes'},
+                    {label: 'Sábado', value: 'Sábado'},
+                    {label: 'Domingo', value: 'Domingo'},
+                    {label: 'Ninguno', value: 'Ninguno'}
+                ];
             }
         }
     },
@@ -181,7 +181,7 @@ Grupos.attachSchema(new SimpleSchema({
         },
         optional: true,
         autoform: {
-            type: "hidden",
+            type: 'hidden',
             label: false
         }
     }
