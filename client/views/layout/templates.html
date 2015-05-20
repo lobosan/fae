@@ -36,8 +36,10 @@
 <template name="mainMenu">
 	<ul class="menu-items nav navbar-nav navbar-right">
 		{{#if currentUser}}
-			<li><a href="{{pathFor 'gruposList'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Grupos</a></li>
+			<li><a href="{{pathFor 'listGrupos'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Grupos</a></li>
+			<li><a href="{{pathFor 'listAcompanamientos'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Acompañamientos</a></li>
 			<li><a href="{{pathFor 'insertGrupo'}}"><i class="glyphicon glyphicon-file"></i> Ficha de Grupo</a></li>
+			<li><a href="{{pathFor 'insertAcompanamiento'}}"><i class="glyphicon glyphicon-file"></i> Ficha de Acompañamiento</a></li>
 		{{/if}}
 		<li>{{> loginButtons}}</li>
 	</ul>

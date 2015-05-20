@@ -1,5 +1,5 @@
 Template.header.onRendered(function () {
-    this.$('.navbar-brand').click(function(e) {
+    this.$('.navbar-brand').click(function() {
         $('.menu-items li.active').removeClass('active');
     });
 });

@@ -18,7 +18,7 @@ var mustBeSignedIn = function() {
 
 var goToAfterLogin = function() {
     if (Meteor.user()) {
-        Router.go('gruposList');
+        Router.go('listGrupos');
     } else {
         this.next();
     }

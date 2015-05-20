@@ -1,0 +1,20 @@
+<template name="listAcompanamientos">
+	<h1>Fichas de Diagnóstico y Acompañamiento</h1>
+	{{> reactiveTable settings=settings}}
+</template>
+
+<template name="insertAcompanamiento">
+	<h1>Nueva Ficha de Diagnóstico y Acompañamiento</h1>
+	{{#autoForm collection="Acompanamientos" id="insertAcompanamientoForm" type="insert"}}
+		{{> afQuickField name='acomProvincia'}}
+		{{> afQuickField name='acomCanton' options="allowed"}}
+		{{> afQuickField name='acomParroquia' options="allowed"}}
+		{{> afQuickField name='acomSectores'}}
+		{{> afQuickField name='acomResponsableProduccion'}}
+		{{> afQuickField name='acomNombreFinca'}}
+		{{> afQuickField name='acomCorreo'}}
+		{{> afQuickField name='acomTelefono'}}
+		{{> _indicadoresFichaTabla}}
+		<button type="submit" class="btn btn-primary bottom-buffer">Guardar</button>
+	{{/autoForm}}
+</template>

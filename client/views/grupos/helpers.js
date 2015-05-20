@@ -1,4 +1,4 @@
-Template.gruposList.helpers({
+Template.listGrupos.helpers({
     settings: function () {
         Meteor.call('initializeGrupos', Meteor.userId(), Grupos.find().count());
         return {

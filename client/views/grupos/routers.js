@@ -1,6 +1,6 @@
-Router.route('/grupos_list', {
-    name: 'gruposList',
-    template: 'gruposList',
+Router.route('/list_grupos', {
+    name: 'listGrupos',
+    template: 'listGrupos',
     waitOn: function () {
         return [
             Meteor.subscribe('grupos', Meteor.userId())
