@@ -295,7 +295,7 @@ Acompanamientos.attachSchema(new SimpleSchema({
         min: 1,
         max: 10
     },
-    /*** Indicadores para instalaciones angares y bodegas ***/
+    /*** Indicadores para instalaciones, angares y bodegas ***/
     instalCondicion: {
         type: Number,
         min: 1,
@@ -340,6 +340,11 @@ Acompanamientos.attachSchema(new SimpleSchema({
 }));
 
 if (Meteor.isServer) {
+
+    Meteor.publish('acompanamientos', function (userId) {
+        return Acompanamientos.find({createdBy: userId});
+    });
+
     Acompanamientos.allow({
         insert: function (userId, doc) {
             return true;

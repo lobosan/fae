@@ -1,7 +1,7 @@
 Meteor.startup(function () {
-    var countAcompanamientoCriterios = AcompanamientoCriterios.find({}).count();
+    var countAcompanamientoIndicadores = AcompanamientoIndicadores.find({}).count();
 
-    if (countAcompanamientoCriterios == 0) {
+    if (countAcompanamientoIndicadores == 0) {
         var criterios = [
             /*** Indicadores para el entorno ***/
             {campo: 'entoForestalesNativos', titulo: 'Presencia de áreas con especies forestales nativos', criterios: [
@@ -9,7 +9,7 @@ Meteor.startup(function () {
                 'Presencia esporádica de árboles y arbustos nativos',
                 'Suficientes áreas con árboles y arbustos nativos'
             ]},
-            {campo: 'entoEspeciesFrutales', titulo: 'Presencia de especies frutales.', criterios: [
+            {campo: 'entoEspeciesFrutales', titulo: 'Presencia de especies frutales', criterios: [
                 'No hay especies frutales',
                 'Hay una sola especie frutal',
                 'Hay diversidad de especies frutales'
@@ -58,7 +58,7 @@ Meteor.startup(function () {
             {campo: 'sueloMecanizacionAgricola', titulo: 'Uso racional de herramientas y mecanización agrícola', criterios: [
                 'Se realizan labores a favor de la pendiente; y se voltean las capas del suelo sin criterio alguno',
                 'Se toman precauciones pero no son suficientes',
-                'Se practica la labranza mínima '
+                'Se practica la labranza mínima'
             ]},
             {campo: 'sueloMateriaOrganica', titulo: 'Materia orgánica en el suelo', criterios: [
                 'No se ven restos de materia orgánica en el suelo',
@@ -112,7 +112,7 @@ Meteor.startup(function () {
                 'Mantiene algo de humedad hasta en épocas secas'
             ]},
             /*** Indicadores para el subsistema de cultivos ***/
-            {campo: 'cultRotacion', titulo: 'Planificación de rotación de cultivos por lotes	', criterios: [
+            {campo: 'cultRotacion', titulo: 'Planificación de rotación de cultivos por lotes', criterios: [
                 'No se planifica',
                 'Existe una tradición de rotación pero no documentada',
                 'Existe un documento en donde se evidencia un plan de rotación por lote'
@@ -262,7 +262,7 @@ Meteor.startup(function () {
             ]},
             {campo: 'instalSenaletica', titulo: 'Señalética adecuada y suficiente a cada tipo de instalación', criterios: [
                 'No hay identificación de áreas en zonas de riesgo',
-                'Existen Letreros pero en malas condiciones ',
+                'Existen Letreros pero en malas condiciones',
                 'Adecuada y suficiente a cada tipo de instalación'
             ]},
             {campo: 'instalDesechos', titulo: 'Desechos provenientes de instalaciones tratados adecuadamente', criterios: [
@@ -273,7 +273,7 @@ Meteor.startup(function () {
         ];
 
         _.each(criterios, function (criterio) {
-            AcompanamientoCriterios.insert(criterio);
+            AcompanamientoIndicadores.insert(criterio);
         });
     }
 });

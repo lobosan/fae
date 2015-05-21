@@ -13,12 +13,12 @@ Router.route('/insert_acompanamiento', {
     template: 'insertAcompanamiento',
     data: function () {
         return templateData = {
-            indicadoresFichaTabla: AcompanamientoCriterios.find({})
+            indicadoresFichaTabla: AcompanamientoIndicadores.find({})
         };
     },
     waitOn: function () {
         return [
-            Meteor.subscribe('acompanamientoCriterios')
+            Meteor.subscribe('acompanamientoIndicadores')
         ];
     }
 });

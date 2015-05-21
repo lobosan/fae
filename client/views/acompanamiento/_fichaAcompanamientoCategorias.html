@@ -1,0 +1,23 @@
+<template name="_fichaAcompanamientoCategorias">
+	{{#if $eq campo 'entoForestalesNativos'}}
+		<div class="acom-categoria">INDICADORES PARA EL ENTORNO</div>
+	{{/if}}
+	{{#if $eq campo 'sueloErosionActual'}}
+		<div class="acom-categoria">INDICADORES PARA EL SUBSISTEMA DEL SUELO</div>
+	{{/if}}
+	{{#if $eq campo 'aguaCantidad'}}
+		<div class="acom-categoria">INDICADORES PARA EL SUBSISTEMA DE AGUA Y HUMEDAD</div>
+	{{/if}}
+	{{#if $eq campo 'cultRotacion'}}
+		<div class="acom-categoria">INDICADORES PARA EL SUBSISTEMA DE CULTIVOS</div>
+	{{/if}}
+	{{#if $eq campo 'forestFertilidadSuelo'}}
+		<div class="acom-categoria">INDICADORES PARA EL SUBSISTEMA FORESTAL</div>
+	{{/if}}
+	{{#if $eq campo 'animalDiversidad'}}
+		<div class="acom-categoria">INDICADORES PARA EL SUBSISTEMA ANIMAL</div>
+	{{/if}}
+	{{#if $eq campo 'instalCondicion'}}
+		<div class="acom-categoria">INDICADORES PARA INSTALACIONES, ANGARES Y BODEGAS</div>
+	{{/if}}
+</template>

@@ -110,67 +110,56 @@ Grupos.attachSchema(new SimpleSchema({
     },
     conocimientosGenerales: {
         type: Number,
-        label: 'Conocimientos de los principios generales de la agroecología',
         min: 1,
         max: 10
     },
     decisionPolitica: {
         type: Number,
-        label: 'Decisión política',
         min: 1,
         max: 10
     },
     disenioFinca: {
         type: Number,
-        label: 'Diseño de finca',
         min: 1,
         max: 10
     },
     capacidadesTecnicas: {
         type: Number,
-        label: 'Capacidades técnicas',
         min: 1,
         max: 10
     },
     capacidadTecnicaGrupo: {
         type: Number,
-        label: 'Capacidad técnica instalada en el grupo',
         min: 1,
         max: 10
     },
     capacidadOrganizacional: {
         type: Number,
-        label: 'Capacidad Organizacional',
         min: 1,
         max: 10
     },
     mecanismoApoyoInterno: {
         type: Number,
-        label: 'Mecanismo de apoyo interno',
         min: 1,
         max: 10
     },
     promotores: {
         type: Number,
-        label: 'Promotores',
         min: 1,
         max: 10
     },
     manejoNormas: {
         type: Number,
-        label: 'Manejo de normas',
         min: 1,
         max: 10
     },
     veedores: {
         type: Number,
-        label: 'Veedores',
         min: 1,
         max: 10
     },
     comiteEtica: {
         type: Number,
-        label: 'Comité de ética',
         min: 1,
         max: 10
     },
@@ -188,6 +177,11 @@ Grupos.attachSchema(new SimpleSchema({
 }));
 
 if (Meteor.isServer) {
+
+    Meteor.publish('grupos', function (userId) {
+        return Grupos.find({createdBy: userId});
+    });
+
     Grupos.allow({
         insert: function (userId, doc) {
             return true;

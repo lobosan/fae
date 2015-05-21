@@ -1,7 +1,12 @@
-AcompanamientoCriterios = new Mongo.Collection('acompanamientoCriterios');
+AcompanamientoIndicadores = new Mongo.Collection('acompanamientoIndicadores');
 
 if (Meteor.isServer) {
-    AcompanamientoCriterios.allow({
+
+    Meteor.publish('acompanamientoIndicadores', function () {
+        return AcompanamientoIndicadores.find({});
+    });
+
+    AcompanamientoIndicadores.allow({
         insert: function (userId, doc) {
             return true;
         },

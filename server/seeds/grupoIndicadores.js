@@ -1,7 +1,7 @@
 Meteor.startup(function () {
-    var countGrupoCriterios = GrupoCriterios.find({}).count();
+    var countGrupoIndicadores = GrupoIndicadores.find({}).count();
 
-    if (countGrupoCriterios == 0) {
+    if (countGrupoIndicadores == 0) {
         var criterios = [
             {campo: 'conocimientosGenerales', titulo: 'Conocimientos de los principios generales de la agroecología', criterios: [
                 'No Conoce',
@@ -61,7 +61,7 @@ Meteor.startup(function () {
         ];
 
         _.each(criterios, function (criterio) {
-            GrupoCriterios.insert(criterio);
+            GrupoIndicadores.insert(criterio);
         });
     }
 });

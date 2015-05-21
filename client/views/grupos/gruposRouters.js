@@ -13,12 +13,12 @@ Router.route('/insert_grupo', {
     template: 'insertGrupo',
     data: function () {
         return templateData = {
-            indicadoresFichaTabla: GrupoCriterios.find({})
+            indicadoresFichaTabla: GrupoIndicadores.find({})
         };
     },
     waitOn: function () {
         return [
-            Meteor.subscribe('grupoCriterios')
+            Meteor.subscribe('grupoIndicadores')
         ];
     }
 });

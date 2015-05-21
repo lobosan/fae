@@ -4,6 +4,7 @@
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 	<title>Fichas Agroecológicas</title>
 </head>
+
 <template name="layout">
 	{{> header}}
 </template>
@@ -36,10 +37,10 @@
 <template name="mainMenu">
 	<ul class="menu-items nav navbar-nav navbar-right">
 		{{#if currentUser}}
-			<li><a href="{{pathFor 'listGrupos'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Grupos</a></li>
-			<li><a href="{{pathFor 'listAcompanamientos'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Acompañamientos</a></li>
-			<li><a href="{{pathFor 'insertGrupo'}}"><i class="glyphicon glyphicon-file"></i> Ficha de Grupo</a></li>
-			<li><a href="{{pathFor 'insertAcompanamiento'}}"><i class="glyphicon glyphicon-file"></i> Ficha de Acompañamiento</a></li>
+			<li><a href="{{pathFor 'listGrupos'}}"><i class="glyphicon glyphicon-list-alt"></i> Grupos</a></li>
+			<li><a href="{{pathFor 'insertGrupo'}}"><i class="glyphicon glyphicon-file"></i> Nuevo Grupo</a></li>
+			<li><a href="{{pathFor 'listAcompanamientos'}}"><i class="glyphicon glyphicon-list-alt"></i> Acompañamientos</a></li>
+			<li><a href="{{pathFor 'insertAcompanamiento'}}"><i class="glyphicon glyphicon-file"></i> Nuevo Acompañamiento</a></li>
 		{{/if}}
 		<li>{{> loginButtons}}</li>
 	</ul>

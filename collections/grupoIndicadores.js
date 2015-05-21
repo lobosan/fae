@@ -1,7 +1,12 @@
-GrupoCriterios = new Mongo.Collection('grupoCriterios');
+GrupoIndicadores = new Mongo.Collection('grupoIndicadores');
 
 if (Meteor.isServer) {
-    GrupoCriterios.allow({
+
+    Meteor.publish('grupoIndicadores', function () {
+        return GrupoIndicadores.find({});
+    });
+
+    GrupoIndicadores.allow({
         insert: function (userId, doc) {
             return true;
         },
