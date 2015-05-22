@@ -157,3 +157,7 @@ h5 {
 .bottom-buffer {
 	margin-bottom: 150px;
 }
+
+#toast-container > div {
+	opacity: 0.9 !important;
+}

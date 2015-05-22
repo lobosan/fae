@@ -1,9 +1,9 @@
-<template name="insertGrupo">
+<template name='insertGrupo'>
 	<h1>Nueva Ficha de Diagnóstico de Grupo</h1>
-  {{#autoForm collection="Grupos" id="insertGrupoForm" type="insert"}}
+  {{#autoForm collection='Grupos' id='insertGrupoForm' type='insert'}}
     {{> afQuickField name='provincia'}}
-    {{> afQuickField name='canton' options="allowed"}}
-    {{> afQuickField name='parroquia' options="allowed"}}
+    {{> afQuickField name='canton'}}
+    {{> afQuickField name='parroquia'}}
     {{> afQuickField name='sectores'}}
     {{> afQuickField name='nombreGrupo'}}
     {{> afQuickField name='representante'}}
@@ -15,6 +15,6 @@
     {{> afQuickField name='numeroMiembros'}}
     {{> afQuickField name='diaPreferidoReuniones'}}
     {{> _indicadoresFichaTabla}}
-	  <button type="submit" class="btn btn-primary bottom-buffer">Guardar</button>
+	  <button type='submit' class='btn btn-primary bottom-buffer'>Guardar</button>
   {{/autoForm}}
 </template>
