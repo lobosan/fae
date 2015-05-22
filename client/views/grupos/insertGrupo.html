@@ -1,20 +1,20 @@
 <template name='insertGrupo'>
 	<h1>Nueva Ficha de Diagnóstico de Grupo</h1>
-  {{#autoForm collection='Grupos' id='insertGrupoForm' type='insert'}}
-    {{> afQuickField name='provincia'}}
-    {{> afQuickField name='canton'}}
-    {{> afQuickField name='parroquia'}}
-    {{> afQuickField name='sectores'}}
-    {{> afQuickField name='nombreGrupo'}}
-    {{> afQuickField name='representante'}}
-    {{> afQuickField name='correo'}}
-    {{> afQuickField name='telefonoFijo'}}
-    {{> afQuickField name='telefonoCelular'}}
-    {{> afQuickField name='personeriaJuridica'}}
-    {{> afQuickField name='tiempoVidaGrupo'}}
-    {{> afQuickField name='numeroMiembros'}}
-    {{> afQuickField name='diaPreferidoReuniones'}}
-    {{> _indicadoresFichaTabla}}
-	  <button type='submit' class='btn btn-primary bottom-buffer'>Guardar</button>
-  {{/autoForm}}
+	{{#autoForm collection='Grupos' id='insertGrupoForm' type='insert'}}
+		{{> afQuickField name='provincia' id='provincia'}}
+		{{> afQuickField name='canton' id='canton'}}
+		{{> afQuickField name='parroquia' id='parroquia'}}
+		{{> afQuickField name='sectores'}}
+		{{> afQuickField name='nombreGrupo'}}
+		{{> afQuickField name='representante'}}
+		{{> afQuickField name='correo'}}
+		{{> afQuickField name='telefonoFijo'}}
+		{{> afQuickField name='telefonoCelular'}}
+		{{> afQuickField name='personeriaJuridica'}}
+		{{> afQuickField name='tiempoVidaGrupo'}}
+		{{> afQuickField name='numeroMiembros'}}
+		{{> afQuickField name='diaPreferidoReuniones'}}
+		{{> _indicadoresFichaTabla}}
+		<button type='submit' class='btn btn-primary bottom-buffer'>Guardar</button>
+	{{/autoForm}}
 </template>

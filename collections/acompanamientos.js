@@ -6,35 +6,44 @@ Acompanamientos.attachSchema(new SimpleSchema({
         label: 'Provincia',
         autoform: {
             type: 'select',
+            firstOption: 'Seleccione una provincia',
             options: function () {
-                return [
-                    {label: 'Pichincha', value: 'Pichincha'},
-                    {label: 'Imbabura', value: 'Imbabura'},
-                    {label: 'Loja', value: 'Loja'}
-                ];
-            },
-            afFieldInput: {
-                firstOption: 'Seleccione una provincia'
+                return DPA.find({grupo: 'Provincia'}).map(function (dpa) {
+                    return {label: dpa.descripcion, value: dpa.codigo};
+                });
             }
         }
     },
     acomCanton: {
         type: String,
         label: 'Cantón',
-        allowedValues: ['Quito', 'Alausí', 'Archidona'],
         autoform: {
-            afFieldInput: {
-                firstOption: 'Seleccione un cantón'
+            type: 'select',
+            firstOption: 'Seleccione un cantón',
+            options: function () {
+                var codigoProvincia = AutoForm.getFieldValue('acomProvincia');
+                var cantones = new RegExp('^' + codigoProvincia + '[\\d]{2}$');
+                return DPA.find({codigo: {$regex: cantones}}).map(function (dpa) {
+                    return {label: dpa.descripcion, value: dpa.codigo};
+                });
             }
         }
     },
     acomParroquia: {
         type: String,
         label: 'Parroquia',
-        allowedValues: ['Abdón Calderón', 'Achupallas', 'Alamor, Cabecera Cantonal'],
         autoform: {
-            afFieldInput: {
-                firstOption: 'Seleccione una parroquia'
+            type: 'select',
+            firstOption: 'Seleccione una parroquia',
+            options: function () {
+                $('#acomProvincia').change(function() {
+                    $('#acomParroquia option[value!=""]').remove();
+                });
+                var codigoCanton = AutoForm.getFieldValue('acomCanton');
+                var parroquias = new RegExp('^' + codigoCanton + '[\\d]{2}$');
+                return DPA.find({codigo: {$regex: parroquias}}).map(function (dpa) {
+                    return {label: dpa.descripcion, value: dpa.codigo};
+                });
             }
         }
     },

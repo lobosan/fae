@@ -1,5 +1,5 @@
 AutoForm.hooks({
-    'insertGrupoForm': {
+    'insertAcompanamientoForm': {
         onSuccess: function (operation, result, template) {
             toastr.options = {"timeOut": "2000", "progressBar": true};
             toastr.success('La ficha ha sido guardada exitosamente');
@@ -10,10 +10,10 @@ AutoForm.hooks({
         },
         before: {
             insert: function (doc) {
-                if ((typeof doc.provincia && typeof doc.canton && typeof doc.parroquia) != 'undefined') {
-                    doc.provincia = DPA.findOne({codigo: doc.provincia}).descripcion;
-                    doc.canton = DPA.findOne({codigo: doc.canton}).descripcion;
-                    doc.parroquia = DPA.findOne({codigo: doc.parroquia}).descripcion;
+                if ((typeof doc.acomProvincia && typeof doc.canton && typeof doc.acomParroquia) != 'undefined') {
+                    doc.acomProvincia = DPA.findOne({codigo: doc.acomProvincia}).descripcion;
+                    doc.acomCanton = DPA.findOne({codigo: doc.acomCanton}).descripcion;
+                    doc.acomParroquia = DPA.findOne({codigo: doc.acomParroquia}).descripcion;
                 }
                 return doc;
             }

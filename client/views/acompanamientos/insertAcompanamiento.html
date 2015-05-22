@@ -1,9 +1,9 @@
 <template name="insertAcompanamiento">
 	<h1>Nueva Ficha de Diagnóstico y Acompañamiento</h1>
 	{{#autoForm collection="Acompanamientos" id="insertAcompanamientoForm" type="insert"}}
-		{{> afQuickField name='acomProvincia'}}
-		{{> afQuickField name='acomCanton' options="allowed"}}
-		{{> afQuickField name='acomParroquia' options="allowed"}}
+		{{> afQuickField name='acomProvincia' id='acomProvincia'}}
+		{{> afQuickField name='acomCanton' id='acomCanton'}}
+		{{> afQuickField name='acomParroquia' id='acomParroquia'}}
 		{{> afQuickField name='acomSectores'}}
 		{{> afQuickField name='acomResponsableProduccion'}}
 		{{> afQuickField name='acomNombreFinca'}}

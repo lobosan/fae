@@ -21,13 +21,11 @@ Grupos.attachSchema(new SimpleSchema({
             type: 'select',
             firstOption: 'Seleccione un cantón',
             options: function () {
-                if (Meteor.isClient) {
-                    var codigoProvincia = AutoForm.getFieldValue('provincia');
-                    var cantones = new RegExp('^' + codigoProvincia + '[\\d]{2}$');
-                    return DPA.find({codigo: {$regex: cantones}}).map(function (dpa) {
-                        return {label: dpa.descripcion, value: dpa.codigo};
-                    });
-                }
+                var codigoProvincia = AutoForm.getFieldValue('provincia');
+                var cantones = new RegExp('^' + codigoProvincia + '[\\d]{2}$');
+                return DPA.find({codigo: {$regex: cantones}}).map(function (dpa) {
+                    return {label: dpa.descripcion, value: dpa.codigo};
+                });
             }
         }
     },
@@ -38,13 +36,14 @@ Grupos.attachSchema(new SimpleSchema({
             type: 'select',
             firstOption: 'Seleccione una parroquia',
             options: function () {
-                if (Meteor.isClient) {
-                    var codigoCanton = AutoForm.getFieldValue('canton');
-                    var parroquias = new RegExp('^' + codigoCanton + '[\\d]{2}$');
-                    return DPA.find({codigo: {$regex: parroquias}}).map(function (dpa) {
-                        return {label: dpa.descripcion, value: dpa.codigo};
-                    });
-                }
+                $('#provincia').change(function() {
+                    $('#parroquia option[value!=""]').remove();
+                });
+                var codigoCanton = AutoForm.getFieldValue('canton');
+                var parroquias = new RegExp('^' + codigoCanton + '[\\d]{2}$');
+                return DPA.find({codigo: {$regex: parroquias}}).map(function (dpa) {
+                    return {label: dpa.descripcion, value: dpa.codigo};
+                });
             }
         }
     },
