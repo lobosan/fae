@@ -1,50 +1,67 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+@import url('http://roboto-webfont.googlecode.com/svn/trunk/roboto.all.css');
 
 body {
-	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 13px;
 	color: #676a6c;
-	padding-top: 55px;
+	padding-top: 65px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 100;
+h1, h2, h3, h4, h5, h6 {
+	color: #606060;
+	font-weight: 400;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: inherit;
 }
 
 h1 {
-	font-size: 26px;
+	font-size: 4.2rem;
+	line-height: 4.62rem;
+	margin: 2.1rem 0 1.68rem 0;
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 3.56rem;
+	line-height: 3.916rem;
+	margin: 1.78rem 0 1.424rem 0;
 }
 
 h3 {
-	font-size: 16px;
+	font-size: 2.92rem;
+	line-height: 3.212rem;
+	margin: 1.46rem 0 2.168rem 0;
 }
 
 h4 {
-	font-size: 14px;
+	font-size: 2.2rem;
+	line-height: 2.508rem;
+	margin: 1.14rem 0 1.912rem 0;
 }
 
 h5 {
-	font-size: 12px;
+	font-size: 1.64rem;
+	line-height: 1.804rem;
+	margin: 0.82rem 0 0.656rem 0;
 }
 
 h6 {
-	font-size: 10px;
+	font-size: 1rem;
+	line-height: 1.1rem;
+	margin: 0.5rem 0 0.4rem 0;
 }
 
-h3,
-h4,
-h5 {
-	margin-top: 5px;
-	font-weight: 600;
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 500;
+}
+
+small {
+	font-size: 75%;
 }
 
 #logo-img {
@@ -56,14 +73,43 @@ h5 {
 	margin: -9px 7px 0 0;
 }
 
+.btn, .btn-large {
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: .5px;
+	-webkit-transition: .2s ease-out;
+	-moz-transition: .2s ease-out;
+	-o-transition: .2s ease-out;
+	-ms-transition: .2s ease-out;
+	transition: .2s ease-out;
+	cursor: pointer;
+}
+
+.btn, .btn-large, .btn-flat {
+	border-radius: 2px;
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	outline: 0;
+	padding: 0 2rem;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover, .btn-large:hover, .btn-floating:hover {
+	-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
 .btn-primary {
-	background-color: #019875 !important;
-	border-color: #019875 !important;
+	background-color: #26a69a !important;
+	border-color: #26a69a !important;
 }
 
 .btn-primary:hover, .btn-primary.focus, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
-	background-color: #18a689 !important;
-	border-color: #18a689 !important;
+	background-color: #2bbbad !important;
+	border-color: #2bbbad !important;
 }
 
 .navbar-inverse {
@@ -131,7 +177,11 @@ h5 {
 }
 
 .form-control {
-	color: #676a6c !important;
+	font-size: 13px !important;
+}
+
+.form-group > select {
+	padding-left: 8px !important;
 }
 
 .input-group .form-control:last-child {
@@ -160,4 +210,10 @@ h5 {
 
 #toast-container > div {
 	opacity: 0.9 !important;
+}
+
+.no-data {
+	text-align: center;
+	margin-top: 50px;
+	font-style: italic;
 }

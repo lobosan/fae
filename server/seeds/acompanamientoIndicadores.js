@@ -40,7 +40,7 @@ Meteor.startup(function () {
                 'Las herramientas, maquinarias, materiales, utensilios y cosechas están en su respectivo lugar'
             ]},
             {campo: 'entoAguaHumedad', titulo: 'Manejo racional del agua y humedad', criterios: [
-                'existe desperdicio de agua en la finca (en general)',
+                'Existe desperdicio de agua en la finca (en general)',
                 'Se reutiliza parte del agua que se usa en la finca',
                 'Se practican coberturas de suelo, reciclamiento y cosecha de agua, se almacena el agua para uso general en la finca'
             ]},

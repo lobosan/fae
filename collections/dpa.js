@@ -18,6 +18,10 @@ if (Meteor.isServer) {
         return DPA.find({});
     });
 
+    Meteor.startup(function () {
+        DPA._ensureIndex({codigo: 1});
+    });
+
     DPA.allow({
         insert: function (userId, doc) {
             return true;

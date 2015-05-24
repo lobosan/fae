@@ -1,4 +1,8 @@
 <template name="listAcompanamientos">
-	<h1>Fichas de Diagnóstico y Acompañamiento</h1>
-	{{> reactiveTable settings=settings}}
+	<h4>Fichas de Diagnóstico y Acompañamiento</h4>
+	{{#if isEmptyAcompanamientos}}
+		<h5 class="no-data">No existen datos que mostrar, cree una nueva ficha de diagnóstico y acompañamiento</h5>
+	{{else}}
+		{{> reactiveTable settings=settings}}
+	{{/if}}
 </template>

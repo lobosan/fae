@@ -1,5 +1,5 @@
 <template name="insertAcompanamiento">
-	<h1>Nueva Ficha de Diagnóstico y Acompañamiento</h1>
+	<h4>Nueva Ficha de Diagnóstico y Acompañamiento</h4>
 	{{#autoForm collection="Acompanamientos" id="insertAcompanamientoForm" type="insert"}}
 		{{> afQuickField name='acomProvincia' id='acomProvincia'}}
 		{{> afQuickField name='acomCanton' id='acomCanton'}}
@@ -10,6 +10,6 @@
 		{{> afQuickField name='acomCorreo'}}
 		{{> afQuickField name='acomTelefono'}}
 		{{> _indicadoresFichaTabla}}
-		<button type="submit" class="btn btn-primary bottom-buffer">Guardar</button>
+		<button type="submit" class="btn btn-primary bottom-buffer">GUARDAR</button>
 	{{/autoForm}}
 </template>

@@ -1,4 +1,8 @@
 <template name="listGrupos">
-	<h1>Fichas de Diagnóstico de Grupo</h1>
-	{{> reactiveTable settings=settings}}
+	<h4>Fichas de Diagnóstico de Grupo</h4>
+	{{#if isEmptyGrupos}}
+		<h5 class="no-data">No existen datos que mostrar, cree una nueva ficha de diagnóstico de grupo</h5>
+	{{else}}
+		{{> reactiveTable settings=settings}}
+	{{/if}}
 </template>

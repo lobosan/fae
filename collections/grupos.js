@@ -6,7 +6,7 @@ Grupos.attachSchema(new SimpleSchema({
         label: 'Provincia',
         autoform: {
             type: 'select',
-            firstOption: 'Seleccione una provincia',
+            firstOption: '',
             options: function () {
                 return DPA.find({grupo: 'Provincia'}).map(function (dpa) {
                     return {label: dpa.descripcion, value: dpa.codigo};
@@ -19,7 +19,7 @@ Grupos.attachSchema(new SimpleSchema({
         label: 'Cantón',
         autoform: {
             type: 'select',
-            firstOption: 'Seleccione un cantón',
+            firstOption: '',
             options: function () {
                 var codigoProvincia = AutoForm.getFieldValue('provincia');
                 var cantones = new RegExp('^' + codigoProvincia + '[\\d]{2}$');
@@ -34,7 +34,7 @@ Grupos.attachSchema(new SimpleSchema({
         label: 'Parroquia',
         autoform: {
             type: 'select',
-            firstOption: 'Seleccione una parroquia',
+            firstOption: '',
             options: function () {
                 $('#provincia').change(function() {
                     $('#parroquia option[value!=""]').remove();
@@ -174,10 +174,15 @@ Grupos.attachSchema(new SimpleSchema({
     },
     createdBy: {
         type: String,
-        autoValue: function () {
-            return this.userId
+        autoValue: function(){
+            if (this.isInsert){
+                return Meteor.userId();
+            } else if (this.isUpsert) {
+                return {$setOnInsert: Meteor.userId()};
+            } else {
+                this.unset();
+            }
         },
-        optional: true,
         autoform: {
             type: 'hidden',
             label: false
