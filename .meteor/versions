@@ -67,6 +67,9 @@ momentjs:moment@2.10.3
 mongo@1.1.0
 msavin:jetsetter@1.0.13
 msavin:mongol@1.0.70
+netanelgilad:excel@0.2.4
+netanelgilad:mkdirp@0.0.1
+netanelgilad:node-uuid@1.0.2
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
@@ -94,5 +97,6 @@ u2622:persistent-session@0.3.5
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
+vsivsi:file-collection@1.1.0
 webapp@1.2.0
 webapp-hashing@1.0.3
