@@ -1,9 +1,11 @@
 <template name="listGrupos">
 	<h4>Fichas de Diagnóstico de Grupo</h4>
-	<button class="export">Download Excel File</button>
 	{{#if isEmptyGrupos}}
+		<a class="btn btn-default" href="{{pathFor 'insertGrupo'}}"><icon class="fa fa-file"></icon> Nueva ficha de grupo</a>
 		<h5 class="no-data">No existen datos que mostrar, cree una nueva ficha de diagnóstico de grupo</h5>
 	{{else}}
+		<button class="btn btn-primary export"><icon class="fa fa-file-excel-o"></icon> Exportar a Excel</button>
+		<a class="btn btn-default" href="{{pathFor 'insertGrupo'}}"><icon class="fa fa-file"></icon> Nueva ficha de grupo</a>
 		{{> reactiveTable settings=settings}}
 	{{/if}}
 </template>

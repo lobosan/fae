@@ -112,6 +112,10 @@ small {
 	border-color: #2bbbad !important;
 }
 
+.btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active {
+	color: #676A6C;
+}
+
 .navbar-inverse {
 	background-color: #474D57 !important;
 	border-color: #2F4050 !important;
@@ -134,16 +138,16 @@ small {
 	font-weight: 600;
 }
 
-.dropdown-toggle {
+#login-dropdown-list > .dropdown-toggle {
 	color: #b3b8bf !important;
 	background-color: transparent !important;
-	padding: 15px;
+	padding: 15px 15px 15px 10px;
 	display: block;
 	position: relative;
 	line-height: 20px;
 }
 
-.dropdown-toggle:hover, .dropdown-toggle:focus {
+#login-dropdown-list > .dropdown-toggle:hover, .dropdown-toggle:focus {
 	color: #fff !important;
 	background-color: transparent;
 	text-decoration: none;
