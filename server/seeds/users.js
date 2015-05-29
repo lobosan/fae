@@ -1,26 +1,49 @@
 Meteor.startup(function () {
     if (Meteor.users.find().count() === 0) {
+
         var users = [
             {
                 username: 'Test',
                 email: 'test@test.com',
-                password: '123123',
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Testa'
-                }
+                },
+                roles: ['tecnico']
             }, {
                 username: 'Wilson',
                 email: 'wilson@probio.com',
-                password: 'wilsonwilson',
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Probío'
-                }
+                },
+                roles: ['tecnico']
+            }, {
+                username: 'Administrador',
+                email: 'admin@admin.com',
+                profile: {
+                    cedula: '1231231233',
+                    institucion: 'Probío'
+                },
+                roles: ['administrador']
             }
         ];
+
         _.each(users, function (user) {
-            Accounts.createUser(user);
+            var id;
+
+            id = Accounts.createUser({
+                username: user.username,
+                email: user.email,
+                password: '123123',
+                profile: { cedula: user.profile.cedula, institucion: user.profile.institucion }
+            });
+
+            if (user.roles.length > 0) {
+                // Need _id of existing user record so this call must come
+                // after `Accounts.createUser` or `Accounts.onCreate`
+                Roles.addUsersToRoles(id, user.roles);
+            }
         });
     }
 });

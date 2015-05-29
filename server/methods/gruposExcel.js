@@ -1,6 +1,6 @@
 Meteor.methods({
 
-    gruposExcel: function () {
+    gruposExcel: function (grupos) {
         var Future = Npm.require('fibers/future');
         var futureResponse = new Future();
 
@@ -39,7 +39,7 @@ Meteor.methods({
 
         // Example : writing multple rows to file
         var row = 1;
-        Grupos.find({}).forEach(function (grupo) {
+        grupos.forEach(function (grupo) {
             worksheet.writeToCell(row, 0, grupo.provincia);
             worksheet.writeToCell(row, 1, grupo.canton);
             worksheet.writeToCell(row, 2, grupo.parroquia);

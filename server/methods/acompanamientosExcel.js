@@ -1,6 +1,6 @@
 Meteor.methods({
 
-    acompanamientosExcel: function () {
+    acompanamientosExcel: function (acompanamientos) {
         var Future = Npm.require('fibers/future');
         var futureResponse = new Future();
 
@@ -82,7 +82,7 @@ Meteor.methods({
 
         // Example : writing multple rows to file
         var row = 1;
-        Acompanamientos.find({}).forEach(function (acompanamiento) {
+        acompanamientos.forEach(function (acompanamiento) {
             worksheet.writeToCell(row, 0, acompanamiento.acomProvincia);
             worksheet.writeToCell(row, 1, acompanamiento.acomCanton);
             worksheet.writeToCell(row, 2, acompanamiento.acomParroquia);

@@ -408,7 +408,15 @@ Acompanamientos.attachSchema(new SimpleSchema({
 if (Meteor.isServer) {
 
     Meteor.publish('acompanamientos', function (userId) {
-        return Acompanamientos.find({createdBy: userId});
+        if (Roles.userIsInRole(userId, 'administrador')) {
+            return Acompanamientos.find({});
+        } else if (Roles.userIsInRole(userId, 'tecnico')) {
+            return Acompanamientos.find({createdBy: userId});
+        } else {
+            // user not authorized. do not publish secrets
+            this.stop();
+            return;
+        }
     });
 
     Acompanamientos.allow({
