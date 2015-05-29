@@ -1,6 +1,6 @@
 Meteor.methods({
 
-    downloadExcelFile: function () {
+    gruposExcel: function () {
         var Future = Npm.require('fibers/future');
         var futureResponse = new Future();
 

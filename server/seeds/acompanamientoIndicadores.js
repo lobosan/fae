@@ -214,7 +214,7 @@ Meteor.startup(function () {
                 'Infraestructura en mal estado o no adecuada',
                 'La infraestructura brinda bienestar a los animales'
             ]},
-            {campo: 'animalAlimentoNecesario', titulo: 'Abastecimiento propio de  alimento en cantidades necesarias al tipo de animal', criterios: [
+            {campo: 'animalAlimentoNecesario', titulo: 'Abastecimiento propio de alimento en cantidades necesarias al tipo de animal', criterios: [
                 'El 100% de la alimentación es comprada',
                 'El 50% es producida en la finca',
                 'Por lo menos el 80% es producida en la finca'
