@@ -73,6 +73,10 @@ small {
 	margin: -9px 7px 0 0;
 }
 
+.btn:focus {
+	outline: none !important;
+}
+
 .btn, .btn-large {
 	text-decoration: none;
 	text-align: center;

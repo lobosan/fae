@@ -18,17 +18,21 @@ TemporaryFiles = new FileCollection('temporaryFiles',
     }
 );
 
-TemporaryFiles.allow({
-    insert: function (userId, file) {
-        return true;
-    },
-    remove: function (userId, file) {
-        return true;
-    },
-    read: function (userId, file) {
-        return true;
-    },
-    write: function (userId, file, fields) {
-        return true;
-    }
-});
+if (Meteor.isServer) {
+    Meteor.startup(function () {
+        TemporaryFiles.allow({
+            insert: function (userId, file) {
+                return true;
+            },
+            remove: function (userId, file) {
+                return true;
+            },
+            read: function (userId, file) {
+                return true;
+            },
+            write: function (userId, file, fields) {
+                return true;
+            }
+        });
+    });
+}
