@@ -7,5 +7,10 @@ Template.listAcompanamientos.events({
             link.href = fileUrl;
             link.click();
         });
+    },
+    'click .reactive-table tbody tr': function () {
+        var acompanamientoId = this._id;
+        Session.setPersistent('acompanamientoId', acompanamientoId);
+        Router.go('detailAcompanamiento');
     }
 });

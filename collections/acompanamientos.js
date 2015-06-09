@@ -419,6 +419,10 @@ if (Meteor.isServer) {
         }
     });
 
+    Meteor.publish('acompanamientoSelected', function (acompanamientoId) {
+        return Acompanamientos.find({_id: acompanamientoId});
+    });
+
     Acompanamientos.allow({
         insert: function (userId, doc) {
             return true;
