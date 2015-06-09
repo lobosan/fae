@@ -90,7 +90,7 @@ small {
 }
 
 .btn, .btn-large, .btn-flat {
-	border-radius: 2px;
+	border-radius: 4px;
 	display: inline-block;
 	height: 36px;
 	line-height: 36px;
@@ -120,9 +120,17 @@ small {
 	color: #676A6C;
 }
 
+.navbar-nav > li > .dropdown-menu {
+	margin-top: 2px !important;
+}
+
 .navbar-inverse {
 	background-color: #474D57 !important;
 	border-color: #2F4050 !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+	background-color: #474D57 !important;
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
@@ -140,6 +148,10 @@ small {
 
 .menu-items > li > a, #login-dropdown-list > a {
 	font-weight: 600;
+}
+
+.dropdown-menu > li > a {
+	color: #676a6c !important;
 }
 
 #login-dropdown-list > .dropdown-toggle {
