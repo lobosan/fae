@@ -1,5 +1,5 @@
 AutoForm.hooks({
-    'insertGrupoForm': {
+    'insertOrganizacionForm': {
         onSuccess: function (operation, result, template) {
             toastr.options = {"timeOut": "2000", "progressBar": true};
             toastr.success('La ficha ha sido guardada exitosamente');

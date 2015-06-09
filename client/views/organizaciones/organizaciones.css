@@ -1,0 +1,34 @@
+.organizacion-td > tbody > tr > td {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.organizacion-td-indicador {
+	padding-left: 17px !important;
+}
+
+.organizacion-titulo-indicador {
+	background-color: #f9f9f9;
+}
+
+.organizacion-text-align-center {
+	text-align: center;
+}
+
+.organizacion-vertical-align-middle {
+	vertical-align: middle !important;
+}
+
+.organizacion-vertical-align-middle > div > input {
+	margin-top: 16px !important;
+}
+
+.organizacion-detail-table {
+	width: 750px !important;
+}
+
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+	background-color: #537769;
+	color:#FFF;
+	cursor: pointer;
+}

@@ -1,6 +1,6 @@
-Grupos = new Mongo.Collection('grupos');
+Organizaciones = new Mongo.Collection('organizaciones');
 
-Grupos.attachSchema(new SimpleSchema({
+Organizaciones.attachSchema(new SimpleSchema({
     provincia: {
         type: String,
         label: 'Provincia',
@@ -203,11 +203,11 @@ Grupos.attachSchema(new SimpleSchema({
 
 if (Meteor.isServer) {
 
-    Meteor.publish('grupos', function (userId) {
+    Meteor.publish('organizaciones', function (userId) {
         if (Roles.userIsInRole(userId, 'administrador')) {
-            return Grupos.find({});
+            return Organizaciones.find({});
         } else if (Roles.userIsInRole(userId, 'tecnico')) {
-            return Grupos.find({createdBy: userId});
+            return Organizaciones.find({createdBy: userId});
         } else {
             // user not authorized. do not publish secrets
             this.stop();
@@ -215,7 +215,11 @@ if (Meteor.isServer) {
         }
     });
 
-    Grupos.allow({
+    Meteor.publish('organizacionSelected', function (organizacionId) {
+      return Organizaciones.find({_id: organizacionId});
+    });
+
+    Organizaciones.allow({
         insert: function (userId, doc) {
             return true;
         },

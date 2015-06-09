@@ -81,7 +81,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010154",
                 "grupo": "Parroquia",
-                "descripcion": "CHECA (JIDCAY)  Cantón Cuenca"
+                "descripcion": "CHECA (JIDCAY) Cantón Cuenca"
             },
             {
                 "codigo": "010155",
@@ -106,7 +106,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010159",
                 "grupo": "Parroquia",
-                "descripcion": "OCTAVIO CORDERO PALACIOS (SANTA ROSA) "
+                "descripcion": "OCTAVIO CORDERO PALACIOS (SANTA ROSA)"
             },
             {
                 "codigo": "010160",
@@ -201,7 +201,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010352",
                 "grupo": "Parroquia",
-                "descripcion": "DANIEL CORDOVA TORAL (EL ORIENTE) "
+                "descripcion": "DANIEL CORDOVA TORAL (EL ORIENTE)"
             },
             {
                 "codigo": "010353",
@@ -271,17 +271,17 @@ Meteor.startup(function () {
             {
                 "codigo": "010552",
                 "grupo": "Parroquia",
-                "descripcion": "BULAN (JOSE VICTOR IZQUIERDO) "
+                "descripcion": "BULAN (JOSE VICTOR IZQUIERDO)"
             },
             {
                 "codigo": "010553",
                 "grupo": "Parroquia",
-                "descripcion": "CHICAN (GUILLERMO ORTEGA) "
+                "descripcion": "CHICAN (GUILLERMO ORTEGA)"
             },
             {
                 "codigo": "010554",
                 "grupo": "Parroquia",
-                "descripcion": "EL CABO  "
+                "descripcion": "EL CABO"
             },
             {
                 "codigo": "010556",
@@ -291,7 +291,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010559",
                 "grupo": "Parroquia",
-                "descripcion": "SAN CRISTOBAL (CARLOS ORDOÑEZ LAZO)  Cantón Paute"
+                "descripcion": "SAN CRISTOBAL (CARLOS ORDOÑEZ LAZO) Cantón Paute"
             },
             {
                 "codigo": "010561",
@@ -326,7 +326,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010701",
                 "grupo": "Parroquia",
-                "descripcion": "SAN FERNANDO   (Cantón San Fernando - Azuay)"
+                "descripcion": "SAN FERNANDO (Cantón San Fernando - Azuay)"
             },
             {
                 "codigo": "010750",
@@ -351,7 +351,7 @@ Meteor.startup(function () {
             {
                 "codigo": "010851",
                 "grupo": "Parroquia",
-                "descripcion": "ABDON CALDERON  (LA UNION) "
+                "descripcion": "ABDON CALDERON (LA UNION)"
             },
             {
                 "codigo": "010853",
@@ -436,7 +436,7 @@ Meteor.startup(function () {
             {
                 "codigo": "011153",
                 "grupo": "Parroquia",
-                "descripcion": "LUIS GALARZA ORELLANA (CAB.EN DELEGSOL) "
+                "descripcion": "LUIS GALARZA ORELLANA (CAB.EN DELEGSOL)"
             },
             {
                 "codigo": "011154",
@@ -546,12 +546,12 @@ Meteor.startup(function () {
             {
                 "codigo": "020155",
                 "grupo": "Parroquia",
-                "descripcion": "SALINAS ( Cantón Guaranda)"
+                "descripcion": "SALINAS (Cantón Guaranda)"
             },
             {
                 "codigo": "020156",
                 "grupo": "Parroquia",
-                "descripcion": "SAN LORENZO ( Cantón Guaranda)"
+                "descripcion": "SAN LORENZO (Cantón Guaranda)"
             },
             {
                 "codigo": "020157",
@@ -601,7 +601,7 @@ Meteor.startup(function () {
             {
                 "codigo": "020351",
                 "grupo": "Parroquia",
-                "descripcion": "ASUNCION (ASANCOTO) "
+                "descripcion": "ASUNCION (ASANCOTO)"
             },
             {
                 "codigo": "020353",
@@ -611,7 +611,7 @@ Meteor.startup(function () {
             {
                 "codigo": "020354",
                 "grupo": "Parroquia",
-                "descripcion": "SAN SEBASTIAN  (Cantón Chimbo)"
+                "descripcion": "SAN SEBASTIAN (Cantón Chimbo)"
             },
             {
                 "codigo": "020355",
@@ -731,7 +731,7 @@ Meteor.startup(function () {
             {
                 "codigo": "030154",
                 "grupo": "Parroquia",
-                "descripcion": "JAVIER LOYOLA (CHUQUIPATA) "
+                "descripcion": "JAVIER LOYOLA (CHUQUIPATA)"
             },
             {
                 "codigo": "030155",
@@ -811,7 +811,7 @@ Meteor.startup(function () {
             {
                 "codigo": "030353",
                 "grupo": "Parroquia",
-                "descripcion": "GENERAL MORALES (SOCARTE) "
+                "descripcion": "GENERAL MORALES (SOCARTE)"
             },
             {
                 "codigo": "030354",
@@ -821,7 +821,7 @@ Meteor.startup(function () {
             {
                 "codigo": "030355",
                 "grupo": "Parroquia",
-                "descripcion": "HONORATO VASQUEZ (TAMBO VIEJO)  Cantón Cañar"
+                "descripcion": "HONORATO VASQUEZ (TAMBO VIEJO) Cantón Cañar"
             },
             {
                 "codigo": "030356",
@@ -891,7 +891,7 @@ Meteor.startup(function () {
             {
                 "codigo": "030650",
                 "grupo": "Parroquia",
-                "descripcion": "DELEG, CABECERA CANTONAL "
+                "descripcion": "DELEG, CABECERA CANTONAL"
             },
             {
                 "codigo": "030651",
@@ -936,12 +936,12 @@ Meteor.startup(function () {
             {
                 "codigo": "040151",
                 "grupo": "Parroquia",
-                "descripcion": "EL CARMELO (EL PUN) "
+                "descripcion": "EL CARMELO (EL PUN)"
             },
             {
                 "codigo": "040153",
                 "grupo": "Parroquia",
-                "descripcion": "JULIO ANDRADE (OREJUELA) "
+                "descripcion": "JULIO ANDRADE (OREJUELA)"
             },
             {
                 "codigo": "040154",
@@ -956,7 +956,7 @@ Meteor.startup(function () {
             {
                 "codigo": "040156",
                 "grupo": "Parroquia",
-                "descripcion": "TOBAR DONOSO (LA BOCANA DE CAMUMBI) "
+                "descripcion": "TOBAR DONOSO (LA BOCANA DE CAMUMBI)"
             },
             {
                 "codigo": "040157",
@@ -1141,7 +1141,7 @@ Meteor.startup(function () {
             {
                 "codigo": "050101",
                 "grupo": "Parroquia",
-                "descripcion": "ELOY ALFARO  (SAN FELIPE)  Cantón Latacunga"
+                "descripcion": "ELOY ALFARO  (SAN FELIPE) Cantón Latacunga"
             },
             {
                 "codigo": "050102",
@@ -1171,7 +1171,7 @@ Meteor.startup(function () {
             {
                 "codigo": "050151",
                 "grupo": "Parroquia",
-                "descripcion": "ALAQUES (ALAQUEZ) "
+                "descripcion": "ALAQUES (ALAQUEZ)"
             },
             {
                 "codigo": "050152",
@@ -1181,7 +1181,7 @@ Meteor.startup(function () {
             {
                 "codigo": "050153",
                 "grupo": "Parroquia",
-                "descripcion": "GUAITACAMA (GUAYTACAMA) "
+                "descripcion": "GUAITACAMA (GUAYTACAMA)"
             },
             {
                 "codigo": "050154",
@@ -1236,7 +1236,7 @@ Meteor.startup(function () {
             {
                 "codigo": "050251",
                 "grupo": "Parroquia",
-                "descripcion": "GUASAGANDA (CAB. EN GUASAGANDA CENTRO) "
+                "descripcion": "GUASAGANDA (CAB. EN GUASAGANDA CENTRO)"
             },
             {
                 "codigo": "0503",
@@ -1246,7 +1246,7 @@ Meteor.startup(function () {
             {
                 "codigo": "050301",
                 "grupo": "Parroquia",
-                "descripcion": "EL CORAZON  "
+                "descripcion": "EL CORAZON"
             },
             {
                 "codigo": "050350",
@@ -1441,7 +1441,7 @@ Meteor.startup(function () {
             {
                 "codigo": "060151",
                 "grupo": "Parroquia",
-                "descripcion": "CACHA (CAB. EN MACHANGARA) "
+                "descripcion": "CACHA (CAB. EN MACHANGARA)"
             },
             {
                 "codigo": "060152",
@@ -2181,7 +2181,7 @@ Meteor.startup(function () {
             {
                 "codigo": "071452",
                 "grupo": "Parroquia",
-                "descripcion": "EL PARAISO  (Cantón Las Lajas)"
+                "descripcion": "EL PARAIS (Cantón Las Lajas)"
             },
             {
                 "codigo": "071453",
@@ -2311,7 +2311,7 @@ Meteor.startup(function () {
             {
                 "codigo": "080652",
                 "grupo": "Parroquia",
-                "descripcion": "SUA  (CAB. EN LA BOCANA) "
+                "descripcion": "SUA (CAB. EN LA BOCANA) "
             },
             {
                 "codigo": "080653",
@@ -2336,7 +2336,7 @@ Meteor.startup(function () {
             {
                 "codigo": "080754",
                 "grupo": "Parroquia",
-                "descripcion": "MONTALVO (CAB. EN HORQUETA)  Cantón Río Verde"
+                "descripcion": "MONTALVO (CAB. EN HORQUETA) Cantón Río Verde"
             },
             {
                 "codigo": "0808",
@@ -2381,7 +2381,7 @@ Meteor.startup(function () {
             {
                 "codigo": "090152",
                 "grupo": "Parroquia",
-                "descripcion": "JUAN GOMEZ RENDON (PROGRESO) "
+                "descripcion": "JUAN GOMEZ RENDON (PROGRESO)"
             },
             {
                 "codigo": "090153",
@@ -2456,7 +2456,7 @@ Meteor.startup(function () {
             {
                 "codigo": "090652",
                 "grupo": "Parroquia",
-                "descripcion": "JUAN BAUTISTA AGUIRRE (LOS TINTOS) "
+                "descripcion": "JUAN BAUTISTA AGUIRRE (LOS TINTOS)"
             },
             {
                 "codigo": "090653",
@@ -2521,7 +2521,7 @@ Meteor.startup(function () {
             {
                 "codigo": "091054",
                 "grupo": "Parroquia",
-                "descripcion": "ROBERTO ASTUDILLO (CAB. EN CRUCE DE VENECIA) "
+                "descripcion": "ROBERTO ASTUDILLO (CAB. EN CRUCE DE VENECIA)"
             },
             {
                 "codigo": "0911",
@@ -2606,7 +2606,7 @@ Meteor.startup(function () {
             {
                 "codigo": "091850",
                 "grupo": "Parroquia",
-                "descripcion": "SANTA LUCIA  "
+                "descripcion": "SANTA LUCIA"
             },
             {
                 "codigo": "0919",
@@ -2616,7 +2616,7 @@ Meteor.startup(function () {
             {
                 "codigo": "091950",
                 "grupo": "Parroquia",
-                "descripcion": "EL SALITRE (LAS RAMAS),  CABECERA CANTONAL"
+                "descripcion": "EL SALITRE (LAS RAMAS), CABECERA CANTONAL"
             },
             {
                 "codigo": "091952",
@@ -2636,7 +2636,7 @@ Meteor.startup(function () {
             {
                 "codigo": "092053",
                 "grupo": "Parroquia",
-                "descripcion": "GRAL. PEDRO J. MONTERO (BOLICHE) "
+                "descripcion": "GRAL. PEDRO J. MONTERO (BOLICHE)"
             },
             {
                 "codigo": "092055",
@@ -2801,7 +2801,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100201",
                 "grupo": "Parroquia",
-                "descripcion": "ANDRADE MARIN  (LOURDES) "
+                "descripcion": "ANDRADE MARIN (LOURDES)"
             },
             {
                 "codigo": "100202",
@@ -2816,7 +2816,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100251",
                 "grupo": "Parroquia",
-                "descripcion": "IMBAYA (SAN LUIS DE COBUENDO) "
+                "descripcion": "IMBAYA (SAN LUIS DE COBUENDO)"
             },
             {
                 "codigo": "100252",
@@ -2856,7 +2856,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100352",
                 "grupo": "Parroquia",
-                "descripcion": "GARCIA MORENO  (LLURIMAGUA) Cantón Cotacachi"
+                "descripcion": "GARCIA MORENO (LLURIMAGUA) Cantón Cotacachi"
             },
             {
                 "codigo": "100353",
@@ -2871,7 +2871,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100355",
                 "grupo": "Parroquia",
-                "descripcion": "PLAZA GUTIERREZ  (CALVARIO) "
+                "descripcion": "PLAZA GUTIERREZ (CALVARIO)"
             },
             {
                 "codigo": "100356",
@@ -2911,7 +2911,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100451",
                 "grupo": "Parroquia",
-                "descripcion": "DR. MIGUEL EGAS CABEZAS (PEGUCHE) "
+                "descripcion": "DR. MIGUEL EGAS CABEZAS (PEGUCHE)"
             },
             {
                 "codigo": "100452",
@@ -2931,7 +2931,7 @@ Meteor.startup(function () {
             {
                 "codigo": "100455",
                 "grupo": "Parroquia",
-                "descripcion": "SAN JOSE DE QUICHINCHE "
+                "descripcion": "SAN JOSE DE QUICHINCHE"
             },
             {
                 "codigo": "100456",
@@ -3021,7 +3021,7 @@ Meteor.startup(function () {
             {
                 "codigo": "1101",
                 "grupo": "Cantón",
-                "descripcion": "LOJA "
+                "descripcion": "LOJA"
             },
             {
                 "codigo": "110101",
@@ -3071,7 +3071,7 @@ Meteor.startup(function () {
             {
                 "codigo": "110156",
                 "grupo": "Parroquia",
-                "descripcion": "MALACATOS (VALLADOLID) "
+                "descripcion": "MALACATOS (VALLADOLID)"
             },
             {
                 "codigo": "110157",
@@ -3096,7 +3096,7 @@ Meteor.startup(function () {
             {
                 "codigo": "110161",
                 "grupo": "Parroquia",
-                "descripcion": "VILCABAMBA  (VICTORIA)"
+                "descripcion": "VILCABAMBA (VICTORIA)"
             },
             {
                 "codigo": "110162",
@@ -3156,7 +3156,7 @@ Meteor.startup(function () {
             {
                 "codigo": "1103",
                 "grupo": "Cantón",
-                "descripcion": "CATAMAYO "
+                "descripcion": "CATAMAYO"
             },
             {
                 "codigo": "110301",
@@ -3196,7 +3196,7 @@ Meteor.startup(function () {
             {
                 "codigo": "1104",
                 "grupo": "Cantón",
-                "descripcion": "CELICA "
+                "descripcion": "CELICA"
             },
             {
                 "codigo": "110450",
@@ -3221,12 +3221,12 @@ Meteor.startup(function () {
             {
                 "codigo": "110457",
                 "grupo": "Parroquia",
-                "descripcion": "TNTE. MAXIMILIANO RODRIGUEZ LOAIZA "
+                "descripcion": "TNTE. MAXIMILIANO RODRIGUEZ LOAIZA"
             },
             {
                 "codigo": "1105",
                 "grupo": "Cantón",
-                "descripcion": "CHAGUARPAMBA "
+                "descripcion": "CHAGUARPAMBA"
             },
             {
                 "codigo": "110501",
@@ -3261,7 +3261,7 @@ Meteor.startup(function () {
             {
                 "codigo": "1106",
                 "grupo": "Cantón",
-                "descripcion": "ESPINDOLA "
+                "descripcion": "ESPINDOLA"
             },
             {
                 "codigo": "110650",
@@ -3301,7 +3301,7 @@ Meteor.startup(function () {
             {
                 "codigo": "1107",
                 "grupo": "Cantón",
-                "descripcion": "GONZANAMA "
+                "descripcion": "GONZANAMA"
             },
             {
                 "codigo": "110750",
@@ -3311,7 +3311,7 @@ Meteor.startup(function () {
             {
                 "codigo": "110751",
                 "grupo": "Parroquia",
-                "descripcion": "CHANGAIMINA (LA LIBERTAD) "
+                "descripcion": "CHANGAIMINA (LA LIBERTAD)"
             },
             {
                 "codigo": "110753",
@@ -3321,7 +3321,7 @@ Meteor.startup(function () {
             {
                 "codigo": "110754",
                 "grupo": "Parroquia",
-                "descripcion": "PURUNUMA (EGUIGUREN) "
+                "descripcion": "PURUNUMA (EGUIGUREN)"
             },
             {
                 "codigo": "110756",
@@ -3331,12 +3331,12 @@ Meteor.startup(function () {
             {
                 "codigo": "1108",
                 "grupo": "Cantón",
-                "descripcion": "MACARA "
+                "descripcion": "MACARA"
             },
             {
                 "codigo": "110801",
                 "grupo": "Parroquia",
-                "descripcion": "GENERAL ELOY ALFARO (SAN SEBASTIAN)  Cantón Macará"
+                "descripcion": "GENERAL ELOY ALFARO (SAN SEBASTIAN) Cantón Macará"
             },
             {
                 "codigo": "110802",
@@ -3461,7 +3461,7 @@ Meteor.startup(function () {
             {
                 "codigo": "111101",
                 "grupo": "Parroquia",
-                "descripcion": "SARAGURO  "
+                "descripcion": "SARAGURO"
             },
             {
                 "codigo": "111150",
@@ -3551,7 +3551,7 @@ Meteor.startup(function () {
             {
                 "codigo": "111351",
                 "grupo": "Parroquia",
-                "descripcion": "CAZADEROS (CAB.EN MANGAURCO) "
+                "descripcion": "CAZADEROS (CAB.EN MANGAURCO)"
             },
             {
                 "codigo": "111352",
@@ -3661,7 +3661,7 @@ Meteor.startup(function () {
             {
                 "codigo": "120153",
                 "grupo": "Parroquia",
-                "descripcion": "FEBRES CORDERO (LAS JUNTAS)(CAB. EN MATA DE CACAO) "
+                "descripcion": "FEBRES CORDERO (LAS JUNTAS)(CAB. EN MATA DE CACAO)"
             },
             {
                 "codigo": "120154",
@@ -3801,7 +3801,7 @@ Meteor.startup(function () {
             {
                 "codigo": "121150",
                 "grupo": "Parroquia",
-                "descripcion": "VALENCIA, CABECERA CANTONAL "
+                "descripcion": "VALENCIA, CABECERA CANTONAL"
             },
             {
                 "codigo": "1212",
@@ -3946,7 +3946,7 @@ Meteor.startup(function () {
             {
                 "codigo": "130551",
                 "grupo": "Parroquia",
-                "descripcion": "SAN FRANCISCO DE NOVILLO (CAB. EN NOVILLO)  Cantón Flavio Alfaro"
+                "descripcion": "SAN FRANCISCO DE NOVILLO (CAB. EN NOVILLO) Cantón Flavio Alfaro"
             },
             {
                 "codigo": "1306",
@@ -4341,7 +4341,7 @@ Meteor.startup(function () {
             {
                 "codigo": "140852",
                 "grupo": "Parroquia",
-                "descripcion": "SAN CARLOS DE LIMON   (Cantón San Juan Bosco)"
+                "descripcion": "SAN CARLOS DE LIMON (Cantón San Juan Bosco)"
             },
             {
                 "codigo": "1410",
@@ -4406,7 +4406,7 @@ Meteor.startup(function () {
             {
                 "codigo": "150451",
                 "grupo": "Parroquia",
-                "descripcion": "GONZALO DIAZ DE PINEDA (EL BOMBON)  Cantón El Chaco"
+                "descripcion": "GONZALO DIAZ DE PINEDA (EL BOMBON) Cantón El Chaco"
             },
             {
                 "codigo": "150452",
@@ -4681,7 +4681,7 @@ Meteor.startup(function () {
             {
                 "codigo": "170153",
                 "grupo": "Parroquia",
-                "descripcion": "ATAHUALPA (HABASPAMBA)  Cantón Quito"
+                "descripcion": "ATAHUALPA (HABASPAMBA) Cantón Quito"
             },
             {
                 "codigo": "170154",
@@ -4691,7 +4691,7 @@ Meteor.startup(function () {
             {
                 "codigo": "170155",
                 "grupo": "Parroquia",
-                "descripcion": "CALDERON (CARAPUNGO)  Cantón Quito"
+                "descripcion": "CALDERON (CARAPUNGO) Cantón Quito"
             },
             {
                 "codigo": "170156",
@@ -4711,7 +4711,7 @@ Meteor.startup(function () {
             {
                 "codigo": "170159",
                 "grupo": "Parroquia",
-                "descripcion": "CHECA (CHILPA)  Cantón Quito"
+                "descripcion": "CHECA (CHILPA) Cantón Quito"
             },
             {
                 "codigo": "170160",
@@ -5221,7 +5221,7 @@ Meteor.startup(function () {
             {
                 "codigo": "180552",
                 "grupo": "Parroquia",
-                "descripcion": "LOS ANDES (CAB. EN POATUG) "
+                "descripcion": "LOS ANDES (CAB. EN POATUG)"
             },
             {
                 "codigo": "180553",
@@ -5341,7 +5341,7 @@ Meteor.startup(function () {
             {
                 "codigo": "180853",
                 "grupo": "Parroquia",
-                "descripcion": "MARCOS ESPINEL (CHACATA) "
+                "descripcion": "MARCOS ESPINEL (CHACATA)"
             },
             {
                 "codigo": "180854",
@@ -5556,7 +5556,7 @@ Meteor.startup(function () {
             {
                 "codigo": "190901",
                 "grupo": "Parroquia",
-                "descripcion": "PAQUISHA  "
+                "descripcion": "PAQUISHA"
             },
             {
                 "codigo": "190950",
@@ -5601,7 +5601,7 @@ Meteor.startup(function () {
             {
                 "codigo": "210252",
                 "grupo": "Parroquia",
-                "descripcion": "GONZALO PIZARRO "
+                "descripcion": "GONZALO PIZARRO"
             },
             {
                 "codigo": "2104",
@@ -5646,7 +5646,7 @@ Meteor.startup(function () {
             {
                 "codigo": "220101",
                 "grupo": "Parroquia",
-                "descripcion": "PUERTO FRANCISCO DE ORELLANA  "
+                "descripcion": "PUERTO FRANCISCO DE ORELLANA"
             },
             {
                 "codigo": "220150",
@@ -5746,7 +5746,7 @@ Meteor.startup(function () {
             {
                 "codigo": "230153",
                 "grupo": "Parroquia",
-                "descripcion": "LUZ DE AMERICA "
+                "descripcion": "LUZ DE AMERICA"
             },
             {
                 "codigo": "230155",

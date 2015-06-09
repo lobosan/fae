@@ -1,9 +1,9 @@
 Meteor.methods({
 
-    initializeGrupos: function (user_id, countGrupos) {
+    initializeOrganizaciones: function (user_id, countOrganizaciones) {
 
-        if (countGrupos === 0) {
-            Factory.define('grupo', Grupos, {
+        if (countOrganizaciones === 0) {
+            Factory.define('grupo', Organizaciones, {
                 provincia: function () {
                     return Fake.fromArray(['Pichincha', 'Imbabura', 'Loja']);
                 },

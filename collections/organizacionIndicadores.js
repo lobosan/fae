@@ -1,12 +1,12 @@
-GrupoIndicadores = new Mongo.Collection('grupoIndicadores');
+OrganizacionIndicadores = new Mongo.Collection('organizacionIndicadores');
 
 if (Meteor.isServer) {
 
-    Meteor.publish('grupoIndicadores', function () {
-        return GrupoIndicadores.find({});
+    Meteor.publish('organizacionIndicadores', function () {
+        return OrganizacionIndicadores.find({});
     });
 
-    GrupoIndicadores.allow({
+    OrganizacionIndicadores.allow({
         insert: function (userId, doc) {
             return true;
         },

@@ -1,6 +1,6 @@
 Meteor.methods({
 
-    gruposExcel: function (grupos) {
+    organizacionesExcel: function (organizaciones) {
         var Future = Npm.require('fibers/future');
         var futureResponse = new Future();
 
@@ -39,35 +39,35 @@ Meteor.methods({
 
         // Example : writing multple rows to file
         var row = 1;
-        grupos.forEach(function (grupo) {
-            worksheet.writeToCell(row, 0, grupo.provincia);
-            worksheet.writeToCell(row, 1, grupo.canton);
-            worksheet.writeToCell(row, 2, grupo.parroquia);
-            worksheet.writeToCell(row, 3, grupo.sectores);
-            worksheet.writeToCell(row, 4, grupo.nombreGrupo);
-            worksheet.writeToCell(row, 5, grupo.representante);
-            worksheet.writeToCell(row, 6, grupo.correo);
-            worksheet.writeToCell(row, 7, grupo.telefonoFijo);
-            worksheet.writeToCell(row, 8, grupo.telefonoCelular);
-            worksheet.writeToCell(row, 9, grupo.personeriaJuridica);
-            worksheet.writeToCell(row, 10, grupo.tiempoVidaGrupo);
-            worksheet.writeToCell(row, 11, grupo.numeroMiembros);
-            worksheet.writeToCell(row, 12, grupo.diaPreferidoReuniones);
-            worksheet.writeToCell(row, 13, grupo.conocimientosGenerales);
-            worksheet.writeToCell(row, 14, grupo.decisionPolitica);
-            worksheet.writeToCell(row, 15, grupo.disenioFinca);
-            worksheet.writeToCell(row, 16, grupo.capacidadesTecnicas);
-            worksheet.writeToCell(row, 17, grupo.capacidadTecnicaGrupo);
-            worksheet.writeToCell(row, 18, grupo.capacidadOrganizacional);
-            worksheet.writeToCell(row, 19, grupo.mecanismoApoyoInterno);
-            worksheet.writeToCell(row, 20, grupo.promotores);
-            worksheet.writeToCell(row, 21, grupo.manejoNormas);
-            worksheet.writeToCell(row, 22, grupo.veedores);
-            worksheet.writeToCell(row, 23, grupo.comiteEtica);
+        organizaciones.forEach(function (organizacion) {
+            worksheet.writeToCell(row, 0, organizacion.provincia);
+            worksheet.writeToCell(row, 1, organizacion.canton);
+            worksheet.writeToCell(row, 2, organizacion.parroquia);
+            worksheet.writeToCell(row, 3, organizacion.sectores);
+            worksheet.writeToCell(row, 4, organizacion.nombreorganizacion);
+            worksheet.writeToCell(row, 5, organizacion.representante);
+            worksheet.writeToCell(row, 6, organizacion.correo);
+            worksheet.writeToCell(row, 7, organizacion.telefonoFijo);
+            worksheet.writeToCell(row, 8, organizacion.telefonoCelular);
+            worksheet.writeToCell(row, 9, organizacion.personeriaJuridica);
+            worksheet.writeToCell(row, 10, organizacion.tiempoVidaorganizacion);
+            worksheet.writeToCell(row, 11, organizacion.numeroMiembros);
+            worksheet.writeToCell(row, 12, organizacion.diaPreferidoReuniones);
+            worksheet.writeToCell(row, 13, organizacion.conocimientosGenerales);
+            worksheet.writeToCell(row, 14, organizacion.decisionPolitica);
+            worksheet.writeToCell(row, 15, organizacion.disenioFinca);
+            worksheet.writeToCell(row, 16, organizacion.capacidadesTecnicas);
+            worksheet.writeToCell(row, 17, organizacion.capacidadTecnicaorganizacion);
+            worksheet.writeToCell(row, 18, organizacion.capacidadOrganizacional);
+            worksheet.writeToCell(row, 19, organizacion.mecanismoApoyoInterno);
+            worksheet.writeToCell(row, 20, organizacion.promotores);
+            worksheet.writeToCell(row, 21, organizacion.manejoNormas);
+            worksheet.writeToCell(row, 22, organizacion.veedores);
+            worksheet.writeToCell(row, 23, organizacion.comiteEtica);
             row++;
         });
 
-        workbook.addSheet('Grupos', worksheet); // Add the worksheet to the workbook
+        workbook.addSheet('Organizaciones', worksheet); // Add the worksheet to the workbook
 
         mkdirp('tmp', Meteor.bindEnvironment(function (err) {
             if (err) {
