@@ -3,8 +3,8 @@
 	<table class="table table-striped">
 		<tbody>
 			<tr>
-				<td>Provincia</td>
-				<td>{{dataAcompanamiento.acomProvincia}}</td>
+				<td class="col-md-4">Provincia</td>
+				<td class="col-md-8">{{dataAcompanamiento.acomProvincia}}</td>
 			</tr>
 			<tr>
 				<td>Cantón</td>
@@ -17,6 +17,272 @@
 			<tr>
 				<td>Sector o comunidad</td>
 				<td>{{dataAcompanamiento.acomSectores}}</td>
+			</tr>
+			<tr>
+				<td>Nombre del o la responsable de la producción</td>
+				<td>{{dataAcompanamiento.acomResponsableProduccion}}</td>
+			</tr>
+			<tr>
+				<td>Nombre de la finca</td>
+				<td>{{dataAcompanamiento.acomNombreFinca}}</td>
+			</tr>
+			<tr>
+				<td>Correo electrónico</td>
+				<td>{{dataAcompanamiento.acomCorreo}}</td>
+			</tr>
+			<tr>
+				<td>Número de teléfono</td>
+				<td>{{dataAcompanamiento.acomTelefono}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL ENTORNO</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Presencia de áreas con especies forestales nativos</td>
+				<td class="col-md-1">{{dataAcompanamiento.entoForestalesNativos}}</td>
+			</tr>
+			<tr>
+				<td>Presencia de especies frutales</td>
+				<td>{{dataAcompanamiento.entoEspeciesFrutales}}</td>
+			</tr>
+			<tr>
+				<td>Protección de caminos de agua</td>
+				<td>{{dataAcompanamiento.entoCaminosAgua}}</td>
+			</tr>
+			<tr>
+				<td>Correcto manejo de materia orgánica</td>
+				<td>{{dataAcompanamiento.entoMateriaOrganica}}</td>
+			</tr>
+			<tr>
+				<td>Correcto manejo de material no orgánica</td>
+				<td>{{dataAcompanamiento.entoMateriaNoOrganica}}</td>
+			</tr>
+			<tr>
+				<td>Área adecuada para poscosecha</td>
+				<td>{{dataAcompanamiento.entoPoscosecha}}</td>
+			</tr>
+			<tr>
+				<td>Áreas adecuadas para bodegas y almacenes</td>
+				<td>{{dataAcompanamiento.entoBodegasAlmacenes}}</td>
+			</tr>
+			<tr>
+				<td>Manejo racional del agua y humedad</td>
+				<td>{{dataAcompanamiento.entoAguaHumedad}}</td>
+			</tr>
+			<tr>
+				<td>Correcta protección de la finca, de las amenazas externas de contaminación</td>
+				<td>{{dataAcompanamiento.entoAmenazasExternasContaminacion}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL SUBSISTEMA DEL SUELO</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Control de la erosión actual</td>
+				<td class="col-md-1">{{dataAcompanamiento.sueloErosionActual}}</td>
+			</tr>
+			<tr>
+				<td>Uso racional de herramientas y mecanización agrícola</td>
+				<td>{{dataAcompanamiento.sueloMecanizacionAgricola}}</td>
+			</tr>
+			<tr>
+				<td>Materia orgánica en el suelo</td>
+				<td>{{dataAcompanamiento.sueloMateriaOrganica}}</td>
+			</tr>
+			<tr>
+				<td>Abastecimiento de materia orgánica</td>
+				<td>{{dataAcompanamiento.sueloAbastecimientoMateriaOrganica}}</td>
+			</tr>
+			<tr>
+				<td>Cobertura viva o muerta en el suelo</td>
+				<td>{{dataAcompanamiento.sueloCobertura}}</td>
+			</tr>
+			<tr>
+				<td>Soltura del suelo</td>
+				<td>{{dataAcompanamiento.sueloSoltura}}</td>
+			</tr>
+			<tr>
+				<td>Actividad biológica</td>
+				<td>{{dataAcompanamiento.sueloActividadBiologica}}</td>
+			</tr>
+			<tr>
+				<td>Estructura del suelo</td>
+				<td>{{dataAcompanamiento.sueloEstructura}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL SUBSISTEMA DE AGUA Y HUMEDAD</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Cantidad suficiente de agua para los cultivos, animales y poscosecha</td>
+				<td class="col-md-1">{{dataAcompanamiento.aguaCantidad}}</td>
+			</tr>
+			<tr>
+				<td>Agua de buena calidad para los cultivos, animales y poscosecha</td>
+				<td>{{dataAcompanamiento.aguaCalidadCultivos}}</td>
+			</tr>
+			<tr>
+				<td>Calidad de sistemas de reserva de agua para los cultivos, animales y poscosecha</td>
+				<td>{{dataAcompanamiento.aguaCalidadSistemasReserva}}</td>
+			</tr>
+			<tr>
+				<td>Manejo de la humedad en el suelo</td>
+				<td>{{dataAcompanamiento.aguaHumedadSuelo}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL SUBSISTEMA DE CULTIVOS</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Planificación de rotación de cultivos por lotes</td>
+				<td class="col-md-1">{{dataAcompanamiento.cultRotacion}}</td>
+			</tr>
+			<tr>
+				<td>Asociación de cultivos</td>
+				<td>{{dataAcompanamiento.cultAsociacion}}</td>
+			</tr>
+			<tr>
+				<td>Diversidad Vegetal</td>
+				<td>{{dataAcompanamiento.cultDiversidadVegetal}}</td>
+			</tr>
+			<tr>
+				<td>Diversidad Genética</td>
+				<td>{{dataAcompanamiento.cultDiversidadGenetica}}</td>
+			</tr>
+			<tr>
+				<td>Presencia de Flores</td>
+				<td>{{dataAcompanamiento.cultPresenciaFlores}}</td>
+			</tr>
+			<tr>
+				<td>Finca libre de contaminación por químicos, industriales, domésticos o de otra índole en lotes</td>
+				<td>{{dataAcompanamiento.cultLibreQuimicos}}</td>
+			</tr>
+			<tr>
+				<td>El origen de semillas y plántulas es propio o de la zona</td>
+				<td>{{dataAcompanamiento.cultOrigenSemillas}}</td>
+			</tr>
+			<tr>
+				<td>Plan de manejo de insectos y enfermedades en los cultivos</td>
+				<td>{{dataAcompanamiento.cultInsectosEnfermedades}}</td>
+			</tr>
+			<tr>
+				<td>Plan de manejo de las hierbas silvestres (malezas)</td>
+				<td>{{dataAcompanamiento.cultHierbasSilvestres}}</td>
+			</tr>
+			<tr>
+				<td>Recuperación de áreas silvestres (hábitat de flora y fauna benéfica)</td>
+				<td>{{dataAcompanamiento.cultAreasSilvestres}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL SUBSISTEMA FORESTAL</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Árboles y arbustos para mejorar y mantener la fertilidad del suelo</td>
+				<td class="col-md-1">{{dataAcompanamiento.forestFertilidadSuelo}}</td>
+			</tr>
+			<tr>
+				<td>Árboles y arbustos para controlar la erosión del suelo</td>
+				<td>{{dataAcompanamiento.forestErosion}}</td>
+			</tr>
+			<tr>
+				<td>Árboles y arbustos en las divisiones de lotes</td>
+				<td>{{dataAcompanamiento.forestDivisionesLotes}}</td>
+			</tr>
+			<tr>
+				<td>Cortinas Rompevientos alrededor de la finca</td>
+				<td>{{dataAcompanamiento.forestCortinasRompevientos}}</td>
+			</tr>
+			<tr>
+				<td>Manejo adecuado de la luz y sombra mediante árboles</td>
+				<td>{{dataAcompanamiento.forestLuzSombraArboles}}</td>
+			</tr>
+			<tr>
+				<td>Diversidad en especies (arbóreas, arbustivas, frutales, maderables)</td>
+				<td>{{dataAcompanamiento.forestDiversidadEspeciesArboreas}}</td>
+			</tr>
+			<tr>
+				<td>Las especies forestales son nativas</td>
+				<td>{{dataAcompanamiento.forestNativas}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA EL SUBSISTEMA ANIMAL</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Diversidad de especies de animales</td>
+				<td class="col-md-1">{{dataAcompanamiento.animalDiversidad}}</td>
+			</tr>
+			<tr>
+				<td>Diversidad genética de especies de animales</td>
+				<td>{{dataAcompanamiento.animalDiversidadGenetica}}</td>
+			</tr>
+			<tr>
+				<td>Infraestructura e instalaciones adecuada al tipo de animal</td>
+				<td>{{dataAcompanamiento.animalInfraestructuraAdecuada}}</td>
+			</tr>
+			<tr>
+				<td>Abastecimiento propio de alimento en cantidades necesarias al tipo de animal</td>
+				<td>{{dataAcompanamiento.animalAlimentoNecesario}}</td>
+			</tr>
+			<tr>
+				<td>Calidad nutricional del alimento adecuada al tipo de animal</td>
+				<td>{{dataAcompanamiento.animalCalidadNutricionalAlimento}}</td>
+			</tr>
+			<tr>
+				<td>Manejo de sanidad en los animales</td>
+				<td>{{dataAcompanamiento.animalSanidadAnimales}}</td>
+			</tr>
+			<tr>
+				<td>Limpieza de instalaciones animales</td>
+				<td>{{dataAcompanamiento.animalLimpiezaInstalaciones}}</td>
+			</tr>
+			<tr>
+				<td>Registros del manejo de animales</td>
+				<td>{{dataAcompanamiento.animalManejoAnimales}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="acom-indicador">INDICADORES PARA INSTALACIONES, ANGARES Y BODEGAS</div>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td class="col-md-11">Buenas condiciones de las instalaciones</td>
+				<td class="col-md-1">{{dataAcompanamiento.instalCondicion}}</td>
+			</tr>
+			<tr>
+				<td>Comodidad en el trabajo dentro de las instalaciones</td>
+				<td>{{dataAcompanamiento.instalComodidad}}</td>
+			</tr>
+			<tr>
+				<td>Protección de posibles riesgos de contaminación de las instalaciones</td>
+				<td>{{dataAcompanamiento.instalRiesgosContaminacion}}</td>
+			</tr>
+			<tr>
+				<td>Adecuado y ordenado guardado de herramientas, combustibles, lubricantes, materiales de construcción, otros,  en los galpones (no se mezclan con cosechas)</td>
+				<td>{{dataAcompanamiento.instalGuardadoHerramientas}}</td>
+			</tr>
+			<tr>
+				<td>Señalética adecuada y suficiente a cada tipo de instalación</td>
+				<td>{{dataAcompanamiento.instalSenaletica}}</td>
+			</tr>
+			<tr>
+				<td>Desechos provenientes de instalaciones tratados adecuadamente</td>
+				<td>{{dataAcompanamiento.instalDesechos}}</td>
 			</tr>
 		</tbody>
 	</table>

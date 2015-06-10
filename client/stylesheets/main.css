@@ -224,10 +224,6 @@ small {
 	margin-right: 5px;
 }
 
-.bottom-buffer {
-	margin-bottom: 150px;
-}
-
 #toast-container > div {
 	opacity: 0.9 !important;
 }
@@ -236,4 +232,8 @@ small {
 	text-align: center;
 	margin-top: 50px;
 	font-style: italic;
+}
+
+.footer {
+	margin-bottom: 150px;
 }

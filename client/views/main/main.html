@@ -10,28 +10,27 @@
 </template>
 
 <template name="header">
-	<div id="wrap">
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="{{pathFor 'home'}}">
-						<i id="logo-img"></i> Fichas Agroecológicas
-					</a>
-				</div>
-
-				<div id="navbar" class="collapse navbar-collapse">
-					{{> mainMenu}}
-				</div>
-			</div>
-		</nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
-			{{> yield}}
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{{pathFor 'home'}}">
+					<i id="logo-img"></i> Fichas Agroecológicas
+				</a>
+			</div>
+
+			<div id="navbar" class="collapse navbar-collapse">
+				{{> mainMenu}}
+			</div>
 		</div>
+	</nav>
+	<div class="container">
+		{{> yield}}
 	</div>
+	<div class="footer"></div>
 </template>
 
 <template name="mainMenu">
