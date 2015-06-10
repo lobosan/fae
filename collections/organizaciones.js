@@ -183,6 +183,22 @@ Organizaciones.attachSchema(new SimpleSchema({
         min: 1,
         max: 10
     },
+    createdAt: {
+        type: Date,
+        autoValue: function() {
+            if (this.isInsert) {
+                return new Date;
+            } else if (this.isUpsert) {
+                return {$setOnInsert: new Date};
+            } else {
+                this.unset();
+            }
+        },
+        autoform: {
+            type: 'hidden',
+            label: false
+        }
+    },
     createdBy: {
         type: String,
         autoValue: function(){

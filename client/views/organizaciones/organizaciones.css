@@ -27,8 +27,12 @@
 	width: 750px !important;
 }
 
-.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
 	background-color: #537769;
-	color:#FFF;
+	color: #FFF;
 	cursor: pointer;
+}
+
+tbody > tr > .comparar {
+	padding-left: 34px !important;
 }
