@@ -38,4 +38,6 @@ netanelgilad:mkdirp
 netanelgilad:node-uuid
 vsivsi:file-collection
 alanning:roles
-pascoual:pdfkit
+chipcastledotcom:jspdf
+chipcastledotcom:jspdf-autotable
+tap:i18n
