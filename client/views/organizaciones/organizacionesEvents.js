@@ -39,7 +39,7 @@ Template.listOrganizaciones.events({
         Router.go('detailOrganizacion');
     },
     'click .reactive-table tbody tr': function (event) {
-        if (event.target.type == 'checkbox') {
+        if (event.target.type == 'checkbox' || event.target.nodeName == "LABEL") {
         } else if (event.target.className !== 'comparar') {
             var organizacionIds = [this._id];
             Session.setPersistent('organizacionIds', organizacionIds);
@@ -51,18 +51,22 @@ Template.listOrganizaciones.events({
 
 Template.detailOrganizacion.events({
    'click .print': function () {
-       var organizacion = Organizaciones.findOne({_id: Session.get('organizacionId')});
+       var organizaciones = Organizaciones.find({_id: {$in: Session.get('organizacionIds')}}, {fields: {'createdBy': 0}}).fetch();
 
        var columns = [
            {title: 'Indicador', key: 'indicador'},
            {title: 'Valor', key: 'value'}
        ];
-       var data = [
-           {indicador: 'Provincia', value: organizacion.provincia},
-           {indicador: 'Cantón', value: organizacion.canton},
-           {indicador: 'Parroquia', value: organizacion.parroquia},
-           {indicador: 'Sector/es', value: organizacion.sectores}
-       ];
+
+       var data = [];
+       _.each(organizaciones, function (organizacion) {
+           data.push(
+               {indicador: 'Provincia', value: organizacion.provincia},
+               {indicador: 'Cantón', value: organizacion.canton},
+               {indicador: 'Parroquia', value: organizacion.parroquia},
+               {indicador: 'Sector/es', value: organizacion.sectores}
+           );
+       });
 
        var doc = new jsPDF('p', 'pt');
 

@@ -33,6 +33,11 @@
 	cursor: pointer;
 }
 
-tbody > tr > .comparar {
-	padding-left: 34px !important;
+.comparar > label {
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+.comparar > label > input[type=checkbox] {
+	cursor: pointer;
 }
