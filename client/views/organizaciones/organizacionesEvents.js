@@ -43,7 +43,6 @@ Template.listOrganizaciones.events({
         } else if (event.target.className !== 'comparar') {
             var organizacionIds = [this._id];
             Session.setPersistent('organizacionIds', organizacionIds);
-            console.log(Session.get('organizacionIds'));
             Router.go('detailOrganizacion');
         }
     }
