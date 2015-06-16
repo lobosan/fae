@@ -1,11 +1,20 @@
 <template name="listOrganizaciones">
 	<h4>Fichas de Diagnóstico de Organización</h4>
 	{{#if isEmptyOrganizaciones}}
-		<a class="btn btn-default" href="{{pathFor 'insertOrganizacion'}}"><icon class="fa fa-file"></icon> Nueva ficha de Organización</a>
-		<h5 class="no-data">No existen datos que mostrar, cree una nueva ficha de diagnóstico de organización</h5>
+		<div class="no-data">
+			<h5>No existen datos que mostrar, cree una </h5>
+			<a class="btn btn-default" href="{{pathFor 'insertOrganizacion'}}"><icon class="fi-page-add"></icon> Nueva ficha de Organización</a>
+		</div>
 	{{else}}
-		<button class="btn btn-primary export"><icon class="fa fa-file-excel-o"></icon> Exportar a Excel</button>
-		<a class="btn btn-default" href="{{pathFor 'insertOrganizacion'}}"><icon class="fa fa-file"></icon> Nueva ficha de Organización</a>
+		<a class="btn btn-primary" title="Nueva ficha de Organización" href="{{pathFor 'insertOrganizacion'}}">
+			<icon class="fi-page-add fi-size-18"></icon>
+		</a>
+		<button class="btn btn-default compare" title="Comparar fichas seleccionadas">
+			<icon class="fa fa-files-o fa-size-17"></icon>
+		</button>
+		<button class="btn btn-default export" title="Exportar a Excel">
+			<icon class="fa fa-file-excel-o"></icon>
+		</button>
 		{{> reactiveTable settings=settings}}
 	{{/if}}
 </template>

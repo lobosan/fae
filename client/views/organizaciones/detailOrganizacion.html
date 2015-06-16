@@ -5,111 +5,21 @@
 
 	<table class="table table-striped top-buffer">
 		<tbody>
+		{{#each detalleOrganizaciones}}
+			{{#if $eq titulo 'Conocimientos de los principios generales de la agroecología'}}
+				<td colspan="10">
+					<div class="acom-indicador">INDICADORES DE LA ORGANIZACIÓN</div>
+				</td>
+			{{/if}}
 			<tr>
-				<td class="col-md-5">Provincia</td>
-				<td class="col-md-7">{{dataOrganizacion.provincia}}</td>
+				<td>{{titulo}}</td>
+				{{#each data}}
+				<td>{{this}}</td>
+				{{/each}}
 			</tr>
-			<tr>
-				<td>Cantón</td>
-				<td>{{dataOrganizacion.canton}}</td>
-			</tr>
-			<tr>
-				<td>Parroquia</td>
-				<td>{{dataOrganizacion.parroquia}}</td>
-			</tr>
-			<tr>
-				<td>Sector/es</td>
-				<td>{{dataOrganizacion.sectores}}</td>
-			</tr>
-			<tr>
-				<td>Nombre del grupo</td>
-				<td>{{dataOrganizacion.nombreGrupo}}</td>
-			</tr>
-			<tr>
-				<td>Representante</td>
-				<td>{{dataOrganizacion.representante}}</td>
-			</tr>
-			<tr>
-				<td>Correo electrónico</td>
-				<td>{{dataOrganizacion.correo}}</td>
-			</tr>
-			<tr>
-				<td>Teléfono fijo</td>
-				<td>{{dataOrganizacion.telefonoFijo}}</td>
-			</tr>
-			<tr>
-				<td>Teléfono celular</td>
-				<td>{{dataOrganizacion.telefonoCelular}}</td>
-			</tr>
-			<tr>
-				<td>Personería jurídica</td>
-				<td>{{dataOrganizacion.personeriaJuridica}}</td>
-			</tr>
-			<tr>
-				<td>Tiempo de vida del grupo</td>
-				<td>{{dataOrganizacion.tiempoVidaGrupo}}</td>
-			</tr>
-			<tr>
-				<td>Número de miembros</td>
-				<td>{{dataOrganizacion.numeroMiembros}}</td>
-			</tr>
-			<tr>
-				<td>Día preferido para reuniones/talleres</td>
-				<td>{{dataOrganizacion.diaPreferidoReuniones}}</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<div class="acom-indicador">INDICADORES DE LA ORGANIZACIÓN</div>
-	<table class="table table-striped">
-		<tbody>
-			<tr>
-				<td class="col-md-5">Conocimientos de los principios generales de la agroecología</td>
-				<td class="col-md-7">{{dataOrganizacion.conocimientosGenerales}}</td>
-			</tr>
-			<tr>
-				<td>Decisión política</td>
-				<td>{{dataOrganizacion.decisionPolitica}}</td>
-			</tr>
-			<tr>
-				<td>Diseño de finca</td>
-				<td>{{dataOrganizacion.disenioFinca}}</td>
-			</tr>
-			<tr>
-				<td>Capacidades técnicas</td>
-				<td>{{dataOrganizacion.capacidadesTecnicas}}</td>
-			</tr>
-			<tr>
-				<td>Capacidad técnica instalada en el grupo</td>
-				<td>{{dataOrganizacion.capacidadTecnicaGrupo}}</td>
-			</tr>
-			<tr>
-				<td>Capacidad organizacional</td>
-				<td>{{dataOrganizacion.capacidadOrganizacional}}</td>
-			</tr>
-			<tr>
-				<td>Mecanismo de apoyo interno</td>
-				<td>{{dataOrganizacion.mecanismoApoyoInterno}}</td>
-			</tr>
-			<tr>
-				<td>Promotores</td>
-				<td>{{dataOrganizacion.promotores}}</td>
-			</tr>
-			<tr>
-				<td>Manejo de normas</td>
-				<td>{{dataOrganizacion.manejoNormas}}</td>
-			</tr>
-			<tr>
-				<td>Veedores</td>
-				<td>{{dataOrganizacion.veedores}}</td>
-			</tr>
-			<tr>
-				<td>Comité de ética</td>
-				<td>{{dataOrganizacion.comiteEtica}}</td>
-			</tr>
+		{{/each}}
 		</tbody>
 	</table>
 
 	<div id="reporteOrganizacion"></div>
-
 </template>

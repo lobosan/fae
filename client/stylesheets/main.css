@@ -231,9 +231,21 @@ small {
 .no-data {
 	text-align: center;
 	margin-top: 50px;
+}
+
+.no-data > h5 {
 	font-style: italic;
+	margin-bottom: 15px;
 }
 
 .footer {
 	margin-bottom: 150px;
+}
+
+.fi-size-18 {
+	font-size: 18px;
+}
+
+.fa-size-17 {
+	font-size: 17px;
 }

@@ -3,7 +3,10 @@ Meteor.methods({
     initializeOrganizaciones: function (user_id, countOrganizaciones) {
 
         if (countOrganizaciones === 0) {
-            Factory.define('grupo', Organizaciones, {
+            Factory.define('organizacion', Organizaciones, {
+                createdAt: function () {
+                    return Fake.fromArray(['2015-01-05', '2015-01-26', '2015-02-11', '2015-03-16', '2015-04-08']);
+                },
                 provincia: function () {
                     return Fake.fromArray(['Pichincha', 'Imbabura', 'Loja']);
                 },
@@ -35,7 +38,7 @@ Meteor.methods({
                     return Fake.fromArray(['Si', 'No', 'En trámite']);
                 },
                 tiempoVidaGrupo: function () {
-                    return Fake.word();
+                    return Fake.fromArray(['5 meses', '2 años', '6 meses y medio', '1 año y 2 meses', '7 años']);
                 },
                 numeroMiembros: function () {
                     return _.random(1, 100);
@@ -82,7 +85,7 @@ Meteor.methods({
             });
 
             _(50).times(function () {
-                Factory.create('grupo');
+                Factory.create('organizacion');
             });
             return true;
         } else {

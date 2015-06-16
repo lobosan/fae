@@ -29,11 +29,21 @@ Template.listOrganizaciones.events({
             link.click();
         });
     },
+    'click .compare': function () {
+        var organizacionIds = [];
+        $('.reactive-table input:checkbox:checked').each(function() {
+            organizacionIds.push(this.value);
+        });
+        Session.setPersistent('organizacionIds', organizacionIds);
+
+        Router.go('detailOrganizacion');
+    },
     'click .reactive-table tbody tr': function (event) {
         if (event.target.type == 'checkbox') {
         } else if (event.target.className !== 'comparar') {
-            var organizacionId = this._id;
-            Session.setPersistent('organizacionId', organizacionId);
+            var organizacionIds = [this._id];
+            Session.setPersistent('organizacionIds', organizacionIds);
+            console.log(Session.get('organizacionIds'));
             Router.go('detailOrganizacion');
         }
     }
