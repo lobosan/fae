@@ -4,6 +4,9 @@ Meteor.methods({
 
         if (countAcompanamientos === 0) {
             Factory.define('acompanamiento', Acompanamientos, {
+                createdAt: function () {
+                    return Fake.fromArray(['2015-01-05', '2015-01-26', '2015-02-11', '2015-03-16', '2015-04-08']);
+                },
                 acomProvincia: function () {
                     return Fake.fromArray(['Pichincha', 'Imbabura', 'Loja']);
                 },
