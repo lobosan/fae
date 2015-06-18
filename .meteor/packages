@@ -18,7 +18,6 @@ underscore
 fortawesome:fontawesome
 jquery
 momentjs:moment
-manuelschoebel:wait-on-lib
 iron:router
 gfk:notifications
 email
@@ -28,15 +27,9 @@ dburles:factory
 anti:fake
 gwendall:simple-schema-i18n
 gwendall:autoform-i18n
-aldeed:autoform-bs-datetimepicker
-tsega:bootstrap3-datetimepicker@=3.1.3_3
 aslagle:reactive-table
 raix:handlebar-helpers
 chrismbeckett:toastr
-netanelgilad:excel
-netanelgilad:mkdirp
-netanelgilad:node-uuid
-vsivsi:file-collection
 alanning:roles
 chipcastledotcom:jspdf
 chipcastledotcom:jspdf-autotable
@@ -44,3 +37,7 @@ tap:i18n
 maibaum:foundation-icons
 meteorhacks:fast-render
 meteorhacks:subs-manager
+netanelgilad:node-uuid
+netanelgilad:mkdirp
+netanelgilad:excel
+vsivsi:file-collection

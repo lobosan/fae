@@ -28,7 +28,7 @@ Meteor.startup(function () {
                 'Reconoce problemas e identifica soluciones',
                 'Crean sus propias recetas'
             ]},
-            {campo: 'capacidadOrganizacional', titulo: 'Capacidad Organizacional', criterios: [
+            {campo: 'capacidadOrganizacional', titulo: 'Capacidad organizacional', criterios: [
                 'Cada productor gestiona individualmente',
                 'La estructura actual genera cierto grado de gestión',
                 'Se gestiona conjuntamente para resolver problemas'

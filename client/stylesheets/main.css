@@ -249,3 +249,15 @@ small {
 .fa-size-17 {
 	font-size: 17px;
 }
+
+@media print {
+	body {
+		padding-top: 0;
+	}
+	.print {
+		display: none;
+	}
+	@page {
+		size: landscape
+	}
+}
