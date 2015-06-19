@@ -67,7 +67,7 @@ Template.detailOrganizacion.events({
         $('#reporteOrganizacion').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             // imageData, type, x, y, width, height
-            doc.addImage(imageData, 'JPEG', 245, 150, 400, 250);
+            doc.addImage(imageData, 'JPEG', 240, 127, 500, 500);
         });
 
         doc.save('Organización.pdf');

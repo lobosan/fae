@@ -250,6 +250,11 @@ small {
 	font-size: 17px;
 }
 
+/*.highcharts-legend-item > text {
+	font-family: "Roboto", sans-serif;
+	color: #676a6c !important;
+}*/
+
 @media print {
 	body {
 		padding-top: 0;
