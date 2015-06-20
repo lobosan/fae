@@ -10,10 +10,7 @@ Template.detailOrganizacion.events({
             });
         }
 
-        var overFlowColumns = [];
-        for (var k = 0; k < columns.length; k++) {
-            overFlowColumns.push(columns[k].key);
-        }
+        var overFlowColumns = _.pluck(columns, 'key');
 
         var data = [];
         for (var i = 1; i < organizaciones.length; i++) {
@@ -42,7 +39,7 @@ Template.detailOrganizacion.events({
                 doc.setTextColor(21, 21, 21);
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
-                doc.text('' + value, x + settings.padding, y);
+                doc.text(value, x + settings.padding, y);
             },
             renderCell: function (x, y, width, height, key, value, row, settings) {
                 doc.setFontSize(9);
@@ -62,7 +59,7 @@ Template.detailOrganizacion.events({
                     doc.setTextColor(51, 51, 51);
                     doc.rect(x, y, width, height, 'S');
                     y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2 - 2.5;
-                    doc.text('' + value, x + settings.padding, y);
+                    doc.text(value, x + settings.padding, y);
                 }
             },
             margins: {horizontal: 40, top: 60, bottom: 40},
