@@ -220,6 +220,10 @@ small {
 	margin-top: 10px;
 }
 
+.top-buffer-md {
+	margin-top: 40px;
+}
+
 .right-buffer {
 	margin-right: 5px;
 }
@@ -249,11 +253,6 @@ small {
 .fa-size-17 {
 	font-size: 17px;
 }
-
-/*.highcharts-legend-item > text {
-	font-family: "Roboto", sans-serif;
-	color: #676a6c !important;
-}*/
 
 @media print {
 	body {

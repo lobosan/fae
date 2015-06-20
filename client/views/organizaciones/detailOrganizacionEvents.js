@@ -10,6 +10,11 @@ Template.detailOrganizacion.events({
             });
         }
 
+        var overFlowColumns = [];
+        for (var k = 0; k < columns.length; k++) {
+            overFlowColumns.push(columns[k].key);
+        }
+
         var data = [];
         for (var i = 1; i < organizaciones.length; i++) {
             var temp = {};
@@ -28,25 +33,25 @@ Template.detailOrganizacion.events({
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
                 doc.text('Reporte de Fichas de Diagnóstico y Organización', options.margins.horizontal, 45);
-                doc.setFontSize(options.fontSize);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
+                doc.setFontSize(10);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                //doc.setFillColor(222, 222, 222);
                 doc.setFillColor(245,245,245);
                 doc.setTextColor(21, 21, 21);
-                //doc.setFontStyle('bold');
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
                 doc.text('' + value, x + settings.padding, y);
             },
             renderCell: function (x, y, width, height, key, value, row, settings) {
+                doc.setFontSize(9);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
                 // Colspan
                 if (row === 13) {
                     if (value == 'GRUPO') {
+                        doc.setFontSize(10);
                         doc.setFillColor(245,245,245);
                         doc.setTextColor(21, 21, 21);
                         doc.rect(x, y, doc.internal.pageSize.width - settings.margins.horizontal * 2, height, 'F');
@@ -60,14 +65,20 @@ Template.detailOrganizacion.events({
                     doc.text('' + value, x + settings.padding, y);
                 }
             },
-            margins: {horizontal: 40, top: 60, bottom: 40}
+            margins: {horizontal: 40, top: 60, bottom: 40},
+            overflow: 'linebreak',
+            overflowColumns: overFlowColumns
         };
         doc.autoTable(columns, data, options);
 
+        doc.addPage();
+        doc.setFontSize(12);
+        doc.setTextColor(51, 51, 51);
+        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
         $('#reporteOrganizacion').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             // imageData, type, x, y, width, height
-            doc.addImage(imageData, 'JPEG', 240, 127, 500, 500);
+            doc.addImage(imageData, 'JPEG', 200, 50, 550, 550);
         });
 
         doc.save('Organización.pdf');

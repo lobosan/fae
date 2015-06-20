@@ -19,66 +19,69 @@
 }(Highcharts));
 
 Template.detailOrganizacion.onRendered(function () {
-    var organizacionesData = Session.get('detalleOrganizaciones');
+    Tracker.autorun(function () {
+        var organizacionesData = Session.get('detalleOrganizaciones');
 
-    var categories = [];
-    for (var i = 14; i < organizacionesData.length; i++) {
-        categories.push(organizacionesData[i].titulo);
-    }
-
-    var series = [];
-    for (var j = 0; j < organizacionesData[0].data.length; j++) {
-        var temp = {};
-        temp['name'] = 'Ficha ' + organizacionesData[0].data[j];
-        temp['pointPlacement'] = 'on';
-        var data = [];
-        for (var k = 14; k < organizacionesData.length; k++) {
-            data.push(organizacionesData[k].data[j]);
+        var categories = [];
+        for (var i = 14; i < organizacionesData.length; i++) {
+            categories.push(organizacionesData[i].titulo);
         }
-        temp['data'] = data;
-        series.push(temp);
-    }
 
-    this.$('#reporteOrganizacion').highcharts({
-        chart: {
-            polar: true,
-            type: 'line',
-            height: '600'
-        },
-        pane: {
-            size: '80%'
-        },
-        title: {
-            text: null
-        },
-        xAxis: {
-            categories: categories,
-            tickmarkPlacement: 'on',
-            lineWidth: 0
-        },
-        yAxis: {
-            gridLineInterpolation: 'polygon',
-            lineWidth: 0,
-            min: 0
-        },
-        tooltip: {
-            shared: true,
-            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
-        },
-        legend: {
-            align: 'right',
-            verticalAlign: 'top',
-            y: 70,
-            layout: 'vertical',
-            itemStyle: {
-                'font-family': '"Roboto", sans-serif',
-                'color': '#676a6c',
-                'padding': '5px'
+        var series = [];
+        for (var j = 0; j < organizacionesData[0].data.length; j++) {
+            var temp = {};
+            temp['name'] = 'Ficha ' + organizacionesData[0].data[j];
+            temp['pointPlacement'] = 'on';
+            var data = [];
+            for (var k = 14; k < organizacionesData.length; k++) {
+                data.push(organizacionesData[k].data[j]);
             }
-        },
-        series: series,
-        credits: {
-            enabled: false
+            temp['data'] = data;
+            series.push(temp);
         }
+
+        this.$('#reporteOrganizacion').highcharts({
+            chart: {
+                polar: true,
+                type: 'line',
+                height: '600'
+            },
+            pane: {
+                size: '80%'
+            },
+            title: {
+                text: null
+            },
+            xAxis: {
+                categories: categories,
+                tickmarkPlacement: 'on',
+                lineWidth: 0
+            },
+            yAxis: {
+                gridLineInterpolation: 'polygon',
+                lineWidth: 0,
+                min: 0,
+                tickInterval: 2
+            },
+            tooltip: {
+                shared: true,
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+            },
+            legend: {
+                align: 'right',
+                verticalAlign: 'top',
+                y: 50,
+                layout: 'vertical',
+                itemStyle: {
+                    'font-family': '"Roboto", sans-serif',
+                    'color': '#676a6c',
+                    'padding': '5px'
+                }
+            },
+            series: series,
+            credits: {
+                enabled: false
+            }
+        });
     });
 });
