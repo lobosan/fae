@@ -28,10 +28,12 @@ Template.detailOrganizacion.onRendered(function () {
         }
 
         var series = [];
+        var colors = ['#26A698', '#777777', '#5D8ED6'];
         for (var j = 0; j < organizacionesData[0].data.length; j++) {
             var temp = {};
             temp['name'] = 'Ficha ' + organizacionesData[0].data[j];
             temp['pointPlacement'] = 'on';
+            temp['color'] = colors[j];
             var data = [];
             for (var k = 14; k < organizacionesData.length; k++) {
                 data.push(organizacionesData[k].data[j]);
@@ -65,7 +67,7 @@ Template.detailOrganizacion.onRendered(function () {
             },
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: {point.y:,.0f}</span><br/>'
             },
             legend: {
                 align: 'right',
@@ -79,6 +81,9 @@ Template.detailOrganizacion.onRendered(function () {
                 }
             },
             series: series,
+            exporting: {
+                enabled: false
+            },
             credits: {
                 enabled: false
             }
