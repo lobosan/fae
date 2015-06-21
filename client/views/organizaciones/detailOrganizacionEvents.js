@@ -26,6 +26,7 @@ Template.detailOrganizacion.events({
         var doc = new jsPDF('l', 'pt', 'a4');
 
         var options = {
+            lineHeight: 16,
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
@@ -45,7 +46,6 @@ Template.detailOrganizacion.events({
                 doc.setFontSize(9);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                // Colspan
                 if (row === 13) {
                     if (value == 'GRUPO') {
                         doc.setFontSize(10);
