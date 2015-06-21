@@ -1,9 +1,6 @@
 Meteor.methods({
     initializeOrganizaciones: function () {
         Factory.define('organizacion', Organizaciones, {
-            createdAt: function () {
-                return Fake.fromArray(['2015-01-05', '2015-01-26', '2015-02-11', '2015-03-16', '2015-04-08']);
-            },
             provincia: function () {
                 return Fake.fromArray(['Pichincha', 'Imbabura', 'Loja']);
             },
@@ -76,12 +73,15 @@ Meteor.methods({
             comiteEtica: function () {
                 return _.random(1, 10);
             },
+            createdAt: function () {
+                return Fake.fromArray(['2015-01-05', '2015-01-26', '2015-02-11', '2015-03-16', '2015-04-08']);
+            },
             createdBy: function () {
                 return this.userId;
             }
         });
 
-        _(5000).times(function () {
+        _(100).times(function () {
             Factory.create('organizacion');
         });
     }

@@ -196,7 +196,7 @@ Meteor.methods({
             }
         });
 
-        _(5000).times(function () {
+        _(100).times(function () {
             Factory.create('acompanamiento');
         });
     }

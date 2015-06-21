@@ -18,7 +18,9 @@ Meteor.methods({
                 temp.push(organizaciones[i][key]);
             }
             if (key !== '_id') data.push(temp);
+            if (key == 'createdAt') data.unshift(temp);
         }
+        data.pop();
 
         var detalleOrganizaciones = [];
         for (var j = 0; j < indicadoresTitulos.length; j++) {
@@ -27,6 +29,7 @@ Meteor.methods({
                 'data': data[j]
             });
         }
+
         return detalleOrganizaciones;
     }
 });
