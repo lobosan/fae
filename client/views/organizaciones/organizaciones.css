@@ -33,11 +33,30 @@
 	cursor: pointer;
 }
 
+.comparar {
+	width: 85px !important;
+	padding-top: 0 !important;
+	padding-right: 0 !important;
+}
+
 .comparar > label {
-	padding: 0 25px;
+	padding: 8px 26px;
+	margin-bottom: 0 !important;
 	cursor: pointer;
 }
 
 .comparar > label > input[type=checkbox] {
 	cursor: pointer;
+}
+
+.createdAt {
+	min-width: 90px !important;
+}
+
+.provincia {
+	min-width: 100px !important;
+}
+
+.nombreGrupo {
+	min-width: 140px !important;
 }

@@ -1,5 +1,5 @@
 (function (H) {
-    H.Chart.prototype.createCanvas = function (divId) {
+    H.Chart.prototype.createCanvas = function () {
         var svg = this.getSVG(),
             width = parseInt(svg.match(/width="([0-9]+)"/)[1]),
             height = parseInt(svg.match(/height="([0-9]+)"/)[1]),

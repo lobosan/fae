@@ -216,6 +216,10 @@ small {
 	color: #676a6c;
 }
 
+.reactive-table > tbody > tr > td {
+	padding-bottom: 0 !important;
+}
+
 .top-buffer {
 	margin-top: 10px;
 }
