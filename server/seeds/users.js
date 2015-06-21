@@ -3,6 +3,15 @@ Meteor.startup(function () {
 
         var users = [
             {
+                username: 'Administrador',
+                email: 'admin@admin.com',
+                profile: {
+                    cedula: '1231231233',
+                    institucion: 'Probío'
+                },
+                roles: ['admin']
+            },
+            {
                 username: 'Test',
                 email: 'test@test.com',
                 profile: {
@@ -18,14 +27,6 @@ Meteor.startup(function () {
                     institucion: 'Probío'
                 },
                 roles: ['tecnico']
-            }, {
-                username: 'Administrador',
-                email: 'admin@admin.com',
-                profile: {
-                    cedula: '1231231233',
-                    institucion: 'Probío'
-                },
-                roles: ['administrador']
             }
         ];
 
