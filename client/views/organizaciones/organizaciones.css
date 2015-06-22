@@ -53,10 +53,10 @@
 	min-width: 90px !important;
 }
 
-.provincia {
-	min-width: 100px !important;
+.provincia, .canton, .parroquia {
+	min-width: 120px !important;
 }
 
-.nombreGrupo {
-	min-width: 140px !important;
+.nombreGrupo, .sectores {
+	min-width: 180px !important;
 }

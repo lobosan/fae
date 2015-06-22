@@ -21,13 +21,17 @@ Template.listAcompanamientos.helpers({
             collection: Acompanamientos,
             rowsPerPage: 10,
             showFilter: true,
-            showColumnToggles: true,
             fields: [
+                {key: 'comparar', label: 'Comparar', sortable: false, fn: function (value, object) {
+                    return new Spacebars.SafeString(
+                        "<label><input type='checkbox' value='"+object._id+"' /></label>"
+                    );
+                }},
+                {key: 'createdAt', label: 'Fecha', sortOrder: 0, sortDirection: 'descending'},
                 {key: 'acomProvincia', label: 'Provincia'},
                 {key: 'acomCanton', label: 'Cantón'},
                 {key: 'acomParroquia', label: 'Parroquia'},
                 {key: 'acomSectores', label: 'Sector o comunidad'},
-                {key: 'acomResponsableProduccion', label: 'Responsable de producción'},
                 {key: 'acomNombreFinca', label: 'Nombre de la finca'}
             ]
         };

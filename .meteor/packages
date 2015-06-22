@@ -19,7 +19,6 @@ fortawesome:fontawesome
 jquery
 momentjs:moment
 iron:router
-gfk:notifications
 email
 maazalik:highcharts
 sacha:spin
