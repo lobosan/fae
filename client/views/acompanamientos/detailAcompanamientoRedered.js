@@ -1,28 +1,40 @@
-Template.detailOrganizacion.onRendered(function () {
+Template.detailAcompanamiento.onRendered(function () {
     Tracker.autorun(function () {
-        var organizacionesData = Session.get('detalleOrganizaciones');
+        var acompanamientosData = Session.get('detalleAcompanamientos');
 
-        var categories = [];
-        for (var i = 14; i < organizacionesData.length; i++) {
-            categories.push(organizacionesData[i].titulo);
-        }
+        var categories = [
+            'Indicadores para el entorno',
+            'Indicadores para el subsistema del suelo',
+            'Indicadores para el subsistema de agua y humedad',
+            'Indicadores para el subsistema de cultivos',
+            'Indicadores para el subsistema forestal',
+            'Indicadores para el subsistema animal',
+            'Indicadores para instalaciones, angares y bodegas'
+        ];
 
         var series = [];
         var colors = ['#26A698', '#777777', '#5D8ED6'];
-        for (var j = 0; j < organizacionesData[0].data.length; j++) {
+        for (var j = 0; j < acompanamientosData[0].data.length; j++) {
             var temp = {};
-            temp['name'] = 'Ficha ' + organizacionesData[0].data[j];
+            temp['name'] = 'Ficha ' + acompanamientosData[0].data[j];
             temp['pointPlacement'] = 'on';
             temp['color'] = colors[j];
+            var grupo = function (inicio, fin) {
+                var grupo = [];
+                for (var k = inicio; k <= fin; k++)
+                    grupo.push(acompanamientosData[k].data[j]);
+                return _.reduce(grupo, function(memo, num) {
+                    return (memo + num);
+                }, 0) / grupo.length;
+            };
+
             var data = [];
-            for (var k = 14; k < organizacionesData.length; k++) {
-                data.push(organizacionesData[k].data[j]);
-            }
+            data.push(grupo(9, 17), grupo(18, 25), grupo(26, 29), grupo(30, 39), grupo(40, 46), grupo(47, 54), grupo(55, 60));
             temp['data'] = data;
             series.push(temp);
         }
 
-        this.$('#reporteOrganizacion').highcharts({
+        this.$('#reporteAcompanamiento').highcharts({
             chart: {
                 polar: true,
                 type: 'line',
@@ -47,7 +59,7 @@ Template.detailOrganizacion.onRendered(function () {
             },
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: {point.y:,.0f}</span><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: {point.y:,.2f}</span><br/>'
             },
             legend: {
                 align: 'right',
