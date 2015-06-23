@@ -1,0 +1,54 @@
+<template name="detailConsumidor">
+	<h4>Detalles de Ficha del Consumidor</h4>
+
+	<button class="btn btn-primary print"><icon class="fa fa-file-pdf-o"></icon> Imprimir</button>
+
+	<table class="table table-striped top-buffer">
+		<tbody>
+			<tr>
+				<td class="col-md-3">Fecha de creación</td>
+				<td class="col-md-9">{{detalleConsumidores.createdAt}}</td>
+			</tr>
+			<tr>
+				<td>Nombre</td>
+				<td>{{detalleConsumidores.consNombre}}</td>
+			</tr>
+			<tr>
+				<td>Contacto</td>
+				<td>{{detalleConsumidores.consContacto}}</td>
+			</tr>
+			<tr>
+				<td>Calidad del producto adquirido</td>
+				<td>{{detalleConsumidores.consCalidadProductoAdquirido}}</td>
+			</tr>
+			<tr>
+				<td>Calidad de la atención del vendedor</td>
+				<td>{{detalleConsumidores.consCalidadAtencionVendedor}}</td>
+			</tr>
+			<tr>
+				<td>Calidad del área de expendio</td>
+				<td>{{detalleConsumidores.consCalidadAreaExpendio}}</td>
+			</tr>
+			<tr>
+				<td>Presentación del producto</td>
+				<td>{{detalleConsumidores.consPresentacionProducto}}</td>
+			</tr>
+			<tr>
+				<td>Nombre del productor visitado</td>
+				<td>{{detalleConsumidores.consNombreProductorVisitado}}</td>
+			</tr>
+			<tr>
+				<td>Nombre de la feria visitada</td>
+				<td>{{detalleConsumidores.consNombreFeriaVisitada}}</td>
+			</tr>
+			<tr>
+				<td>Comentarios y sugerencias sobre la feria</td>
+				<td>{{detalleConsumidores.consComentariosSugerencias}}</td>
+			</tr>
+			<tr>
+				<td>Impresiones de la visita a la finca</td>
+				<td>{{detalleConsumidores.consImpresionesVisitaFinca}}</td>
+			</tr>
+		</tbody>
+	</table>
+</template>

@@ -19,6 +19,7 @@ Template.listAcompanamientos.helpers({
     settings: function () {
         return {
             collection: Acompanamientos,
+            rowClass: 'checkbox-reactive-table',
             rowsPerPage: 10,
             showFilter: true,
             fields: [

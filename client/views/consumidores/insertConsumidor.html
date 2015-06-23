@@ -1,0 +1,16 @@
+<template name='insertConsumidor'>
+	<h4>Nueva Ficha del Consumidor</h4>
+	{{#autoForm collection='Consumidores' id='insertConsumidorForm' type='insert'}}
+		{{> afQuickField name='consNombre'}}
+		{{> afQuickField name='consContacto'}}
+		{{> afQuickField name='consCalidadProductoAdquirido'}}
+		{{> afQuickField name='consCalidadAtencionVendedor'}}
+		{{> afQuickField name='consCalidadAreaExpendio'}}
+		{{> afQuickField name='consPresentacionProducto'}}
+		{{> afQuickField name='consNombreProductorVisitado'}}
+		{{> afQuickField name='consNombreFeriaVisitada'}}
+		{{> afQuickField name='consComentariosSugerencias'}}
+		{{> afQuickField name='consImpresionesVisitaFinca'}}
+		<button type='submit' class='btn btn-primary'>GUARDAR</button>
+	{{/autoForm}}
+</template>

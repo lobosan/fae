@@ -19,6 +19,7 @@ Template.listOrganizaciones.helpers({
     settings: function () {
         return {
             collection: Organizaciones,
+            rowClass: 'checkbox-reactive-table',
             rowsPerPage: 10,
             showFilter: true,
             fields: [

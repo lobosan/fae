@@ -216,7 +216,7 @@ small {
 	color: #676a6c;
 }
 
-.reactive-table > tbody > tr > td {
+.checkbox-reactive-table > td {
 	padding-bottom: 0 !important;
 }
 
