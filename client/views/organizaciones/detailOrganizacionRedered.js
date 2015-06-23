@@ -26,7 +26,8 @@ Template.detailOrganizacion.onRendered(function () {
             chart: {
                 polar: true,
                 type: 'line',
-                height: '600'
+                width: '800',
+                height: '500'
             },
             pane: {
                 size: '80%'

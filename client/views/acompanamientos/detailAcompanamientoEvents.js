@@ -88,7 +88,7 @@ Template.detailAcompanamiento.events({
         doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 45);
         $('#reporteAcompanamiento').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
-            doc.addImage(imageData, 'JPEG', 200, 50, 550, 550);  // imageData, type, x, y, width, height
+            doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height
         });
 
         doc.save('Acompañamiento.pdf');

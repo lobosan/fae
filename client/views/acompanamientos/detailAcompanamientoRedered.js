@@ -38,10 +38,8 @@ Template.detailAcompanamiento.onRendered(function () {
             chart: {
                 polar: true,
                 type: 'line',
-                height: '600'
-            },
-            pane: {
-                size: '80%'
+                width: '800',
+                height: '500'
             },
             title: {
                 text: null
@@ -64,7 +62,6 @@ Template.detailAcompanamiento.onRendered(function () {
             legend: {
                 align: 'right',
                 verticalAlign: 'top',
-                y: 50,
                 layout: 'vertical',
                 itemStyle: {
                     'font-family': '"Roboto", sans-serif',
