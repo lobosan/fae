@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-    Security.defineMethod("ifIsCurrentUser", {
+    Security.defineMethod("ifIsOwner", {
         fetch: [],
         transform: null,
         deny: function (type, arg, userId, doc) {
@@ -20,10 +20,10 @@ Meteor.startup(function () {
     // Only if a user is logged in and is the owner of the document
     Security.permit(['update', 'remove']).collections([
         Organizaciones, Acompanamientos, Consumidores
-    ]).ifLoggedIn().ifIsCurrentUser().apply();
+    ]).ifLoggedIn().ifIsOwner().apply();
 
-    // Update users only if they don't try to change the roles property
-    Meteor.users.permit('update').ifLoggedIn().exceptProps(['roles']).apply();
+    // Only if a user doesn't try to change the roles property and is the owner of the document
+    Meteor.users.permit('update').ifLoggedIn().ifIsOwner().exceptProps(['roles']).apply();
 
     TemporaryFiles.allow({
         insert: function (userId, file) {

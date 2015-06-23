@@ -1,5 +1,5 @@
 Template.detailConsumidor.helpers({
-    detalleConsumidores: function () {
+    detalleConsumidor: function () {
         return Consumidores.findOne({_id: Session.get('consumidorId')});
     }
 });

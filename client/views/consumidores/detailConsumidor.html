@@ -3,52 +3,54 @@
 
 	<button class="btn btn-primary print"><icon class="fa fa-file-pdf-o"></icon> Imprimir</button>
 
+	{{#with detalleConsumidor}}
 	<table class="table table-striped top-buffer">
 		<tbody>
 			<tr>
-				<td class="col-md-3">Fecha de creación</td>
-				<td class="col-md-9">{{detalleConsumidores.createdAt}}</td>
+				<td class="col-sm-3">Fecha de creación</td>
+				<td class="col-sm-9">{{createdAt}}</td>
 			</tr>
 			<tr>
 				<td>Nombre</td>
-				<td>{{detalleConsumidores.consNombre}}</td>
+				<td>{{consNombre}}</td>
 			</tr>
 			<tr>
 				<td>Contacto</td>
-				<td>{{detalleConsumidores.consContacto}}</td>
+				<td>{{consContacto}}</td>
 			</tr>
 			<tr>
 				<td>Calidad del producto adquirido</td>
-				<td>{{detalleConsumidores.consCalidadProductoAdquirido}}</td>
+				<td>{{consCalidadProductoAdquirido}}</td>
 			</tr>
 			<tr>
 				<td>Calidad de la atención del vendedor</td>
-				<td>{{detalleConsumidores.consCalidadAtencionVendedor}}</td>
+				<td>{{consCalidadAtencionVendedor}}</td>
 			</tr>
 			<tr>
 				<td>Calidad del área de expendio</td>
-				<td>{{detalleConsumidores.consCalidadAreaExpendio}}</td>
+				<td>{{consCalidadAreaExpendio}}</td>
 			</tr>
 			<tr>
 				<td>Presentación del producto</td>
-				<td>{{detalleConsumidores.consPresentacionProducto}}</td>
+				<td>{{consPresentacionProducto}}</td>
 			</tr>
 			<tr>
 				<td>Nombre del productor visitado</td>
-				<td>{{detalleConsumidores.consNombreProductorVisitado}}</td>
+				<td>{{consNombreProductorVisitado}}</td>
 			</tr>
 			<tr>
 				<td>Nombre de la feria visitada</td>
-				<td>{{detalleConsumidores.consNombreFeriaVisitada}}</td>
+				<td>{{consNombreFeriaVisitada}}</td>
 			</tr>
 			<tr>
 				<td>Comentarios y sugerencias sobre la feria</td>
-				<td>{{detalleConsumidores.consComentariosSugerencias}}</td>
+				<td>{{consComentariosSugerencias}}</td>
 			</tr>
 			<tr>
 				<td>Impresiones de la visita a la finca</td>
-				<td>{{detalleConsumidores.consImpresionesVisitaFinca}}</td>
+				<td>{{consImpresionesVisitaFinca}}</td>
 			</tr>
 		</tbody>
 	</table>
+	{{/with}}
 </template>
