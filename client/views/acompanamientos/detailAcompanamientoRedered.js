@@ -29,7 +29,7 @@ Template.detailAcompanamiento.onRendered(function () {
             };
 
             var data = [];
-            data.push(grupo(9, 17), grupo(18, 25), grupo(26, 29), grupo(30, 39), grupo(40, 46), grupo(47, 54), grupo(55, 60));
+            data.push(grupo(11, 19), grupo(18, 25), grupo(26, 29), grupo(30, 39), grupo(40, 46), grupo(47, 54), grupo(55, 60));
             temp['data'] = data;
             series.push(temp);
         }

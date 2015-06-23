@@ -219,6 +219,11 @@ Meteor.startup(function () {
                 'El 50% es producida en la finca',
                 'Por lo menos el 80% es producida en la finca'
             ]},
+            {campo: 'animalSanidad', titulo: 'Sanidad animal', criterios: [
+                'No utiliza remedios con plantas medicinales para los principales problemas sanitarios en animales',
+                'Al menos utiliza dos remedios con plantas medicinales para los principales problemas sanitarios en animales',
+                'Utiliza más de dos remedios con plantas medicinales para los principales problemas sanitarios en animales'
+            ]},
             {campo: 'animalCalidadNutricionalAlimento', titulo: 'Calidad nutricional del alimento adecuada al tipo de animal', criterios: [
                 'Los animales denotan desnutrición',
                 'Se completa la cantidad nutricional con fórmulas adquiridas en almacenes',

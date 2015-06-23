@@ -4,7 +4,8 @@ Meteor.methods({
         var indicadores = AcompanamientoIndicadores.find({}, {fields: {'titulo': 1}}).fetch();
 
         var indicadoresTitulos = ['Fecha de creación', 'Provincia', 'Cantón', 'Parroquia', 'Sector o comunidad', 
-            'Nombre del o la responsable de la producción', 'Nombre de la finca', 'Correo electrónico', 'Número de teléfono'
+            'Nombre del o la responsable de la producción', 'Nombre de la finca', 'Correo electrónico',
+            'Número de teléfono', 'Área con riego (m²)', 'Área sin riego (m²)'
         ];
         _.each(indicadores, function (indicador) {
             indicadoresTitulos.push(indicador.titulo);

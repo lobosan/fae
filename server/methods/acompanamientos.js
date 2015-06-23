@@ -25,6 +25,12 @@ Meteor.methods({
             acomTelefono: function () {
                 return Fake.fromArray(['025689569', '042365856', '062214455']);
             },
+            acomAreaConRiego: function () {
+                return Fake.fromArray(['1040', '3500', '5030', '0', '10163']);
+            },
+            acomAreaSinRiego: function () {
+                return Fake.fromArray(['210', '750', '1000', '0', '4250']);
+            },
             /*** Indicadores para el entorno ***/
             entoForestalesNativos: function () {
                 return _.random(1, 10);
@@ -155,6 +161,9 @@ Meteor.methods({
                 return _.random(1, 10);
             },
             animalAlimentoNecesario: function () {
+                return _.random(1, 10);
+            },
+            animalSanidad: function () {
                 return _.random(1, 10);
             },
             animalCalidadNutricionalAlimento: function () {
