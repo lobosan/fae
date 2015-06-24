@@ -220,6 +220,10 @@ small {
 	padding-bottom: 0 !important;
 }
 
+.bottom-buffer {
+	margin-bottom: 15px;
+}
+
 .top-buffer {
 	margin-top: 10px;
 }

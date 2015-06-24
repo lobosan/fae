@@ -29,11 +29,11 @@ Template.listOrganizaciones.helpers({
                     );
                 }},
                 {key: 'createdAt', label: 'Fecha', sortOrder: 0, sortDirection: 'descending'},
-                {key: 'provincia', label: 'Provincia'},
-                {key: 'canton', label: 'Cantón'},
-                {key: 'parroquia', label: 'Parroquia'},
-                {key: 'sectores', label: 'Sector/es'},
-                {key: 'nombreGrupo', label: 'Nombre del grupo'}
+                {key: 'provincia', label: Organizaciones.simpleSchema().label()['provincia']},
+                {key: 'canton', label: Organizaciones.simpleSchema().label()['canton']},
+                {key: 'parroquia', label: Organizaciones.simpleSchema().label()['parroquia']},
+                {key: 'sectores', label: Organizaciones.simpleSchema().label()['sectores']},
+                {key: 'nombreGrupo', label: Organizaciones.simpleSchema().label()['nombreGrupo']}
             ]
         };
     }

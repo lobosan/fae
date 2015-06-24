@@ -15,7 +15,7 @@ Template.listOrganizaciones.events({
         });
         if (organizacionIds.length < 2 || organizacionIds.length > 3) {
             toastr.options = {"timeOut": "6000", "progressBar": true};
-            toastr.error('ERROR: Para comparar necesita seleccionar mínimo de 2 a 3 fichas');
+            toastr.error('ERROR: Para comparar necesita seleccionar de 2 a 3 fichas');
         } else {
             Session.setPersistent('organizacionIds', organizacionIds);
             Router.go('detailOrganizacion');

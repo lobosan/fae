@@ -29,11 +29,11 @@ Template.listAcompanamientos.helpers({
                     );
                 }},
                 {key: 'createdAt', label: 'Fecha', sortOrder: 0, sortDirection: 'descending'},
-                {key: 'acomProvincia', label: 'Provincia'},
-                {key: 'acomCanton', label: 'Cantón'},
-                {key: 'acomParroquia', label: 'Parroquia'},
-                {key: 'acomSectores', label: 'Sector o comunidad'},
-                {key: 'acomNombreFinca', label: 'Nombre de la finca'}
+                {key: 'acomProvincia', label: Acompanamientos.simpleSchema().label()['acomProvincia']},
+                {key: 'acomCanton', label: Acompanamientos.simpleSchema().label()['acomCanton']},
+                {key: 'acomParroquia', label: Acompanamientos.simpleSchema().label()['acomParroquia']},
+                {key: 'acomSectores', label: Acompanamientos.simpleSchema().label()['acomSectores']},
+                {key: 'acomNombreFinca', label: Acompanamientos.simpleSchema().label()['acomNombreFinca']}
             ]
         };
     }
