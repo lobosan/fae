@@ -3,54 +3,14 @@
 
 	<button class="btn btn-primary print"><icon class="fa fa-file-pdf-o"></icon> Imprimir</button>
 
-	{{#with detalleConsumidor}}
 	<table class="table table-striped top-buffer">
 		<tbody>
+			{{#each detalleConsumidor}}
 			<tr>
-				<td class="col-sm-3">Fecha de creación</td>
-				<td class="col-sm-9">{{createdAt}}</td>
+				<td class="col-sm-3">{{label}}</td>
+				<td class="col-sm-9">{{value}}</td>
 			</tr>
-			<tr>
-				<td>Nombre</td>
-				<td>{{consNombre}}</td>
-			</tr>
-			<tr>
-				<td>Contacto</td>
-				<td>{{consContacto}}</td>
-			</tr>
-			<tr>
-				<td>Calidad del producto adquirido</td>
-				<td>{{consCalidadProductoAdquirido}}</td>
-			</tr>
-			<tr>
-				<td>Calidad de la atención del vendedor</td>
-				<td>{{consCalidadAtencionVendedor}}</td>
-			</tr>
-			<tr>
-				<td>Calidad del área de expendio</td>
-				<td>{{consCalidadAreaExpendio}}</td>
-			</tr>
-			<tr>
-				<td>Presentación del producto</td>
-				<td>{{consPresentacionProducto}}</td>
-			</tr>
-			<tr>
-				<td>Nombre del productor visitado</td>
-				<td>{{consNombreProductorVisitado}}</td>
-			</tr>
-			<tr>
-				<td>Nombre de la feria visitada</td>
-				<td>{{consNombreFeriaVisitada}}</td>
-			</tr>
-			<tr>
-				<td>Comentarios y sugerencias sobre la feria</td>
-				<td>{{consComentariosSugerencias}}</td>
-			</tr>
-			<tr>
-				<td>Impresiones de la visita a la finca</td>
-				<td>{{consImpresionesVisitaFinca}}</td>
-			</tr>
+			{{/each}}
 		</tbody>
 	</table>
-	{{/with}}
 </template>
