@@ -1,0 +1,19 @@
+<template name="insertVeeduria">
+	<h4>Nueva Ficha de Diagnóstico y Acompañamiento</h4>
+	<div class="grupo-indicador">IDENTIFICACIÓN DEL PRODUCTOR</div>
+	{{#autoForm collection="Veedurias" id="insertVeeduriaForm" type="insert"}}
+		{{#each dataCollection}}
+			{{#if $eq field 'ubicProvincia'}}<div class="grupo-indicador">UBICACIÓN</div>{{/if}}
+			{{#if $eq field 'entoPresenciaForestalesNativos'}}<div class="grupo-indicador">EL ENTORNO</div>{{/if}}
+			{{#if $eq field 'sueloControlErosionActualEvidente'}}<div class="grupo-indicador">EL SUBSISTEMA SUELO</div>{{/if}}
+			{{#if $eq field 'aguaBuenaCalidad'}}<div class="grupo-indicador">EL SUBSISTEMA AGUA Y HUMEDAD</div>{{/if}}
+			{{#if $eq field 'cultivosPlanificacionRotacion'}}<div class="grupo-indicador">EL SUBSISTEMA CULTIVOS</div>{{/if}}
+			{{#if $eq field 'agroforestalFertilidadSuelo'}}<div class="grupo-indicador">EL SUSBSISTEMA  AGROFORESTAL</div>{{/if}}
+			{{#if $eq field 'animalInfraestructuraAdecuada'}}<div class="grupo-indicador">EL SUSBSISTEMA ANIMAL</div>{{/if}}
+			{{#if $eq field 'cosechaMaterialesAdecuados'}}<div class="grupo-indicador">COSECHA, POSTCOSECHA Y COMERCIALIZACIÓN</div>{{/if}}
+			{{#if $eq field 'socialBienestar'}}<div class="grupo-indicador">JUSTICIA SOCIAL Y DOCUMENTOS</div>{{/if}}
+			{{> afQuickField name=field}}
+		{{/each}}
+		<button type="submit" class="btn btn-primary">GUARDAR</button>
+	{{/autoForm}}
+</template>

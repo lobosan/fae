@@ -1,0 +1,20 @@
+<template name="listVeedurias">
+	<h4>Fichas de Información de Veeduría</h4>
+	{{#if isEmptyVeedurias}}
+		<div class="no-data">
+			<h5>No existen datos que mostrar, cree una </h5>
+			<a class="btn btn-default" href="{{pathFor 'insertVeeduria'}}"><icon class="fa fa-plus"></icon> Nueva ficha de Información de Veeduría</a>
+		</div>
+	{{else}}
+		<a class="btn btn-primary" title="Nueva ficha de Información de Veeduría" href="{{pathFor 'insertVeeduria'}}">
+			<icon class="fa fa-plus"></icon>
+		</a>
+		<button class="btn btn-default compare" title="Comparar fichas seleccionadas">
+			<icon class="fa fa-files-o fa-size-17"></icon>
+		</button>
+		<button class="btn btn-default export" title="Exportar a Excel">
+			<icon class="fa fa-file-excel-o"></icon>
+		</button>
+		{{> reactiveTable settings=settings}}
+	{{/if}}
+</template>
