@@ -10,10 +10,10 @@ AutoForm.hooks({
         },
         before: {
             insert: function (doc) {
-                if ((typeof doc.acomProvincia && typeof doc.canton && typeof doc.acomParroquia) != 'undefined') {
-                    doc.acomProvincia = DPA.findOne({codigo: doc.acomProvincia}).descripcion;
-                    doc.acomCanton = DPA.findOne({codigo: doc.acomCanton}).descripcion;
-                    doc.acomParroquia = DPA.findOne({codigo: doc.acomParroquia}).descripcion;
+                if ((typeof doc.ubicProvincia && typeof doc.ubicCanton && typeof doc.ubicParroquia) != 'undefined') {
+                    doc.ubicProvincia = DPA.findOne({codigo: doc.ubicProvincia}).descripcion;
+                    doc.ubicCanton = DPA.findOne({codigo: doc.ubicCanton}).descripcion;
+                    doc.ubicParroquia = DPA.findOne({codigo: doc.ubicParroquia}).descripcion;
                 }
                 return doc;
             }

@@ -14,12 +14,12 @@ Meteor.startup(function () {
 
     // Only if a user is logged in
     Security.permit(['insert']).collections([
-        Organizaciones, Acompanamientos, Consumidores
+        Organizaciones, Acompanamientos, Consumidores, Veedurias
     ]).ifLoggedIn().apply();
 
     // Only if a user is logged in and is the owner of the document
     Security.permit(['update', 'remove']).collections([
-        Organizaciones, Acompanamientos, Consumidores
+        Organizaciones, Acompanamientos, Consumidores, Veedurias
     ]).ifLoggedIn().ifIsOwner().apply();
 
     // Only if a user doesn't try to change the roles property and is the owner of the document

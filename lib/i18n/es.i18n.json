@@ -22,10 +22,9 @@
       "expectedObject": "[label] tiene que ser un objeto",
       "expectedConstructor": "[label] tiene que ser de tipo [type]",
       "keyNotInSchema": "[key] no esta permitido por el esquema",
-      "regEx correo": "[label] tiene que ser una dirección válida",
       "regEx": {
         "0": {
-          "msg": "[label] falló la validación por Expresión Regular (Regex)"
+          "msg": "[label] tiene que tener un formato válido"
         },
         "1": {
           "exp": "SimpleSchema.RegEx.Email",
