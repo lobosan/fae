@@ -121,7 +121,8 @@ small {
 }
 
 .navbar-nav > li > .dropdown-menu {
-	margin-top: 2px !important;
+	margin-top: -5px !important;
+	border-radius: 4px !important;
 }
 
 .navbar-inverse {
@@ -150,6 +151,10 @@ small {
 	font-weight: 600;
 }
 
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
 .dropdown-menu > li > a {
 	color: #676a6c !important;
 }
@@ -160,7 +165,7 @@ small {
 	padding: 15px 15px 15px 10px;
 	display: block;
 	position: relative;
-	line-height: 20px;
+	line-height: 10px;
 }
 
 #login-dropdown-list > .dropdown-toggle:hover, .dropdown-toggle:focus {
