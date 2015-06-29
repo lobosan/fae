@@ -1,7 +1,10 @@
 Template.listConsumidores.events({
     'click .export': function () {
-        var consumidores = Consumidores.find({}).fetch();
-        Meteor.call('consumidoresExcel', consumidores, function(error, fileUrl) {
+        var consumidores = Consumidores.find({}, {fields: {createdBy: 0}, sort: {createdAt: 1}}).fetch();
+        var labels = _.without(_.values(Consumidores.simpleSchema().label()), 'Fecha de creación', 'Created by');
+        labels.unshift('Fecha de creación');
+
+        Meteor.call('exportExcel', labels, consumidores, 'Consumidores', function(error, fileUrl) {
             var link = document.createElement('a');
             link.download = 'Fichas del Consumidor.xlsx';
             link.href = fileUrl;

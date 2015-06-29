@@ -1,8 +1,11 @@
 Template.listAcompanamientos.events({
     'click .export': function () {
-        var acompanamientos = Acompanamientos.find({}).fetch();
-        Meteor.call('acompanamientosExcel', acompanamientos, function(err, fileUrl) {
-            var link = document.createElement("a");
+        var acompanamientos = Acompanamientos.find({}, {fields: {createdBy: 0}, sort: {createdAt: 1}}).fetch();
+        var labels = _.without(_.values(Acompanamientos.simpleSchema().label()), 'Fecha de creación', 'Created by');
+        labels.unshift('Fecha de creación');
+
+        Meteor.call('exportExcel', labels, acompanamientos, 'Acompañamientos', function(error, fileUrl) {
+            var link = document.createElement('a');
             link.download = 'Fichas de Diagnóstico y Acompañamiento.xlsx';
             link.href = fileUrl;
             link.click();

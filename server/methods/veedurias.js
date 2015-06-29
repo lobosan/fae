@@ -98,7 +98,7 @@ Meteor.methods({
                 return Fake.fromArray(['Si', 'No']);
             },
             entoPresenciaQuebradasRiosEsteros: function () {
-                return Fake.fromArray(['Cascada Azul', 'Machangara', 'Velo de la novia']);
+                return Fake.fromArray(['Cascada Azul', 'Machángara', 'Velo de la novia']);
             },
             entoAreaManejoMateriaOrganica: function () {
                 return Fake.fromArray([10, 54, 876]);

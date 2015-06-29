@@ -2,8 +2,8 @@ Template.listVeedurias.events({
     'click .export': function () {
         var veedurias = Veedurias.find({}).fetch();
         Meteor.call('veeduriasExcel', veedurias, function(err, fileUrl) {
-            var link = document.createElement("a");
-            link.download = 'Fichas de Diagnóstico y Acompañamiento.xlsx';
+            var link = document.createElement('a');
+            link.download = 'Fichas de Información de Veedurías.xlsx';
             link.href = fileUrl;
             link.click();
         });

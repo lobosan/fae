@@ -8,7 +8,7 @@ aldeed:template-extension@3.4.3
 amplify@1.0.0
 anti:fake@0.4.1
 anti:i18n@0.4.3
-aslagle:reactive-table@0.8.1
+aslagle:reactive-table@0.8.2
 autoupdate@1.2.1
 babrahams:editable-json@0.4.3
 base64@1.0.3
@@ -99,6 +99,6 @@ u2622:persistent-session@0.3.5
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
-vsivsi:file-collection@1.1.4
+vsivsi:file-collection@1.1.5
 webapp@1.2.0
 webapp-hashing@1.0.3
