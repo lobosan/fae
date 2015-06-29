@@ -1,5 +1,5 @@
 Meteor.methods({
-    acompanamientosExcel: function (acompanamientos) {
+    veeduriasExcel: function (veedurias) {
         var Future = Npm.require('fibers/future');
         var futureResponse = new Future();
 
@@ -85,78 +85,78 @@ Meteor.methods({
 
         // Example : writing multple rows to file
         var row = 1;
-        _.each(acompanamientos, function (acompanamiento) {
-            worksheet.writeToCell(row, 0, acompanamiento.createdAt);
-            worksheet.writeToCell(row, 1, acompanamiento.acomProvincia);
-            worksheet.writeToCell(row, 2, acompanamiento.acomCanton);
-            worksheet.writeToCell(row, 3, acompanamiento.acomParroquia);
-            worksheet.writeToCell(row, 4, acompanamiento.acomSectores);
-            worksheet.writeToCell(row, 5, acompanamiento.acomResponsableProduccion);
-            worksheet.writeToCell(row, 6, acompanamiento.acomNombreFinca);
-            worksheet.writeToCell(row, 7, acompanamiento.acomCorreo);
-            worksheet.writeToCell(row, 8, acompanamiento.acomTelefono);
-            worksheet.writeToCell(row, 9, acompanamiento.acomAreaConRiego);
-            worksheet.writeToCell(row, 10, acompanamiento.acomAreaSinRiego);
+        _.each(veedurias, function (veeduria) {
+            worksheet.writeToCell(row, 0, veeduria.createdAt);
+            worksheet.writeToCell(row, 1, veeduria.acomProvincia);
+            worksheet.writeToCell(row, 2, veeduria.acomCanton);
+            worksheet.writeToCell(row, 3, veeduria.acomParroquia);
+            worksheet.writeToCell(row, 4, veeduria.acomSectores);
+            worksheet.writeToCell(row, 5, veeduria.acomResponsableProduccion);
+            worksheet.writeToCell(row, 6, veeduria.acomNombreFinca);
+            worksheet.writeToCell(row, 7, veeduria.acomCorreo);
+            worksheet.writeToCell(row, 8, veeduria.acomTelefono);
+            worksheet.writeToCell(row, 9, veeduria.acomAreaConRiego);
+            worksheet.writeToCell(row, 10, veeduria.acomAreaSinRiego);
             /*** Indicadores para el entorno ***/
-            worksheet.writeToCell(row, 11, acompanamiento.entoForestalesNativos);
-            worksheet.writeToCell(row, 12, acompanamiento.entoEspeciesFrutales);
-            worksheet.writeToCell(row, 13, acompanamiento.entoCaminosAgua);
-            worksheet.writeToCell(row, 14, acompanamiento.entoMateriaOrganica);
-            worksheet.writeToCell(row, 15, acompanamiento.entoMateriaNoOrganica);
-            worksheet.writeToCell(row, 16, acompanamiento.entoPoscosecha);
-            worksheet.writeToCell(row, 17, acompanamiento.entoBodegasAlmacenes);
-            worksheet.writeToCell(row, 18, acompanamiento.entoAguaHumedad);
-            worksheet.writeToCell(row, 19, acompanamiento.entoAmenazasExternasContaminacion);
+            worksheet.writeToCell(row, 11, veeduria.entoForestalesNativos);
+            worksheet.writeToCell(row, 12, veeduria.entoEspeciesFrutales);
+            worksheet.writeToCell(row, 13, veeduria.entoCaminosAgua);
+            worksheet.writeToCell(row, 14, veeduria.entoMateriaOrganica);
+            worksheet.writeToCell(row, 15, veeduria.entoMateriaNoOrganica);
+            worksheet.writeToCell(row, 16, veeduria.entoPoscosecha);
+            worksheet.writeToCell(row, 17, veeduria.entoBodegasAlmacenes);
+            worksheet.writeToCell(row, 18, veeduria.entoAguaHumedad);
+            worksheet.writeToCell(row, 19, veeduria.entoAmenazasExternasContaminacion);
             /*** Indicadores para el subsistema del suelo ***/
-            worksheet.writeToCell(row, 20, acompanamiento.sueloErosionActual);
-            worksheet.writeToCell(row, 21, acompanamiento.sueloMecanizacionAgricola);
-            worksheet.writeToCell(row, 22, acompanamiento.sueloMateriaOrganica);
-            worksheet.writeToCell(row, 23, acompanamiento.sueloAbastecimientoMateriaOrganica);
-            worksheet.writeToCell(row, 24, acompanamiento.sueloCobertura);
-            worksheet.writeToCell(row, 25, acompanamiento.sueloSoltura);
-            worksheet.writeToCell(row, 26, acompanamiento.sueloActividadBiologica);
-            worksheet.writeToCell(row, 27, acompanamiento.sueloEstructura);
+            worksheet.writeToCell(row, 20, veeduria.sueloErosionActual);
+            worksheet.writeToCell(row, 21, veeduria.sueloMecanizacionAgricola);
+            worksheet.writeToCell(row, 22, veeduria.sueloMateriaOrganica);
+            worksheet.writeToCell(row, 23, veeduria.sueloAbastecimientoMateriaOrganica);
+            worksheet.writeToCell(row, 24, veeduria.sueloCobertura);
+            worksheet.writeToCell(row, 25, veeduria.sueloSoltura);
+            worksheet.writeToCell(row, 26, veeduria.sueloActividadBiologica);
+            worksheet.writeToCell(row, 27, veeduria.sueloEstructura);
             /*** Indicadores para el subsistema de agua y humedad ***/
-            worksheet.writeToCell(row, 28, acompanamiento.aguaCantidad);
-            worksheet.writeToCell(row, 29, acompanamiento.aguaCalidadCultivos);
-            worksheet.writeToCell(row, 30, acompanamiento.aguaCalidadSistemasReserva);
-            worksheet.writeToCell(row, 31, acompanamiento.aguaHumedadSuelo);
+            worksheet.writeToCell(row, 28, veeduria.aguaCantidad);
+            worksheet.writeToCell(row, 29, veeduria.aguaCalidadCultivos);
+            worksheet.writeToCell(row, 30, veeduria.aguaCalidadSistemasReserva);
+            worksheet.writeToCell(row, 31, veeduria.aguaHumedadSuelo);
             /*** Indicadores para el subsistema de cultivos ***/
-            worksheet.writeToCell(row, 32, acompanamiento.cultRotacion);
-            worksheet.writeToCell(row, 33, acompanamiento.cultAsociacion);
-            worksheet.writeToCell(row, 34, acompanamiento.cultDiversidadVegetal);
-            worksheet.writeToCell(row, 35, acompanamiento.cultDiversidadGenetica);
-            worksheet.writeToCell(row, 36, acompanamiento.cultPresenciaFlores);
-            worksheet.writeToCell(row, 37, acompanamiento.cultLibreQuimicos);
-            worksheet.writeToCell(row, 38, acompanamiento.cultOrigenSemillas);
-            worksheet.writeToCell(row, 39, acompanamiento.cultInsectosEnfermedades);
-            worksheet.writeToCell(row, 40, acompanamiento.cultHierbasSilvestres);
-            worksheet.writeToCell(row, 41, acompanamiento.cultAreasSilvestres);
+            worksheet.writeToCell(row, 32, veeduria.cultRotacion);
+            worksheet.writeToCell(row, 33, veeduria.cultAsociacion);
+            worksheet.writeToCell(row, 34, veeduria.cultDiversidadVegetal);
+            worksheet.writeToCell(row, 35, veeduria.cultDiversidadGenetica);
+            worksheet.writeToCell(row, 36, veeduria.cultPresenciaFlores);
+            worksheet.writeToCell(row, 37, veeduria.cultLibreQuimicos);
+            worksheet.writeToCell(row, 38, veeduria.cultOrigenSemillas);
+            worksheet.writeToCell(row, 39, veeduria.cultInsectosEnfermedades);
+            worksheet.writeToCell(row, 40, veeduria.cultHierbasSilvestres);
+            worksheet.writeToCell(row, 41, veeduria.cultAreasSilvestres);
             /*** Indicadores para el subsistema forestal ***/
-            worksheet.writeToCell(row, 42, acompanamiento.forestFertilidadSuelo);
-            worksheet.writeToCell(row, 43, acompanamiento.forestErosion);
-            worksheet.writeToCell(row, 44, acompanamiento.forestDivisionesLotes);
-            worksheet.writeToCell(row, 45, acompanamiento.forestCortinasRompevientos);
-            worksheet.writeToCell(row, 46, acompanamiento.forestLuzSombraArboles);
-            worksheet.writeToCell(row, 47, acompanamiento.forestDiversidadEspeciesArboreas);
-            worksheet.writeToCell(row, 48, acompanamiento.forestNativas);
+            worksheet.writeToCell(row, 42, veeduria.forestFertilidadSuelo);
+            worksheet.writeToCell(row, 43, veeduria.forestErosion);
+            worksheet.writeToCell(row, 44, veeduria.forestDivisionesLotes);
+            worksheet.writeToCell(row, 45, veeduria.forestCortinasRompevientos);
+            worksheet.writeToCell(row, 46, veeduria.forestLuzSombraArboles);
+            worksheet.writeToCell(row, 47, veeduria.forestDiversidadEspeciesArboreas);
+            worksheet.writeToCell(row, 48, veeduria.forestNativas);
             /*** Indicadores para el subsistema animal ***/
-            worksheet.writeToCell(row, 49, acompanamiento.animalDiversidad);
-            worksheet.writeToCell(row, 50, acompanamiento.animalDiversidadGenetica);
-            worksheet.writeToCell(row, 51, acompanamiento.animalInfraestructuraAdecuada);
-            worksheet.writeToCell(row, 52, acompanamiento.animalAlimentoNecesario);
-            worksheet.writeToCell(row, 53, acompanamiento.animalSanidad);
-            worksheet.writeToCell(row, 54, acompanamiento.animalCalidadNutricionalAlimento);
-            worksheet.writeToCell(row, 55, acompanamiento.animalSanidadAnimales);
-            worksheet.writeToCell(row, 56, acompanamiento.animalLimpiezaInstalaciones);
-            worksheet.writeToCell(row, 57, acompanamiento.animalManejoAnimales);
+            worksheet.writeToCell(row, 49, veeduria.animalDiversidad);
+            worksheet.writeToCell(row, 50, veeduria.animalDiversidadGenetica);
+            worksheet.writeToCell(row, 51, veeduria.animalInfraestructuraAdecuada);
+            worksheet.writeToCell(row, 52, veeduria.animalAlimentoNecesario);
+            worksheet.writeToCell(row, 53, veeduria.animalSanidad);
+            worksheet.writeToCell(row, 54, veeduria.animalCalidadNutricionalAlimento);
+            worksheet.writeToCell(row, 55, veeduria.animalSanidadAnimales);
+            worksheet.writeToCell(row, 56, veeduria.animalLimpiezaInstalaciones);
+            worksheet.writeToCell(row, 57, veeduria.animalManejoAnimales);
             /*** Indicadores para instalaciones, angares y bodegas ***/
-            worksheet.writeToCell(row, 58, acompanamiento.instalCondicion);
-            worksheet.writeToCell(row, 59, acompanamiento.instalComodidad);
-            worksheet.writeToCell(row, 60, acompanamiento.instalRiesgosContaminacion);
-            worksheet.writeToCell(row, 61, acompanamiento.instalGuardadoHerramientas);
-            worksheet.writeToCell(row, 62, acompanamiento.instalSenaletica);
-            worksheet.writeToCell(row, 63, acompanamiento.instalDesechos);
+            worksheet.writeToCell(row, 58, veeduria.instalCondicion);
+            worksheet.writeToCell(row, 59, veeduria.instalComodidad);
+            worksheet.writeToCell(row, 60, veeduria.instalRiesgosContaminacion);
+            worksheet.writeToCell(row, 61, veeduria.instalGuardadoHerramientas);
+            worksheet.writeToCell(row, 62, veeduria.instalSenaletica);
+            worksheet.writeToCell(row, 63, veeduria.instalDesechos);
             row++;
         });
 

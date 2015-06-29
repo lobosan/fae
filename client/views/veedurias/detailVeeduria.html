@@ -1,0 +1,30 @@
+<template name="detailVeeduria">
+	<h4>Detalles de Ficha de Información de Veeduría</h4>
+
+	<button class="btn btn-primary print" title="Imprimir ficha"><icon class="glyphicon glyphicon-print"></icon></button>
+
+	<table class="table table-striped">
+		<tbody>
+		<td colspan="10"><div class="grupo-indicador">IDENTIFICACIÓN DEL PRODUCTOR</div></td>
+		{{#each detalleVeedurias}}
+			{{#if $eq fieldName 'ubicProvincia'}}<td colspan="10"><div class="grupo-indicador">UBICACIÓN</div></td>{{/if}}
+			{{#if $eq fieldName 'entoPresenciaForestalesNativos'}}<td colspan="10"><div class="grupo-indicador">EL ENTORNO</div></td>{{/if}}
+			{{#if $eq fieldName 'sueloControlErosionActualEvidente'}}<td colspan="10"><div class="grupo-indicador">EL SUBSISTEMA SUELO</div></td>{{/if}}
+			{{#if $eq fieldName 'aguaBuenaCalidad'}}<td colspan="10"><div class="grupo-indicador">EL SUBSISTEMA AGUA Y HUMEDAD</div></td>{{/if}}
+			{{#if $eq fieldName 'cultivosPlanificacionRotacion'}}<td colspan="10"><div class="grupo-indicador">EL SUBSISTEMA CULTIVOS</div></td>{{/if}}
+			{{#if $eq fieldName 'agroforestalFertilidadSuelo'}}<td colspan="10"><div class="grupo-indicador">EL SUSBSISTEMA  AGROFORESTAL</div></td>{{/if}}
+			{{#if $eq fieldName 'animalInfraestructuraAdecuada'}}<td colspan="10"><div class="grupo-indicador">EL SUSBSISTEMA ANIMAL</div></td>{{/if}}
+			{{#if $eq fieldName 'cosechaMaterialesAdecuados'}}<td colspan="10"><div class="grupo-indicador">COSECHA, POSTCOSECHA Y COMERCIALIZACIÓN</div></td>{{/if}}
+			{{#if $eq fieldName 'socialBienestar'}}<td colspan="10"><div class="grupo-indicador">JUSTICIA SOCIAL Y DOCUMENTOS</div></td>{{/if}}
+			<tr>
+				<td>{{label}}</td>
+				{{#each data}}
+					<td>{{this}}</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+
+	<div id="reporteVeeduria" class="ficha-spider"></div>
+</template>
