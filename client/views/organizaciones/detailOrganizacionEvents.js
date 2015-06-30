@@ -2,11 +2,12 @@ Template.detailOrganizacion.events({
     'click .print': function () {
         var organizaciones = Session.get('detalleOrganizaciones');
 
-        var columns = [{title: '', key: 'titulo'}];
+        var columns = [{title: '', key: 'titulo', width: 250}];
         for (var c = 0; c < organizaciones[0].data.length; c++) {
             columns.push({
-                'title': 'Ficha ' + organizaciones[0].data[c],
-                'key' : 'organizacion' + c
+                title: 'Ficha ' + organizaciones[0].data[c],
+                key: 'organizacion' + c,
+                width: 150
             });
         }
 
@@ -30,7 +31,7 @@ Template.detailOrganizacion.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Reporte de Fichas de Diagnóstico y Organización', options.margins.horizontal, 45);
+                doc.text('Reporte de Fichas de Diagnóstico y Organización', options.margins.horizontal, 40);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
@@ -62,17 +63,16 @@ Template.detailOrganizacion.events({
                     doc.text(value, x + settings.padding, y);
                 }
             },
-            margins: {horizontal: 40, top: 60, bottom: 40},
+            margins: {horizontal: 40, top: 50, bottom: 30},
             overflow: 'linebreak',
-            //overflowColumns: overflowColumns
-            overflowColumns: false
+            overflowColumns: overflowColumns
         };
         doc.autoTable(columns, data, options);
 
         doc.addPage();
         doc.setFontSize(12);
         doc.setTextColor(51, 51, 51);
-        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
+        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 40);
         $('#reporteOrganizacion').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height

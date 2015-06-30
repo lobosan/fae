@@ -30,8 +30,6 @@ aslagle:reactive-table
 raix:handlebar-helpers
 chrismbeckett:toastr
 alanning:roles
-chipcastledotcom:jspdf
-chipcastledotcom:jspdf-autotable
 tap:i18n
 maibaum:foundation-icons
 netanelgilad:node-uuid
@@ -39,3 +37,5 @@ netanelgilad:mkdirp
 netanelgilad:excel
 vsivsi:file-collection
 ongoworks:security
+jspdf:core
+jspdf:autotable

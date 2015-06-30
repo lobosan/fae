@@ -1,3 +1,4 @@
+/*
 Template.detailVeeduria.onRendered(function () {
     this.autorun(function () {
         var veeduriasData = Session.get('detalleVeedurias');
@@ -79,3 +80,4 @@ Template.detailVeeduria.onRendered(function () {
         });
     });
 });
+*/
