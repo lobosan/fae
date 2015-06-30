@@ -1,7 +1,11 @@
 Template.listVeedurias.events({
     'click .export': function () {
-        var veedurias = Veedurias.find({}).fetch();
-        Meteor.call('veeduriasExcel', veedurias, function(err, fileUrl) {
+        var veedurias = Veedurias.find({}, {fields: {createdBy: 0}, sort: {createdAt: 1}}).fetch();
+        var labels = _.without(_.values(Veedurias.simpleSchema().label()), 'Fecha de creación', 'Created by');
+        _(2).times(function () { labels.pop(); });
+        labels.unshift('Fecha de creación');
+
+        Meteor.call('exportExcel', labels, veedurias, 'Veedurías', function(error, fileUrl) {
             var link = document.createElement('a');
             link.download = 'Fichas de Información de Veedurías.xlsx';
             link.href = fileUrl;
