@@ -5,8 +5,8 @@ Template.detailAcompanamiento.events({
         var columns = [{title: '', key: 'titulo', width: 300}];
         for (var c = 0; c < acompanamientos[0].data.length; c++) {
             columns.push({
-                title: 'Ficha ' + acompanamientos[0].data[c],
-                key : 'acompanamiento' + c,
+                title: 'FICHA ' + acompanamientos[0].data[c],
+                key: 'acompanamiento' + c,
                 width: 140
             });
         }
@@ -47,13 +47,13 @@ Template.detailAcompanamiento.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', options.margins.horizontal, 40);
+                doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 45);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                doc.setFillColor(245,245,245);
+                doc.setFillColor(255, 255, 255);
                 doc.setTextColor(21, 21, 21);
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
@@ -67,7 +67,7 @@ Template.detailAcompanamiento.events({
                     if (value == grupos[0] || value == grupos[1] || value == grupos[2] || value == grupos[3] ||
                         value == grupos[4] || value == grupos[5] || value == grupos[6]) {
                         doc.setFontSize(10);
-                        doc.setFillColor(245,245,245);
+                        doc.setFillColor(245, 245, 245);
                         doc.setTextColor(21, 21, 21);
                         doc.rect(x, y, doc.internal.pageSize.width - settings.margins.horizontal * 2, height, 'F');
                         y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2 - 2.5;
@@ -80,7 +80,7 @@ Template.detailAcompanamiento.events({
                     doc.text(value, x + settings.padding, y);
                 }
             },
-            margins: {horizontal: 40, top: 50, bottom: 30},
+            margins: {horizontal: 40, top: 60, bottom: 30},
             overflow: 'linebreak',
             overflowColumns: overflowColumns
         };
@@ -89,7 +89,7 @@ Template.detailAcompanamiento.events({
         doc.addPage();
         doc.setFontSize(12);
         doc.setTextColor(51, 51, 51);
-        doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 40);
+        doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 45);
         $('#reporteAcompanamiento').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height

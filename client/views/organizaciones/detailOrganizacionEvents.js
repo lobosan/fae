@@ -5,7 +5,7 @@ Template.detailOrganizacion.events({
         var columns = [{title: '', key: 'titulo', width: 250}];
         for (var c = 0; c < organizaciones[0].data.length; c++) {
             columns.push({
-                title: 'Ficha ' + organizaciones[0].data[c],
+                title: 'FICHA ' + organizaciones[0].data[c],
                 key: 'organizacion' + c,
                 width: 150
             });
@@ -31,13 +31,13 @@ Template.detailOrganizacion.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Reporte de Fichas de Diagnóstico y Organización', options.margins.horizontal, 40);
+                doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                doc.setFillColor(245,245,245);
+                doc.setFillColor(255, 255, 255);
                 doc.setTextColor(21, 21, 21);
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
@@ -50,7 +50,7 @@ Template.detailOrganizacion.events({
                 if (row === 13) {
                     if (value == 'GRUPO') {
                         doc.setFontSize(10);
-                        doc.setFillColor(245,245,245);
+                        doc.setFillColor(245, 245, 245);
                         doc.setTextColor(21, 21, 21);
                         doc.rect(x, y, doc.internal.pageSize.width - settings.margins.horizontal * 2, height, 'F');
                         y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2 - 2.5;
@@ -63,7 +63,7 @@ Template.detailOrganizacion.events({
                     doc.text(value, x + settings.padding, y);
                 }
             },
-            margins: {horizontal: 40, top: 50, bottom: 30},
+            margins: {horizontal: 40, top: 60, bottom: 30},
             overflow: 'linebreak',
             overflowColumns: overflowColumns
         };
@@ -72,7 +72,7 @@ Template.detailOrganizacion.events({
         doc.addPage();
         doc.setFontSize(12);
         doc.setTextColor(51, 51, 51);
-        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 40);
+        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
         $('#reporteOrganizacion').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height

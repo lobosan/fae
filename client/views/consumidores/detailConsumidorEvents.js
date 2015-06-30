@@ -3,8 +3,8 @@ Template.detailConsumidor.events({
         var consumidor = Session.get('detalleConsumidor');
 
         var columns = [
-            {title: '', key: 'label'},
-            {title: 'Ficha ' + consumidor[0].value, key: 'value'}
+            {title: '', key: 'label', width: 150},
+            {title: 'FICHA ' + consumidor[0].value, key: 'value', width: 550}
         ];
 
         var data = [];
@@ -23,13 +23,13 @@ Template.detailConsumidor.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Ficha del Consumidor', options.margins.horizontal, 45);
+                doc.text('Ficha del Consumidor', 40, 45);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                doc.setFillColor(245,245,245);
+                doc.setFillColor(255, 255, 255);
                 doc.setTextColor(21, 21, 21);
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
@@ -44,7 +44,7 @@ Template.detailConsumidor.events({
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2 - 2.5;
                 doc.text(value, x + settings.padding, y);
             },
-            margins: {horizontal: 40, top: 60, bottom: 40},
+            margins: {horizontal: 40, top: 60, bottom: 30},
             overflow: 'linebreak'
         };
         doc.autoTable(columns, data, options);
