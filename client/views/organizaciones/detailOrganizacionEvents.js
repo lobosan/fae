@@ -10,7 +10,7 @@ Template.detailOrganizacion.events({
             });
         }
 
-        var overFlowColumns = _.pluck(columns, 'key');
+        var overflowColumns = _.pluck(columns, 'key');
 
         var data = [];
         for (var i = 1; i < organizaciones.length; i++) {
@@ -64,7 +64,8 @@ Template.detailOrganizacion.events({
             },
             margins: {horizontal: 40, top: 60, bottom: 40},
             overflow: 'linebreak',
-            overflowColumns: overFlowColumns
+            //overflowColumns: overflowColumns
+            overflowColumns: false
         };
         doc.autoTable(columns, data, options);
 
