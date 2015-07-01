@@ -8,6 +8,6 @@ Meteor.publish('veedurias', function () {
     }
 });
 
-Meteor.publish('veeduriaSelected', function (veeduriaIds) {
+Meteor.publish('veeduriasSelected', function (veeduriaIds) {
     return Veedurias.find({_id: {$in: veeduriaIds}}, {fields: {'createdBy': 0}});
 });

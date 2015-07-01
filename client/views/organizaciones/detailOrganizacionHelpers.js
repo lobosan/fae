@@ -1,8 +1,8 @@
 Template.detailOrganizacion.helpers({
-    detalleOrganizaciones: function () {
-        Meteor.call('detalleOrganizaciones', Session.get('organizacionIds'), function (error, result) {
-            Session.setPersistent('detalleOrganizaciones', result);
+    detailOrganizaciones: function () {
+        Meteor.call('detailOrganizaciones', Session.get('organizacionIds'), function (error, result) {
+            Session.setPersistent('detailOrganizaciones', result);
         });
-        return Session.get('detalleOrganizaciones');
+        return Session.get('detailOrganizaciones');
     }
 });

@@ -1,5 +1,5 @@
 Meteor.methods({
-    detalleAcompanamientos: function (acompanamientoIds) {
+    detailAcompanamientos: function (acompanamientoIds) {
         var acompanamientos = Acompanamientos.find({_id: {$in: acompanamientoIds}}, {fields: {'createdBy': 0}}).fetch();
         var indicadores = AcompanamientoIndicadores.find({}, {fields: {'titulo': 1}}).fetch();
 
@@ -22,14 +22,14 @@ Meteor.methods({
         }
         data.pop();
 
-        var detalleAcompanamientos = [];
+        var detailAcompanamientos = [];
         for (var j = 0; j < indicadoresTitulos.length; j++) {
-            detalleAcompanamientos.push({
+            detailAcompanamientos.push({
                 'titulo': indicadoresTitulos[j],
                 'data': data[j]
             });
         }
 
-        return detalleAcompanamientos;
+        return detailAcompanamientos;
     }
 });

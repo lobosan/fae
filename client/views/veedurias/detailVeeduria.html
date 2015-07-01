@@ -1,12 +1,14 @@
 <template name="detailVeeduria">
 	<h4>Detalles de Ficha de Información de Veeduría</h4>
 
-	<button class="btn btn-primary print" title="Imprimir ficha"><icon class="glyphicon glyphicon-print"></icon></button>
+	<button class="btn btn-primary print" title="Imprimir ficha">
+		<icon class="glyphicon glyphicon-print"></icon>
+	</button>
 
 	<table class="table table-striped">
 		<tbody>
 		<td colspan="10"><div class="grupo-indicador">IDENTIFICACIÓN DEL PRODUCTOR</div></td>
-		{{#each detalleVeedurias}}
+		{{#each detailVeedurias}}
 			{{#if $eq fieldName 'ubicProvincia'}}<td colspan="10"><div class="grupo-indicador">UBICACIÓN</div></td>{{/if}}
 			{{#if $eq fieldName 'entoPresenciaForestalesNativos'}}<td colspan="10"><div class="grupo-indicador">EL ENTORNO</div></td>{{/if}}
 			{{#if $eq fieldName 'sueloControlErosionActualEvidente'}}<td colspan="10"><div class="grupo-indicador">EL SUBSISTEMA SUELO</div></td>{{/if}}

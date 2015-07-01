@@ -1,6 +1,6 @@
 Template.detailOrganizacion.events({
     'click .print': function () {
-        var organizaciones = Session.get('detalleOrganizaciones');
+        var organizaciones = Session.get('detailOrganizaciones');
 
         var columns = [{title: '', key: 'titulo', width: 250}];
         for (var c = 0; c < organizaciones[0].data.length; c++) {

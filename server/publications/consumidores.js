@@ -9,5 +9,5 @@ Meteor.publish('consumidores', function () {
 });
 
 Meteor.publish('consumidorSelected', function (consumidorId) {
-    return Consumidores.find({_id: consumidorId});
+    return Consumidores.find({_id: consumidorId}, {fields: {'createdBy': 0}});
 });

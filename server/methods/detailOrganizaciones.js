@@ -1,5 +1,5 @@
 Meteor.methods({
-    detalleOrganizaciones: function (organizacionIds) {
+    detailOrganizaciones: function (organizacionIds) {
         var organizaciones = Organizaciones.find({_id: {$in: organizacionIds}}, {fields: {'createdBy': 0}}).fetch();
         var indicadores = OrganizacionIndicadores.find({}, {fields: {'titulo': 1}}).fetch();
 
@@ -22,14 +22,14 @@ Meteor.methods({
         }
         data.pop();
 
-        var detalleOrganizaciones = [];
+        var detailOrganizaciones = [];
         for (var j = 0; j < indicadoresTitulos.length; j++) {
-            detalleOrganizaciones.push({
+            detailOrganizaciones.push({
                 'titulo': indicadoresTitulos[j],
                 'data': data[j]
             });
         }
 
-        return detalleOrganizaciones;
+        return detailOrganizaciones;
     }
 });

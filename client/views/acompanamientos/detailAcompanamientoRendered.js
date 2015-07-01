@@ -1,6 +1,6 @@
 Template.detailAcompanamiento.onRendered(function () {
     Tracker.autorun(function () {
-        var acompanamientosData = Session.get('detalleAcompanamientos');
+        var acompanamientosData = Session.get('detailAcompanamientos');
 
         var categories = [
             'Indicadores para el entorno',

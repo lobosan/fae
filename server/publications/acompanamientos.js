@@ -4,12 +4,10 @@ Meteor.publish('acompanamientos', function () {
     } else if (Roles.userIsInRole(this.userId, 'tecnico')) {
         return Acompanamientos.find({createdBy: this.userId});
     } else {
-        // user not authorized. do not publish secrets
         this.stop();
-        return;
     }
 });
 
-Meteor.publish('acompanamientoSelected', function (acompanamientoId) {
-    return Acompanamientos.find({_id: acompanamientoId});
+Meteor.publish('acompanamientosSelected', function (acompanamientoIds) {
+    return Acompanamientos.find({_id: {$in: acompanamientoIds}}, {fields: {'createdBy': 0}});
 });

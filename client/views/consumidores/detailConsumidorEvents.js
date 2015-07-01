@@ -1,6 +1,6 @@
 Template.detailConsumidor.events({
     'click .print': function () {
-        var consumidor = Session.get('detalleConsumidor');
+        var consumidor = Session.get('detailConsumidor');
 
         var columns = [
             {title: '', key: 'label', width: 150},

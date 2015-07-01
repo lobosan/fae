@@ -4,12 +4,10 @@ Meteor.publish('organizaciones', function () {
     } else if (Roles.userIsInRole(this.userId, 'tecnico')) {
         return Organizaciones.find({createdBy: this.userId});
     } else {
-        // user not authorized. do not publish secrets
         this.stop();
-        return;
     }
 });
 
-Meteor.publish('organizacionSelected', function (organizacionIds) {
-    return Organizaciones.find({_id: {$in: organizacionIds}});
+Meteor.publish('organizacionesSelected', function (organizacionIds) {
+    return Organizaciones.find({_id: {$in: organizacionIds}}, {fields: {'createdBy': 0}});
 });

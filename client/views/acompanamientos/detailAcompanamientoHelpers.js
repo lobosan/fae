@@ -1,8 +1,8 @@
 Template.detailAcompanamiento.helpers({
-    detalleAcompanamientos: function () {
-        Meteor.call('detalleAcompanamientos', Session.get('acompanamientoIds'), function (error, result) {
-            Session.setPersistent('detalleAcompanamientos', result);
+    detailAcompanamientos: function () {
+        Meteor.call('detailAcompanamientos', Session.get('acompanamientoIds'), function (error, result) {
+            Session.setPersistent('detailAcompanamientos', result);
         });
-        return Session.get('detalleAcompanamientos');
+        return Session.get('detailAcompanamientos');
     }
 });

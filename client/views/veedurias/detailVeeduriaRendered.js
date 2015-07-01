@@ -1,16 +1,16 @@
-/*
 Template.detailVeeduria.onRendered(function () {
-    this.autorun(function () {
-        var veeduriasData = Session.get('detalleVeedurias');
+    Tracker.autorun(function () {
+        var veeduriasData = Session.get('detailVeedurias');
+        console.table(veeduriasData);
 
         var categories = [
-            'Indicadores para el entorno',
-            'Indicadores para el subsistema del suelo',
-            'Indicadores para el subsistema de agua y humedad',
-            'Indicadores para el subsistema de cultivos',
-            'Indicadores para el subsistema forestal',
-            'Indicadores para el subsistema animal',
-            'Indicadores para instalaciones, angares y bodegas'
+            'El Subsistema Suelo',
+            'El Subsistema Agua y Humedad',
+            'El Subsistema Cultivos',
+            'El Subsistema Agroforestal',
+            'El Subsistema Animal',
+            'Cosecha, Postcosecha y Comercialización',
+            'Justicia Social y Documentos'
         ];
 
         var series = [];
@@ -20,20 +20,28 @@ Template.detailVeeduria.onRendered(function () {
             temp['name'] = 'Ficha ' + veeduriasData[0].data[j];
             temp['pointPlacement'] = 'on';
             temp['color'] = colors[j];
-            var grupo = function (inicio, fin) {
+            var grupo = function (inicio, fin, numIndicadores) {
                 var grupo = [];
-                for (var k = inicio; k <= fin; k++)
-                    grupo.push(veeduriasData[k].data[j]);
+                for (var k = inicio; k <= fin; k++) {
+                    var indicador = veeduriasData[k].data[j];
+                    if (indicador == 'Cumple') grupo.push(100/numIndicadores);
+                    else if (indicador == 'Cumple parcialmente') grupo.push(50/numIndicadores);
+                    else if (indicador == 'No cumple') grupo.push(0);
+                    else console.log(veeduriasData[k].fieldName);
+                }
+                console.log(grupo);
                 return _.reduce(grupo, function(memo, num) {
                     return (memo + num);
-                }, 0) / grupo.length;
+                }, 0);
             };
 
             var data = [];
-            data.push(grupo(11, 19), grupo(18, 25), grupo(26, 29), grupo(30, 39), grupo(40, 46), grupo(47, 54), grupo(55, 60));
+            data.push(grupo(49, 61, 13), grupo(63, 70, 8), grupo(72, 82, 11),
+                grupo(84, 88, 5), grupo(90, 95, 6), grupo(97, 107, 11), grupo(109, 111, 3));
             temp['data'] = data;
             series.push(temp);
         }
+        console.log(series);
 
         this.$('#reporteVeeduria').highcharts({
             chart: {
@@ -54,7 +62,7 @@ Template.detailVeeduria.onRendered(function () {
                 gridLineInterpolation: 'polygon',
                 lineWidth: 0,
                 min: 0,
-                tickInterval: 2
+                tickInterval: 20
             },
             tooltip: {
                 shared: true,
@@ -80,4 +88,3 @@ Template.detailVeeduria.onRendered(function () {
         });
     });
 });
-*/

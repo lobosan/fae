@@ -1,6 +1,6 @@
 Template.detailAcompanamiento.events({
     'click .print': function () {
-        var acompanamientos = Session.get('detalleAcompanamientos');
+        var acompanamientos = Session.get('detailAcompanamientos');
 
         var columns = [{title: '', key: 'titulo', width: 300}];
         for (var c = 0; c < acompanamientos[0].data.length; c++) {

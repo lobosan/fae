@@ -1,6 +1,6 @@
 Template.detailOrganizacion.onRendered(function () {
     Tracker.autorun(function () {
-        var organizacionesData = Session.get('detalleOrganizaciones');
+        var organizacionesData = Session.get('detailOrganizaciones');
 
         var categories = [];
         for (var i = 14; i < organizacionesData.length; i++) {
