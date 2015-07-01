@@ -1,7 +1,6 @@
 Template.detailVeeduria.onRendered(function () {
     Tracker.autorun(function () {
         var veeduriasData = Session.get('detailVeedurias');
-        console.table(veeduriasData);
 
         var categories = [
             'El Subsistema Suelo',
@@ -27,9 +26,7 @@ Template.detailVeeduria.onRendered(function () {
                     if (indicador == 'Cumple') grupo.push(100/numIndicadores);
                     else if (indicador == 'Cumple parcialmente') grupo.push(50/numIndicadores);
                     else if (indicador == 'No cumple') grupo.push(0);
-                    else console.log(veeduriasData[k].fieldName);
                 }
-                console.log(grupo);
                 return _.reduce(grupo, function(memo, num) {
                     return (memo + num);
                 }, 0);
@@ -41,7 +38,6 @@ Template.detailVeeduria.onRendered(function () {
             temp['data'] = data;
             series.push(temp);
         }
-        console.log(series);
 
         this.$('#reporteVeeduria').highcharts({
             chart: {
