@@ -1,0 +1,122 @@
+<template name="detailProductor">
+	<h4>Detalles de Ficha del Productor</h4>
+
+	<button class="btn btn-primary print bottom-buffer" title="Imprimir ficha">
+		<icon class="glyphicon glyphicon-print"></icon>
+	</button>
+
+	{{#with detailProductor}}
+	<table class="table table-striped top-buffer">
+		<tbody>
+			<tr>
+				<td class="col-sm-4">Fecha de creación</td>
+				<td class="col-sm-8">{{createdAt}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Nombre del o la responsable de la producción</td>
+				<td class="col-sm-8">{{prdNombreResponsable}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Nombre de la finca</td>
+				<td class="col-sm-8">{{prdNombreFinca}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Correo electrónico</td>
+				<td class="col-sm-8">{{prdCorreoElectronico}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Número de teléfono</td>
+				<td class="col-sm-8">{{prdNumeroTelefono}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Sector o comunidad</td>
+				<td class="col-sm-8">{{prdSectorComunidad}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Provincia</td>
+				<td class="col-sm-8">{{prdProvincia}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Cantón</td>
+				<td class="col-sm-8">{{prdCanton}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Parroquia</td>
+				<td class="col-sm-8">{{prdParroquia}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Coordenada X</td>
+				<td class="col-sm-8">{{prdCoordenadaX}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Coordenada Y</td>
+				<td class="col-sm-8">{{prdCoordenadaY}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Costo de un jornal en la zona (USD)</td>
+				<td class="col-sm-8">{{prdCostoJornalZona}}</td>
+			</tr>
+			<tr>
+				<td class="col-sm-4">Duración del jornal en la zona (horas)</td>
+				<td class="col-sm-8">{{prdDuracionJornalZona}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="grupo-indicador">REGISTRO DE ACTIVIDADES</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="col-sm-1">Fecha de inicio</th>
+				<th class="col-sm-4">Actividad</th>
+				<th class="col-sm-1">Horas familiares</th>
+				<th class="col-sm-1">Jornales familiares</th>
+				<th class="col-sm-1">Costo familiar</th>
+				<th class="col-sm-1">Horas contratadas</th>
+				<th class="col-sm-1">Jornales contratados</th>
+				<th class="col-sm-1">Costo contratado</th>
+				<th class="col-sm-1">Costo total</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each registroDeActividades}}
+			<tr>
+				<td>{{formatTime fechaInicio}}</td>
+				<td>{{actividad}}</td>
+				<td>{{horasFamiliar}}</td>
+				<td>{{jornalesFamiliares}}</td>
+				<td>{{costoFamiliar}}</td>
+				<td>{{horasContratada}}</td>
+				<td>{{jornalesContratados}}</td>
+				<td>{{costoContratada}}</td>
+				<td>{{costoTotal}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+	<div class="grupo-indicador">REGISTRO DE COMPRAS</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="col-sm-1">Fecha</th>
+				<th class="col-sm-5">Producto</th>
+				<th class="col-sm-2">Cantidad</th>
+				<th class="col-sm-2">Costo Unitario</th>
+				<th class="col-sm-2">Costo</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each registroDeCompras}}
+			<tr>
+				<td>{{formatTime fecha}}</td>
+				<td>{{producto}}</td>
+				<td>{{cantidad}}</td>
+				<td>{{costoUnitario}}</td>
+				<td>{{costo}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	{{/with}}
+</template>

@@ -1,0 +1,17 @@
+<template name="listProductores">
+	<h4>Ficha del Productor</h4>
+	{{#if isEmptyProductores}}
+		<div class="no-data">
+			<h5>No existen datos que mostrar, cree una </h5>
+			<a class="btn btn-default" href="{{pathFor 'insertProductor'}}"><icon class="fa fa-plus"></icon> Nueva ficha del Productor</a>
+		</div>
+	{{else}}
+		<a class="btn btn-primary" title="Nueva ficha del Productor" href="{{pathFor 'insertProductor'}}">
+			<icon class="fa fa-plus"></icon>
+		</a>
+		<button class="btn btn-default export" title="Exportar a Excel">
+			<icon class="fa fa-file-excel-o"></icon>
+		</button>
+		{{> reactiveTable settings=settings}}
+	{{/if}}
+</template>
