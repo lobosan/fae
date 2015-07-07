@@ -13,8 +13,8 @@
 				<td class="col-sm-8">{{createdAt}}</td>
 			</tr>
 			<tr>
-				<td class="col-sm-4">Nombre del o la responsable de la producción</td>
-				<td class="col-sm-8">{{prdNombreResponsable}}</td>
+				<td class="col-sm-4">Responsable de la producción</td>
+				<td class="col-sm-8">{{prdResponsableProduccion}}</td>
 			</tr>
 			<tr>
 				<td class="col-sm-4">Nombre de la finca</td>
@@ -25,8 +25,8 @@
 				<td class="col-sm-8">{{prdCorreoElectronico}}</td>
 			</tr>
 			<tr>
-				<td class="col-sm-4">Número de teléfono</td>
-				<td class="col-sm-8">{{prdNumeroTelefono}}</td>
+				<td class="col-sm-4">Teléfono fijo</td>
+				<td class="col-sm-8">{{prdTelefonoFijo}}</td>
 			</tr>
 			<tr>
 				<td class="col-sm-4">Sector o comunidad</td>
@@ -45,12 +45,8 @@
 				<td class="col-sm-8">{{prdParroquia}}</td>
 			</tr>
 			<tr>
-				<td class="col-sm-4">Coordenada X</td>
-				<td class="col-sm-8">{{prdCoordenadaX}}</td>
-			</tr>
-			<tr>
-				<td class="col-sm-4">Coordenada Y</td>
-				<td class="col-sm-8">{{prdCoordenadaY}}</td>
+				<td class="col-sm-4">Coordenadas geográficas</td>
+				<td class="col-sm-8">{{prdCoordenadas}}</td>
 			</tr>
 			<tr>
 				<td class="col-sm-4">Costo de un jornal en la zona (USD)</td>
@@ -67,15 +63,15 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th class="col-sm-1">Fecha de inicio</th>
-				<th class="col-sm-4">Actividad</th>
-				<th class="col-sm-1">Horas familiares</th>
-				<th class="col-sm-1">Jornales familiares</th>
-				<th class="col-sm-1">Costo familiar</th>
-				<th class="col-sm-1">Horas contratadas</th>
-				<th class="col-sm-1">Jornales contratados</th>
-				<th class="col-sm-1">Costo contratado</th>
-				<th class="col-sm-1">Costo total</th>
+				<th>Fecha</th>
+				<th>Actividad</th>
+				<th>Horas familiares</th>
+				<th>Jornales familiares</th>
+				<th>Costo familiar</th>
+				<th>Horas contratadas</th>
+				<th>Jornales contratados</th>
+				<th>Costo contratado</th>
+				<th>Costo total</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -99,11 +95,11 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th class="col-sm-1">Fecha</th>
-				<th class="col-sm-5">Producto</th>
-				<th class="col-sm-2">Cantidad</th>
-				<th class="col-sm-2">Costo Unitario</th>
-				<th class="col-sm-2">Costo</th>
+				<th>Fecha</th>
+				<th>Producto</th>
+				<th>Cantidad</th>
+				<th>Costo Unitario</th>
+				<th>Costo</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -114,6 +110,36 @@
 				<td>{{cantidad}}</td>
 				<td>{{costoUnitario}}</td>
 				<td>{{costo}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+	<div class="grupo-indicador">REGISTRO DE COSECHAS Y VENTAS</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Fecha</th>
+				<th>Producto</th>
+				<th>Unidad</th>
+				<th>Cantidad total</th>
+				<th>Cantidad vendida</th>
+				<th>Autoconsumo</th>
+				<th>Intercambio</th>
+				<th>Otros usos</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each registroDeCosechasY_Ventas}}
+			<tr>
+				<td>{{formatTime fecha}}</td>
+				<td>{{producto}}</td>
+				<td>{{unidad}}</td>
+				<td>{{cantidadTotal}}</td>
+				<td>{{cantidadVendida}}</td>
+				<td>{{autoconsumo}}</td>
+				<td>{{intercambio}}</td>
+				<td>{{otrosUsos}}</td>
 			</tr>
 			{{/each}}
 		</tbody>

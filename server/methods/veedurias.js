@@ -2,7 +2,7 @@ Meteor.methods({
     initializeVeedurias: function () {
         Factory.define('veeduria', Veedurias, {
             /*** Identificación del productor ***/
-            prodNombreResponsableProduccion: function () {
+            prodResponsableProduccion: function () {
                 return Fake.fromArray(['María Carrera', 'Juan Chiliquinga', 'Rodrigo Pérez']);
             },
             prodNombreFinca: function () {
@@ -11,11 +11,11 @@ Meteor.methods({
             prodCorreoElectronico: function () {
                 return Fake.fromArray(['mariacarrera@gmail.com', 'juanchiliquinga@hotmail.com', 'rodrigoperez@yahoo.com']);
             },
-            prodNumeroTelefonoFijo: function () {
-                return Fake.fromArray(['025689569', '042365856', '062214455']);
+            prodTelefonoFijo: function () {
+                return Fake.fromArray(['02-568-9569', '04-236-5856', '06-221-4455']);
             },
-            prodNumeroCelular: function () {
-                return Fake.fromArray(['0985475221', '0812322332', '0999925466']);
+            prodTelefonoCelular: function () {
+                return Fake.fromArray(['098-547-5221', '081-232-2332', '099-992-5466']);
             },
             /*** Ubicación ***/
             ubicProvincia: function () {

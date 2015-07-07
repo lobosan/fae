@@ -22,8 +22,8 @@ Meteor.methods({
             acomCorreo: function () {
                 return Fake.fromArray(['maria@hotmail.com', 'pedro@gmail.com', 'lucho@yahoo.com']);
             },
-            acomTelefono: function () {
-                return Fake.fromArray(['025689569', '042365856', '062214455']);
+            acomTelefonoFijo: function () {
+                return Fake.fromArray(['02-568-9569', '04-236-5856', '06-221-4455']);
             },
             acomAreaConRiego: function () {
                 return Fake.fromArray(['1040', '3500', '5030', '0', '10163']);

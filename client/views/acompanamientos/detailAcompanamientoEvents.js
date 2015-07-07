@@ -47,7 +47,7 @@ Template.detailAcompanamiento.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 45);
+                doc.text('Reporte de Fichas de Acompañamiento', 40, 45);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
@@ -90,7 +90,7 @@ Template.detailAcompanamiento.events({
         doc.addPage();
         doc.setFontSize(12);
         doc.setTextColor(51, 51, 51);
-        doc.text('Reporte de Fichas de Diagnóstico y Acompañamiento', 40, 45);
+        doc.text('Reporte de Fichas de Acompañamiento', 40, 45);
         $('#reporteAcompanamiento').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height

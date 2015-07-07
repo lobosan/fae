@@ -31,7 +31,7 @@ Template.detailOrganizacion.events({
             renderHeader: function (doc, pageCount, options) {
                 doc.setFontSize(12);
                 doc.setTextColor(51, 51, 51);
-                doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
+                doc.text('Reporte de Fichas de Organización', 40, 45);
             },
             renderHeaderCell: function (x, y, width, height, key, value, settings) {
                 doc.setFontSize(10);
@@ -72,7 +72,7 @@ Template.detailOrganizacion.events({
         doc.addPage();
         doc.setFontSize(12);
         doc.setTextColor(51, 51, 51);
-        doc.text('Reporte de Fichas de Diagnóstico y Organización', 40, 45);
+        doc.text('Reporte de Fichas de Organización', 40, 45);
         $('#reporteOrganizacion').each(function (index) {
             var imageData = $(this).highcharts().createCanvas();
             doc.addImage(imageData, 'JPEG', 0, 65, 800, 500);  // imageData, type, x, y, width, height

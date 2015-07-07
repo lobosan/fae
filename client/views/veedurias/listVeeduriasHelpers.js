@@ -32,7 +32,7 @@ Template.listVeedurias.helpers({
                 {key: 'ubicProvincia', label: Veedurias.simpleSchema().label()['ubicProvincia']},
                 {key: 'ubicCanton', label: Veedurias.simpleSchema().label()['ubicCanton']},
                 {key: 'ubicParroquia', label: Veedurias.simpleSchema().label()['ubicParroquia']},
-                {key: 'prodNombreResponsableProduccion', label: Veedurias.simpleSchema().label()['prodNombreResponsableProduccion']},
+                {key: 'prodResponsableProduccion', label: Veedurias.simpleSchema().label()['prodResponsableProduccion']},
                 {key: 'prodNombreFinca', label: Veedurias.simpleSchema().label()['prodNombreFinca']}
             ]
         };

@@ -10,7 +10,7 @@ Meteor.startup(function () {
             ]},
             {campo: 'decisionPolitica', titulo: 'Decisión política', criterios: [
                 'La reflexión sobre el proyecto político es ausente',
-                'Hay discusión activa en el grupo',
+                'Hay discusión activa en la organización',
                 'Los socios defienden el proyecto político'
             ]},
             {campo: 'disenioFinca', titulo: 'Diseño de finca', criterios: [
@@ -23,7 +23,7 @@ Meteor.startup(function () {
                 'Conoce algunas recetas',
                 'Aplica sistemáticamente técnicas de agroecología'
             ]},
-            {campo: 'capacidadTecnicaGrupo', titulo: 'Capacidad técnica instalada en el grupo', criterios: [
+            {campo: 'capacidadTecnicaGrupo', titulo: 'Capacidad técnica instalada en la organización', criterios: [
                 'No reconoce los problemas en la finca',
                 'Reconoce problemas e identifica soluciones',
                 'Crean sus propias recetas'
@@ -35,7 +35,7 @@ Meteor.startup(function () {
             ]},
             {campo: 'mecanismoApoyoInterno', titulo: 'Mecanismo de apoyo interno', criterios: [
                 'No existe',
-                'Existe esporádicamente en el grupo',
+                'Existe esporádicamente en la organización',
                 'Existen momentos estructurados que garantizan continuidad de apoyo interno'
             ]},
             {campo: 'promotores', titulo: 'Promotores', criterios: [

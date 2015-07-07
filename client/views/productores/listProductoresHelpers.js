@@ -25,7 +25,7 @@ Template.listProductores.helpers({
             showFilter: true,
             fields: [
                 {key: 'createdAt', label: Productores.simpleSchema().label()['createdAt'], sortOrder: 0, sortDirection: 'descending'},
-                {key: 'prdNombreResponsable', label: Productores.simpleSchema().label()['prdNombreResponsable']},
+                {key: 'prdResponsableProduccion', label: Productores.simpleSchema().label()['prdResponsableProduccion']},
                 {key: 'prdNombreFinca', label: Productores.simpleSchema().label()['prdNombreFinca']},
                 {key: 'prdSectorComunidad', label: Productores.simpleSchema().label()['prdSectorComunidad']},
                 {key: 'prdParroquia', label: Productores.simpleSchema().label()['prdParroquia']}

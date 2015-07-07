@@ -23,10 +23,10 @@ Meteor.methods({
                 return Fake.fromArray(['maria@hotmail.com', 'pedro@gmail.com', 'lucho@yahoo.com']);
             },
             telefonoFijo: function () {
-                return Fake.fromArray(['025689569', '042365856', '062214455']);
+                return Fake.fromArray(['02-568-9569', '04-236-5856', '06-221-4455']);
             },
             telefonoCelular: function () {
-                return Fake.fromArray(['0985475221', '0812322332', '0999925466']);
+                return Fake.fromArray(['098-547-5221', '081-232-2332', '099-992-5466']);
             },
             personeriaJuridica: function () {
                 return Fake.fromArray(['Si', 'No', 'En trámite']);

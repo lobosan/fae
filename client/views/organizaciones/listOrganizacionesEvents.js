@@ -6,7 +6,7 @@ Template.listOrganizaciones.events({
 
         Meteor.call('exportExcel', labels, organizaciones, 'Organizaciones', function(error, fileUrl) {
             var link = document.createElement('a');
-            link.download = 'Fichas de Diagnóstico de Organización.xlsx';
+            link.download = 'Fichas de Organización.xlsx';
             link.href = fileUrl;
             link.click();
         });

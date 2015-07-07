@@ -270,6 +270,12 @@ small {
 	width: 800px;
 }
 
+.panel-default > .panel-heading {
+	color: inherit !important;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 @media print {
 	body {
 		padding-top: 0;

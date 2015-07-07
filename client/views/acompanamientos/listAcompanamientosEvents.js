@@ -6,7 +6,7 @@ Template.listAcompanamientos.events({
 
         Meteor.call('exportExcel', labels, acompanamientos, 'Acompañamientos', function(error, fileUrl) {
             var link = document.createElement('a');
-            link.download = 'Fichas de Diagnóstico y Acompañamiento.xlsx';
+            link.download = 'Fichas de Acompañamiento.xlsx';
             link.href = fileUrl;
             link.click();
         });
