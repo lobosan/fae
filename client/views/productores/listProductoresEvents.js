@@ -1,8 +1,6 @@
 Template.listProductores.events({
     'click .export': function () {
-        var productores = Productores.findOne({_id: Session.get('productorId')});
-
-        Meteor.call('exportExcel', productores, function(error, fileUrl) {
+        Meteor.call('productorExportExcel', function(error, fileUrl) {
             var link = document.createElement('a');
             link.download = 'Fichas del Productor.xlsx';
             link.href = fileUrl;
