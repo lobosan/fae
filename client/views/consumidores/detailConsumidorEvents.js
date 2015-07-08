@@ -29,7 +29,7 @@ Template.detailConsumidor.events({
                 doc.setFontSize(10);
                 doc.setLineWidth(0.1);
                 doc.setDrawColor(240);
-                doc.setFillColor(255, 255, 255);
+                doc.setFillColor(245, 245, 245);
                 doc.setTextColor(21, 21, 21);
                 doc.rect(x, y, width, height, 'B');
                 y += settings.lineHeight / 2 + doc.internal.getLineHeight() / 2;
