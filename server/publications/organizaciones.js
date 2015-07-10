@@ -1,8 +1,6 @@
 Meteor.publish('organizaciones', function () {
-    if (Roles.userIsInRole(this.userId, 'admin')) {
+    if (Roles.userIsInRole(this.userId, 'tecnico')) {
         return Organizaciones.find({});
-    } else if (Roles.userIsInRole(this.userId, 'tecnico')) {
-        return Organizaciones.find({createdBy: this.userId});
     } else {
         this.stop();
     }

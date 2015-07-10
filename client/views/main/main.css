@@ -66,11 +66,11 @@ small {
 
 #logo-img {
 	background: url("images/fae_logo.png") no-repeat;
-	background-size: 55px;
-	height: 55px;
-	width: 55px;
+	background-size: 50px;
+	height: 50px;
+	width: 50px;
 	float: left;
-	margin: -9px 7px 0 0;
+	margin: -9px 5px 0 0;
 }
 
 .btn:focus {
@@ -136,6 +136,10 @@ small {
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
 	color: #b3b8bf;
+}
+
+.nav > li > a {
+	padding: 15px 10px !important;
 }
 
 .nav > li.active > a {

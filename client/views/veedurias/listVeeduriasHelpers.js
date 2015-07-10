@@ -1,20 +1,7 @@
 Template.listVeedurias.helpers({
     isEmptyVeedurias: function () {
-        if (Roles.userIsInRole(Meteor.userId(), 'admin')) {
-            var countVeeduriasAdmin = Veedurias.find({}).count();
-            if (countVeeduriasAdmin === 0) {
-                Meteor.call('initializeVeedurias');
-                return false;
-            }
-        } else if (Roles.userIsInRole(Meteor.userId(), 'tecnico')) {
-            var countVeedurias = Veedurias.find({createdBy: Meteor.userId()}).count();
-            if (countVeedurias === 0) {
-                Meteor.call('initializeVeedurias');
-                return false;
-            }
-        } else {
-            return false;
-        }
+        //if (Veedurias.find({}).count() == 0) Meteor.call('initializeVeedurias');
+        return Veedurias.find({}).count() == 0;
     },
     settings: function () {
         return {

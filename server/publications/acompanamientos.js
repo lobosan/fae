@@ -1,8 +1,6 @@
 Meteor.publish('acompanamientos', function () {
-    if (Roles.userIsInRole(this.userId, 'admin')) {
+    if (Roles.userIsInRole(this.userId, 'tecnico')) {
         return Acompanamientos.find({});
-    } else if (Roles.userIsInRole(this.userId, 'tecnico')) {
-        return Acompanamientos.find({createdBy: this.userId});
     } else {
         this.stop();
     }

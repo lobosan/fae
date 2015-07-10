@@ -1,20 +1,7 @@
 Template.listOrganizaciones.helpers({
     isEmptyOrganizaciones: function () {
-        if (Roles.userIsInRole(Meteor.userId(), 'admin')) {
-            var countOrganizacionesAdmin = Organizaciones.find({}).count();
-            if (countOrganizacionesAdmin === 0) {
-                Meteor.call('initializeOrganizaciones');
-                return false;
-            }
-        } else if (Roles.userIsInRole(Meteor.userId(), 'tecnico')) {
-            var countOrganizaciones = Organizaciones.find({createdBy: Meteor.userId()}).count();
-            if (countOrganizaciones === 0) {
-                Meteor.call('initializeOrganizaciones');
-                return false;
-            }
-        } else {
-            return false;
-        }
+        //if (Organizaciones.find({}).count() == 0) Meteor.call('initializeOrganizaciones');
+        return Organizaciones.find({}).count() == 0;
     },
     settings: function () {
         return {

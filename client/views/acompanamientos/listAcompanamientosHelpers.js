@@ -1,20 +1,7 @@
 Template.listAcompanamientos.helpers({
     isEmptyAcompanamientos: function () {
-        if (Roles.userIsInRole(Meteor.userId(), 'admin')) {
-            var countAcompanamientosAdmin = Acompanamientos.find({}).count();
-            if (countAcompanamientosAdmin === 0) {
-                Meteor.call('initializeAcompanamientos');
-                return false;
-            }
-        } else if (Roles.userIsInRole(Meteor.userId(), 'tecnico')) {
-            var countAcompanamientos = Acompanamientos.find({createdBy: Meteor.userId()}).count();
-            if (countAcompanamientos === 0) {
-                Meteor.call('initializeAcompanamientos');
-                return false;
-            }
-        } else {
-            return false;
-        }
+        //if (Acompanamientos.find({}).count() == 0) Meteor.call('initializeAcompanamientos');
+        return Acompanamientos.find({}).count() == 0;
     },
     settings: function () {
         return {
