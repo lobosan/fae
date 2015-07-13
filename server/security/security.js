@@ -9,7 +9,7 @@ Meteor.startup(function () {
 
     // Only if an admin user is logged in
     Security.permit(['insert', 'update', 'remove']).collections([
-        OrganizacionIndicadores, AcompanamientoIndicadores, DPA
+        OrganizacionIndicadores, AcompanamientoIndicadores, DPA, Meteor.users
     ]).ifHasRole('admin').apply();
 
     // Only if a user is logged in

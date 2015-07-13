@@ -1,6 +1,5 @@
 Meteor.startup(function () {
-    if (Meteor.users.find().count() === 0) {
-
+    if (Meteor.users.find().count() == 0) {
         var users = [
             {
                 username: 'Administrador',
@@ -8,8 +7,7 @@ Meteor.startup(function () {
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Probío'
-                },
-                roles: ['admin']
+                }
             },
             {
                 username: 'Test',
@@ -17,34 +15,37 @@ Meteor.startup(function () {
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Testa'
-                },
-                roles: ['tecnico']
-            }, {
+                }
+            },
+            {
                 username: 'Wilson',
                 email: 'wilson@probio.com',
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Probío'
-                },
-                roles: ['tecnico']
+                }
             }
         ];
 
         _.each(users, function (user) {
-            var id;
-
-            id = Accounts.createUser({
+            Accounts.createUser({
                 username: user.username,
                 email: user.email,
                 password: '123123',
-                profile: { cedula: user.profile.cedula, institucion: user.profile.institucion }
+                profile: {cedula: user.profile.cedula, institucion: user.profile.institucion}
             });
-
-            if (user.roles.length > 0) {
-                // Need _id of existing user record so this call must come
-                // after `Accounts.createUser` or `Accounts.onCreate`
-                Roles.addUsersToRoles(id, user.roles);
-            }
         });
     }
+});
+
+Accounts.onCreateUser(function (options, user) {
+    if (options.username == 'Administrador')
+        user.roles = ['admin', 'tecnico'];
+    else if (options.profile.provincia)
+        user.roles = ['provincial', 'tecnico'];
+    else
+        user.roles = ['tecnico'];
+    if (options.profile)
+        user.profile = options.profile;
+    return user;
 });

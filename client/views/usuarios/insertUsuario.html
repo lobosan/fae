@@ -1,0 +1,11 @@
+<template name='insertUsuario'>
+	<h4>Nuevo Usuario</h4>
+	{{#autoForm schema=userSchema id='insertUsuarioForm'}}
+		{{> afQuickField name='username'}}
+		{{> afQuickField name='email'}}
+		{{> afQuickField name='profile.cedula'}}
+		{{> afQuickField name='profile.institucion'}}
+		{{> afQuickField name='profile.provincia'}}
+		<button type='submit' class='btn btn-primary'>GUARDAR</button>
+	{{/autoForm}}
+</template>

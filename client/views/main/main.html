@@ -81,6 +81,17 @@
 				<li><a href="{{pathFor 'insertConsumidor'}}"><i class="fa fa-plus"></i> Nuevo Consumidor</a></li>
 			</ul>
 		</li>
+		{{#if isInRole 'admin'}}
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				Usuarios <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="{{pathFor 'listUsuarios'}}"><i class="glyphicon glyphicon-list-alt"></i> Lista de Usuarios</a></li>
+				<li><a href="{{pathFor 'insertUsuario'}}"><i class="fa fa-plus"></i> Nuevo Usuario</a></li>
+			</ul>
+		</li>
+		{{/if}}
 		{{/if}}
 		<li>{{> loginButtons}}</li>
 	</ul>
