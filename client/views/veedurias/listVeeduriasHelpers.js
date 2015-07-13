@@ -1,6 +1,6 @@
 Template.listVeedurias.helpers({
     isEmptyVeedurias: function () {
-        //if (Veedurias.find({}).count() == 0) Meteor.call('initializeVeedurias');
+        if (Veedurias.find({}).count() == 0) Meteor.call('initializeVeedurias');
         return Veedurias.find({}).count() == 0;
     },
     settings: function () {

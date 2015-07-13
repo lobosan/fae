@@ -1,5 +1,5 @@
 Meteor.publish('organizaciones', function () {
-    if (Roles.userIsInRole(this.userId, 'tecnico')) {
+    if (Roles.userIsInRole(this.userId, ['admin', 'provincial', 'tecnico'])) {
         return Organizaciones.find({});
     } else {
         this.stop();

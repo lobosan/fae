@@ -1,6 +1,6 @@
 Template.listOrganizaciones.helpers({
     isEmptyOrganizaciones: function () {
-        //if (Organizaciones.find({}).count() == 0) Meteor.call('initializeOrganizaciones');
+        if (Organizaciones.find({}).count() == 0) Meteor.call('initializeOrganizaciones');
         return Organizaciones.find({}).count() == 0;
     },
     settings: function () {

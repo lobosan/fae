@@ -2,13 +2,13 @@ Meteor.methods({
     initializeAcompanamientos: function () {
         Factory.define('acompanamiento', Acompanamientos, {
             acomProvincia: function () {
-                return Fake.fromArray(['Pichincha', 'Imbabura', 'Loja']);
+                return Fake.fromArray(['PICHINCHA', 'IMBABURA', 'LOJA']);
             },
             acomCanton: function () {
-                return Fake.fromArray(['Quito', 'Alausí', 'Archidona']);
+                return Fake.fromArray(['QUITO', 'ALAUSÍ', 'ARCHIDONA']);
             },
             acomParroquia: function () {
-                return Fake.fromArray(['Abdón Calderón', 'Achupallas', 'Alamor, Cabecera Cantonal']);
+                return Fake.fromArray(['ABDÓN CALDERÓN', 'ACHUPALLAS', 'ALAMOR, CABECERA CANTONAL']);
             },
             acomSectores: function () {
                 return Fake.fromArray(['Cotocollao', 'La Independencia', 'Pedro de Jaramillo']);

@@ -1,5 +1,5 @@
 Meteor.publish('consumidores', function () {
-    if (Roles.userIsInRole(this.userId, 'tecnico')) {
+    if (Roles.userIsInRole(this.userId, ['admin', 'provincial', 'tecnico'])) {
         return Consumidores.find({});
     } else {
         this.stop();

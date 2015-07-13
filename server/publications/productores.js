@@ -1,5 +1,5 @@
 Meteor.publish('productores', function () {
-    if (Roles.userIsInRole(this.userId, 'tecnico')) {
+    if (Roles.userIsInRole(this.userId, ['admin', 'provincial', 'tecnico'])) {
         return Productores.find({});
     } else {
         this.stop();

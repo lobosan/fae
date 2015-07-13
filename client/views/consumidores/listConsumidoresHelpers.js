@@ -1,6 +1,6 @@
 Template.listConsumidores.helpers({
     isEmptyConsumidores: function () {
-        //if (Consumidores.find({}).count() == 0) Meteor.call('initializeConsumidores');
+        if (Consumidores.find({}).count() == 0) Meteor.call('initializeConsumidores');
         return Consumidores.find({}).count() == 0;
     },
     settings: function () {

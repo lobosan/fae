@@ -10,6 +10,15 @@ Meteor.startup(function () {
                 }
             },
             {
+                username: 'Provincial',
+                email: 'provincial@magap.gob.ec',
+                profile: {
+                    cedula: '1231231233',
+                    institucion: 'MAGAP',
+                    provincia: 'PICHINCHA'
+                }
+            },
+            {
                 username: 'Test',
                 email: 'test@test.com',
                 profile: {
@@ -28,11 +37,16 @@ Meteor.startup(function () {
         ];
 
         _.each(users, function (user) {
+            var profile;
+            if (user.profile.provincia != null)
+                profile = {cedula: user.profile.cedula, institucion: user.profile.institucion, provincia: user.profile.provincia};
+            else
+                profile = {cedula: user.profile.cedula, institucion: user.profile.institucion};
             Accounts.createUser({
                 username: user.username,
                 email: user.email,
                 password: '123123',
-                profile: {cedula: user.profile.cedula, institucion: user.profile.institucion}
+                profile: profile
             });
         });
     }
@@ -40,9 +54,9 @@ Meteor.startup(function () {
 
 Accounts.onCreateUser(function (options, user) {
     if (options.username == 'Administrador')
-        user.roles = ['admin', 'tecnico'];
+        user.roles = ['admin'];
     else if (options.profile.provincia)
-        user.roles = ['provincial', 'tecnico'];
+        user.roles = ['provincial'];
     else
         user.roles = ['tecnico'];
     if (options.profile)

@@ -1,6 +1,6 @@
 Template.listAcompanamientos.helpers({
     isEmptyAcompanamientos: function () {
-        //if (Acompanamientos.find({}).count() == 0) Meteor.call('initializeAcompanamientos');
+        if (Acompanamientos.find({}).count() == 0) Meteor.call('initializeAcompanamientos');
         return Acompanamientos.find({}).count() == 0;
     },
     settings: function () {
