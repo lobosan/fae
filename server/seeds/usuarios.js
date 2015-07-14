@@ -3,7 +3,7 @@ Meteor.startup(function () {
         var users = [
             {
                 username: 'Administrador',
-                email: 'admin@admin.com',
+                email: 'admin@magap.gob.ec',
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Probío'
@@ -19,19 +19,11 @@ Meteor.startup(function () {
                 }
             },
             {
-                username: 'Test',
-                email: 'test@test.com',
+                username: 'Técnico',
+                email: 'tecnico@probio.com',
                 profile: {
                     cedula: '1231231233',
                     institucion: 'Testa'
-                }
-            },
-            {
-                username: 'Wilson',
-                email: 'wilson@probio.com',
-                profile: {
-                    cedula: '1231231233',
-                    institucion: 'Probío'
                 }
             }
         ];
